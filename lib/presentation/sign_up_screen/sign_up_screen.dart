@@ -67,7 +67,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
               SizedBox(height: AppSize.s20.h),
               CustomTextFormField(
                 hintText: AppStrings.kFirstName,
-                focusNode: node,
+               // focusNode: node,
                 controller: _firstNameController,
                 validator: (String? val) {
                   formatNickname();
@@ -82,7 +82,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
               SizedBox(height: AppSize.s15.h),
               CustomTextFormField(
                   hintText: AppStrings.kLastName,
-                  focusNode: node,
+                  //focusNode: node,
                   controller: _lastNameController,
                   validator: (String? val) {
                     formatNickname();
@@ -97,7 +97,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
               SizedBox(height: AppSize.s15.h),
               CustomTextFormField(
                   hintText: AppStrings.kEmailHintText,
-                  focusNode: node,
+                 // focusNode: node,
                   controller: _emailController,
                 validator: (String? val) {
                   formatNickname();
@@ -123,24 +123,28 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   return AppStrings.passwordvalidator;
                 },
               ),
-              Text(AppStrings.kPasswordMustBeAtLeast8Chr, style: getRegularStyle(
-                  color: ColorManager.kGreyColor,
-                  fontSize: ScreenUtil().setSp(AppSize.s12)),
+              Padding(
+                padding: const EdgeInsets.only(left: 20,right: 20,top: 5,bottom: 15),
+                child: Text(AppStrings.kPasswordMustBeAtLeast8Chr, style: getRegularStyle(
+                    color: ColorManager.kGreyColor,
+                    fontSize: ScreenUtil().setSp(AppSize.s12)),
+                ),
               ),
 
               CustomTextFormField(
                 hintText: AppStrings.kPhoneNumber,
                 focusNode: node,
                 controller: _phoneNumberController,
-                validator: (String? val) {
-                  formatNickname();
-                  if (val == null || val.isEmpty) {
-                    return AppStrings.enterEmailAddress;
-                  } else if (val.isValidEmail) {
-                    return null;
+                keyboardType: TextInputType.phone,
+                  validator: (String? val) {
+                    formatNickname();
+                        (String? val) {
+                      if (val == null || val.isEmpty) {
+                        return "Enter Phone Number";
+                      }
+                      return null;
+                    };
                   }
-                  return 'Invalid Email';
-                },
               ),
               Padding(
                 padding: EdgeInsets.symmetric(
@@ -179,13 +183,29 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   ),
                 ),
               ),
-              const SizedBox(height: 5),
               SizedBox(height: 10.h),
               button(
                   text: AppStrings.kSignup,
                   color: ColorManager.secondary,
                   context: context,
                   onTap: () {
+                    if(_emailController.text.isNotEmpty){
+                      Navigator.pushNamed(
+                        context,
+                        CustomRouteNames.kOtpVerificationScreenRoute,
+                        arguments: _emailController.text,
+                      );
+                    }else{
+                      CustomSnacksBar.showSnackBar(
+                        context,
+                        "Please Enter Email address ",
+                        icon: Icon(
+                          Icons.error,
+                          color: ColorManager.kWhiteColor,
+                        ),
+                      );
+                    }
+
                     // context.go('/Homepage');
 
                     /* if (_formKey.currentState!.validate()) {
@@ -203,6 +223,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     }
                     */
                   }),
+              const SizedBox(height: 30.0),
             ],
           ),
         ),

@@ -182,7 +182,10 @@ class _SignInScreenState extends State<SignInScreen> {
                   text1: AppStrings.kYouDontHaveAnAccount,
                   text2: AppStrings.kSignup,
                   onTap: () {
-//=> context.push('/SignUp'),
+                    Navigator.pushNamed(
+                      context,
+                      CustomRouteNames.kSignUpScreenRoute,
+                    );
                   }),
             ],
           ),

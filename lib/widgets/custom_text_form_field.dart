@@ -7,6 +7,7 @@ import '../export_dulex.dart';
 class CustomTextFormField extends StatefulWidget {
   String? hintText;
   bool obscureText;
+  bool readOnly;
   double horizontalMergin;
   int maxLines;
   Color fillColor;
@@ -14,12 +15,15 @@ class CustomTextFormField extends StatefulWidget {
   TextEditingController? controller;
   Widget? suffixIcon;
   FocusNode? focusNode;
+  void Function()? onTextFiledTap;
   String? Function(String?)? validator;
   CustomTextFormField({
     Key? key,
     this.hintText,
     this.validator,
+    this.readOnly=false,
     this.fillColor = Colors.transparent,
+    this.onTextFiledTap,
     this.keyboardType,
     this.focusNode,
     this.maxLines = 1,
@@ -47,6 +51,8 @@ class _CustomeTextFormFieldState extends State<CustomTextFormField> {
       margin: EdgeInsets.symmetric(
           horizontal: AppSize.sizeWidth(context) * widget.horizontalMergin),
       child: TextFormField(
+        readOnly: widget.readOnly,
+        onTap: widget.onTextFiledTap,
         keyboardType: widget.keyboardType,
         validator: widget.validator,
         obscureText: _pwShow,

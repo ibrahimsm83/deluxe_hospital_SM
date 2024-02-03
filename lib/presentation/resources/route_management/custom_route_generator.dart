@@ -1,3 +1,4 @@
+import 'package:deluxe_hospital_sm/presentation/otp_code_verification/otp_code_verification.dart';
 import 'package:deluxe_hospital_sm/presentation/resources/route_management/export_route_management.dart';
 import 'package:flutter/material.dart';
 import '../../export_presentation.dart';
@@ -32,7 +33,6 @@ class CustomRouteGenerator {
           builder: (context) {
             return
               const SplashScreen();
-
           },
         );
       case CustomRouteNames.kChooseAccountScreenRoute:
@@ -42,16 +42,32 @@ class CustomRouteGenerator {
           },
         );
 
-
         case CustomRouteNames.kLoginScreenRoute:
         return MaterialPageRoute(
           builder: (context) {
             return   SignInScreen();
           },
-        );case CustomRouteNames.kSignUpScreenRoute:
+        );
+
+        case CustomRouteNames.kSignUpScreenRoute:
         return MaterialPageRoute(
           builder: (context) {
             return   SignUpScreen();
+          },
+        );
+        case CustomRouteNames.kOtpVerificationScreenRoute:
+          final String email = settings.arguments as String;
+        return MaterialPageRoute(
+          builder: (context) {
+            return   OtpCodeVerificationScreen(
+                email: email,
+            );
+          },
+        );
+        case CustomRouteNames.kPersonalInformationScreenRoute:
+        return MaterialPageRoute(
+          builder: (context) {
+            return const PersonalInformationScreen();
           },
         );
       // case CustomRouteNames.kForgotPasswordScreenRoute:

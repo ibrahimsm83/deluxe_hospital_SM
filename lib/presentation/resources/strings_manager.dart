@@ -28,6 +28,24 @@ class AppStrings {
   static const String kPasswordMustBeAtLeast8Chr = "Password must be at least 8 characters long & use alphanumeric";
   static const String kPhoneNumber = "Phone Number";
   static const String kCreateNewAccount = "Create New Account";
+  ///Otp Verification
+  static const String kVerify = "Verify";
+  static const String kResendCodeIn = "Resend Code in ";
+  static const String kCodeHasBeenSendTo= "Code Has Been Send To ";
+  static const String otpCodeVerification = "OTP Code Verification";
+  ///Personal Information
+  static const String kPersonalInformation= "Personal Information";
+  static const String kDateOfBirth = "Date of Birth";
+  static const String kSelectGender = "Select Gender";
+  static const String kSelectCountry = "Select Country";
+  static const String kStateAndRegion = "State & Region";
+  static const String kCity = "City";
+  static const String kCm = "Cm";
+  static const String kNext = "Next";
+  static const String kKg = "Kg";
+  static const String kWeight = "weight";
+  static const String kHeight = "Height";
+  static const String kSelectLanguage = "Select Language";
 
 
   // ///Forgot Password
