@@ -5,3 +5,8 @@ export 'sign_in_screen/sign_in_screen.dart';
 export 'sign_up_screen/sign_up_screen.dart';
 export 'otp_code_verification/otp_code_verification.dart';
 export 'personal_information/personal_information.dart';
+export 'face_id_setup/face_id_setup_screen.dart';
+export 'fingure_print_setup/fingure_print_setup_screen.dart';
+export 'profile_picture_setup/profile_picture_setup_screen.dart';
+export 'forgot_password/forgot_password_screen.dart';
+export 'create_new_password/create_new_password_screen.dart';

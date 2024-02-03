@@ -1,10 +1,8 @@
 import 'package:country_picker/country_picker.dart';
-import 'package:csc_picker/csc_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:intl_phone_field/intl_phone_field.dart';
-
 import '../../export_dulex.dart';
 
 class PersonalInformationScreen extends StatefulWidget {
@@ -30,7 +28,7 @@ class _PersonalInformationScreenState extends State<PersonalInformationScreen> {
   String selectedTitle = 'Mr'; // Initial value
   String? selectedGender;
   String? selectedLanguage;
-  GlobalKey<CSCPickerState> _cscPickerKey = GlobalKey();
+  // GlobalKey<CSCPickerState> _cscPickerKey = GlobalKey();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -148,9 +146,8 @@ class _PersonalInformationScreenState extends State<PersonalInformationScreen> {
                     }*/
                     Navigator.pushNamed(
                             context,
-                            CustomRouteNames.kOtpVerificationScreenRoute,
+                            CustomRouteNames.kMedicalDetailsScreenRoute,
                           );
-
                     //   CustomSnacksBar.showSnackBar(
                     //     context,
                     //     "Please Enter Email address ",
@@ -158,9 +155,6 @@ class _PersonalInformationScreenState extends State<PersonalInformationScreen> {
                     //       Icons.error,
                     //       color: ColorManager.kWhiteColor,
                     //     ),
-
-
-
                   }),
               const SizedBox(height: 30.0),
         ],

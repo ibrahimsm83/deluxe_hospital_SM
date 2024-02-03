@@ -78,7 +78,7 @@ class _CustomeTextFormFieldState extends State<CustomTextFormField> {
               BorderSide(color: ColorManager.kGreyColor, width: 1.5)),
           focusedErrorBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(12.0),
-              borderSide: BorderSide(color: ColorManager.primary, width: 1.5)),
+              borderSide: BorderSide(color: ColorManager.kGreyColor, width: 1.5)),
           errorBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(12.0),
               borderSide: BorderSide(color: ColorManager.kRedColor, width: 1.5)),
@@ -94,7 +94,7 @@ class _CustomeTextFormFieldState extends State<CustomTextFormField> {
                   child: _pwShow
                       ? Icon(
                     Icons.visibility_off,
-                    color: ColorManager.kGreyColor,
+                    color: ColorManager.secondary,
                   )
                       : Icon(
                     Icons.visibility,

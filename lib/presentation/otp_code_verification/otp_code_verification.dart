@@ -11,7 +11,8 @@ import '../../export_dulex.dart';
 
 class OtpCodeVerificationScreen extends StatefulWidget {
   String? email;
-   OtpCodeVerificationScreen({super.key,this.email});
+  bool? isForgotPassword;
+   OtpCodeVerificationScreen({super.key,this.email,this.isForgotPassword});
 
   @override
   State<OtpCodeVerificationScreen> createState() => _OtpCodeVerificationScreenState();
@@ -163,10 +164,18 @@ class _OtpCodeVerificationScreenState extends State<OtpCodeVerificationScreen> {
                                 color: ColorManager.kWhiteColor,
                               ),
                             );
-                            Navigator.pushNamed(
-                              context,
-                              CustomRouteNames.kPersonalInformationScreenRoute,
-                            );
+                            if(widget.isForgotPassword!){
+                              Navigator.pushNamed(
+                                context,
+                                CustomRouteNames.kCreateNewPasswordScreenRoute,
+                              );
+                            }else{
+                              Navigator.pushNamed(
+                                context,
+                                CustomRouteNames.kPersonalInformationScreenRoute,
+                              );
+                            }
+
                             //context.push('/Personalisation');
                           },
                         );

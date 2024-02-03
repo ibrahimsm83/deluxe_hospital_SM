@@ -10,6 +10,30 @@ class ImageAssets {
   static const String demoUserImage = "$IMAGE_PATH/user.png";
   static const String doctorsImage = "$IMAGE_PATH/Doctors_Image.png";
 
+  ///FaceId,FingerPrint
+  static const String faceIdImage = "$IMAGE_PATH/Faceid.png";
+  static const String doneImage = "$IMAGE_PATH/done.png";
+  static const String fingerPrintImage = "$IMAGE_PATH/Fingerprint.png";
+
+  ///Deshboard
+  static const String kAppointmentIcon = "$ICON_PATH/appointment.svg";
+  static const String kArticlesIcon = "$ICON_PATH/articles.svg";
+  static const String kChatIcon = "$ICON_PATH/chat.svg";
+  static const String kProfileIcon = "$ICON_PATH/profile.svg";
+  static const String kHomeIcon = "$ICON_PATH/home.svg";
+  ///Home
+  static const String kBellIcon = "$ICON_PATH/notification.svg";
+  static const String kEmergencyIcon = "$ICON_PATH/emergency.svg";
+  static const String kFilterIcon = "$ICON_PATH/filter.svg";
+  static const String kHospitalIcon = "$ICON_PATH/hospital.svg";
+  static const String kClockIcon = "$ICON_PATH/clock.svg";
+  static const String kPersonIcon = "$ICON_PATH/person.svg";
+  static const String kCalendarIcon = "$ICON_PATH/calendar.svg";
+  static const String kCalendarEditIcon = "$ICON_PATH/calendarEdit.svg";
+  static const String kCloseCircleIcon = "$ICON_PATH/close-circle.svg";
+  static const String kMessageIcon = "$ICON_PATH/message.svg";
+
+
   //Svg icons
 
   // static const String applogo = "$ICON_PATH/appLogo.svg";

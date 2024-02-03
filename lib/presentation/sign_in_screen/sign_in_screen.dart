@@ -136,10 +136,10 @@ class _SignInScreenState extends State<SignInScreen> {
                       padding: const EdgeInsets.only(right: 0.0),
                       child: GestureDetector(
                         onTap: () {
-                          // Navigator.pushNamed(
-                          //   context,
-                          //   CustomRouteNames.kForgotPasswordScreenRoute,
-                          // );
+                          Navigator.pushNamed(
+                            context,
+                            CustomRouteNames.kForgotPasswordScreenRoute,
+                          );
                         },
                         child: Text(
                           AppStrings.kForgotPassword,
@@ -159,24 +159,26 @@ class _SignInScreenState extends State<SignInScreen> {
                   color: ColorManager.secondary,
                   context: context,
                   onTap: () {
-                    // context.go('/Homepage');
+                    Navigator.pushNamed(
+                      context,
+                      CustomRouteNames.kDashboardScreenRoute,
+                    );
 
-                    /* if (_formKey.currentState!.validate()) {
-                      print(_emailController.text);
-                      print(_passwordController.text);
-                      context.go('/Homepage');
-                      CustomSnacksBar.showSnackBar(
-                        context,
-                        "Login Successfully",
-                        icon: Icon(
-                          Icons.check,
-                          color: ColorManager.whiteColor,
-                        ),
-                      );
-                    }
-                    */
+                    //  if (_formKey.currentState!.validate()) {
+                    //   print(_emailController.text);
+                    //   print(_passwordController.text);
+                    //
+                    //   CustomSnacksBar.showSnackBar(
+                    //     context,
+                    //     "Login Successfully",
+                    //     icon: Icon(
+                    //       Icons.check,
+                    //       color: ColorManager.kWhiteColor,
+                    //     ),
+                    //   );
+                    // }
+
                   }),
-              SizedBox(height: 1.h),
               SizedBox(height: 10.h),
               textspan(
                   text1: AppStrings.kYouDontHaveAnAccount,

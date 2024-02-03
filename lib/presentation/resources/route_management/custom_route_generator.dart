@@ -1,6 +1,10 @@
+import 'package:deluxe_hospital_sm/presentation/deshboard/deshboard_screen.dart';
+import 'package:deluxe_hospital_sm/presentation/medical_details/medical_details_screen.dart';
 import 'package:deluxe_hospital_sm/presentation/otp_code_verification/otp_code_verification.dart';
+import 'package:deluxe_hospital_sm/presentation/profile_picture_setup/profile_picture_setup_screen.dart';
 import 'package:deluxe_hospital_sm/presentation/resources/route_management/export_route_management.dart';
 import 'package:flutter/material.dart';
+import '../../../model/otp_screen_argument_Model.dart';
 import '../../export_presentation.dart';
 
 
@@ -55,30 +59,71 @@ class CustomRouteGenerator {
             return   SignUpScreen();
           },
         );
-        case CustomRouteNames.kOtpVerificationScreenRoute:
-          final String email = settings.arguments as String;
+      case CustomRouteNames.kOtpVerificationScreenRoute:
+        OtpScreenArgumentModel argumentModel =
+            settings.arguments as OtpScreenArgumentModel;
+        // final String email = settings.arguments as String;
+        // final bool isForgotPw = settings.arguments as bool;
+
+
         return MaterialPageRoute(
           builder: (context) {
-            return   OtpCodeVerificationScreen(
-                email: email,
+            return OtpCodeVerificationScreen(
+              email: argumentModel.email,//email,
+              isForgotPassword: argumentModel.isForgotPwPage//isForgotPw,
             );
           },
         );
-        case CustomRouteNames.kPersonalInformationScreenRoute:
+      case CustomRouteNames.kPersonalInformationScreenRoute:
         return MaterialPageRoute(
           builder: (context) {
             return const PersonalInformationScreen();
           },
         );
-      // case CustomRouteNames.kForgotPasswordScreenRoute:
-      //   return MaterialPageRoute(
-      //     builder: (context) {
-      //       return BlocProvider<ForgotPasswordCubit>(
-      //         create: (context) => ForgotPasswordCubit(),
-      //         child: const ForGotPasswordPage(),
-      //       );
-      //     },
-      //   );
+        case CustomRouteNames.kMedicalDetailsScreenRoute:
+        return MaterialPageRoute(
+          builder: (context) {
+            return const MedicalDetailsScreen();
+          },
+        );
+        case CustomRouteNames.kProfilePictureSetupScreenRoute:
+        return MaterialPageRoute(
+          builder: (context) {
+            return const ProfilePictureSetup();
+          },
+        );
+      case CustomRouteNames.kFingerPrintSetupScreenRoute:
+        return MaterialPageRoute(
+          builder: (context) {
+            return const FingerPrintSetupScreen();
+          },
+        );
+      case CustomRouteNames.kFaceIdSetupScreenRoute:
+        return MaterialPageRoute(
+          builder: (context) {
+            return const FaceIdSetupScreen();
+          },
+        );
+
+        case CustomRouteNames.kForgotPasswordScreenRoute:
+        return MaterialPageRoute(
+          builder: (context) {
+            return  ForgotPasswordScreen();
+          },
+        );
+        case CustomRouteNames.kCreateNewPasswordScreenRoute:
+        return MaterialPageRoute(
+          builder: (context) {
+            return  CreateNewPasswordScreen();
+          },
+        );
+
+        case CustomRouteNames.kDashboardScreenRoute:
+        return MaterialPageRoute(
+          builder: (context) {
+            return  DashboardScreen();
+          },
+        );
       // case CustomRouteNames.kOTPScreenRoute:
       //   final String email = settings.arguments as String;
       //   return MaterialPageRoute(

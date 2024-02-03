@@ -1,9 +1,7 @@
 class AppStrings {
   ///Figma Link
   static String FigmaFileLink =
-      "https://www.figma.com/file/wtp8ZdPk3O8OgH5ObdQUfb/Customer-App-Mixed-Fidelity?node-id=0%3A1&mode=dev";
-
-
+      "https://www.figma.com/file/SquY4XSwDZG9og3zHQRKgq/Delux-Hospital?type=design&node-id=442-3790&mode=design&t=lGzhfN6OZxwPY7Eh-0";
 
   ///Splash
   static const String productOf = "Product of";
@@ -20,6 +18,8 @@ class AppStrings {
   static const String kEmailHintText = "Email Address";
   static const String kShowPassword = "Show Password";
   static const String kPasswordHintText = "Password (case sensitive)";
+  static const String kNewPasswordHintText = "New Password (case sensitive)";
+  static const String kConfirmNewPasswordHintText = "Confirm Password (case sensitive)";
   static const String kYouDontHaveAnAccount = "You Don’t have an account ?";
   static const String kSignup = " Sign Up";
   ///SignUp
@@ -47,8 +47,61 @@ class AppStrings {
   static const String kHeight = "Height";
   static const String kSelectLanguage = "Select Language";
 
+  ///Medical Details
+  static const String kMedicalDetails = "Medical Details";
+  static const String kPastSurgicalHistory = "Past Surgical History";
+  static const String kPastMedicalHistory = "Past Medical History";
+  static const String kAllergy = "Allergy";
+  static const String kDrugsHistory = "Drugs History";
+  static const String kGynaecologicalHistoryFemale = "Gynaecological History (Female)";
+  static const String kObsetricHistoryFemale = "Obsetric History (Female)";
+  static const String kRecentHospitalStaysHospitalization = "Recent Hospital Stays / Hospitalization";
+  static const String kFamilyHistory = "Family History";
+  static const String kSocialHistory= "Social History";
+  static const String kOccupation= "Occupation";
+  static const String kPreviousOccupation= "Previous Occupation";
+  static const String kTypeOf= "Type of";
+  static const String kSelectDocument= "Select Document";
+  static const String kAddNew= "add new";
+  static const String kUpload ="upload";
 
-  // ///Forgot Password
+  ///Profile Setup
+  static const String kAddYourProfilePhotoSetup ="Add Your Profile Photo";
+  static const String kContinue ="Continue";
+  static const String kTakePhoto ="Take Photo";
+  static const String kUploadFromGallery ="Upload From Gallery";
+  static const String kYourInformationWillBe ="Your Information Will Be Share With Our Medical Expert Team Who Will Verify Your Identity.";
+  ///FingerPrint
+  static const String kSetupYourFingerPrint ="Setup Your Finger Print";
+  static const String kAddFingerPrintToMake ="Add a finger print to make your account more secure";
+  static const String kPleasePutYourFingerOnThe ="Please put your finger on the finger print scanner to get started";
+
+  ///FaceId
+  static const String kSetupYourFaceId="Setup Your Face id";
+  static const String kSkip="Skip";
+  static const String kSignInYourAccountQuicklyBYUsingFaceID="Sign in Your Account Quickly By Using Face id";
+
+  ///Congratulations !
+  static const String kCongratulations="Congratulations !";
+  static const String kYourAccountIsReadyToUse="Your Account is ready to use. you will be redirected to the home page in a few seconds";
+///Forgot password
+  static const String kForgotPasswords ="Forgot Password";
+  static const String kEnterYourEmailToSendYouOtp ="Enter your email to send you otp.";
+  ///Create New Password
+  static const String kCreateANewPassword ="Create a new password";
+  static const String kCreateYourNewPassword ="Create your new password !";
+  static const String kNewPassword ="New password";
+  static const String kConfirmNewPassword ="Confirm New Password";
+
+  ///Deshboard
+  static const String kHome ="Home";
+  static const String kAppointment ="Appointment";
+  static const String kChat ="Chat";
+  static const String kArticles ="Articles";
+  static const String kProfile ="Profile";
+
+
+  // /Forgot Password
   // static const String Forgotpassword = "Forgot password";
   // static const String selectWhichContactDetails =
   //     "Select which contact details should we use to reset your password:";

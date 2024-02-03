@@ -67,10 +67,8 @@ class _SignUpScreenState extends State<SignUpScreen> {
               SizedBox(height: AppSize.s20.h),
               CustomTextFormField(
                 hintText: AppStrings.kFirstName,
-               // focusNode: node,
                 controller: _firstNameController,
                 validator: (String? val) {
-                  formatNickname();
                       (String? val) {
                     if (val == null || val.isEmpty) {
                       return "Enter First Name";
@@ -189,21 +187,26 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   color: ColorManager.secondary,
                   context: context,
                   onTap: () {
-                    if(_emailController.text.isNotEmpty){
-                      Navigator.pushNamed(
-                        context,
-                        CustomRouteNames.kOtpVerificationScreenRoute,
-                        arguments: _emailController.text,
-                      );
-                    }else{
-                      CustomSnacksBar.showSnackBar(
-                        context,
-                        "Please Enter Email address ",
-                        icon: Icon(
-                          Icons.error,
-                          color: ColorManager.kWhiteColor,
-                        ),
-                      );
+                    // if (_formKey.currentState!.validate()) {
+                      if(_emailController.text.isNotEmpty){
+                        Navigator.pushNamed(
+                          context,
+                          CustomRouteNames.kOtpVerificationScreenRoute,
+                          arguments: OtpScreenArgumentModel.required(
+                              email: _emailController.text,
+                              isForgotPwPage: false
+                          ),
+                        );
+                      }else{
+                        CustomSnacksBar.showSnackBar(
+                          context,
+                          "Please Enter Email address ",
+                          icon: Icon(
+                            Icons.error,
+                            color: ColorManager.kWhiteColor,
+                          ),
+                        );
+                    //  }
                     }
 
                     // context.go('/Homepage');
