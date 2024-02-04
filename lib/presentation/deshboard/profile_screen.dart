@@ -38,14 +38,14 @@ class _ProfileViewState extends State<ProfileView> {
   ];
 
   List choicsRoute = [
-   " Routes.PrivacyViewRoute,"
-   " Routes.PrivacyViewRoute,"
-   " Routes.PrivacyViewRoute,"
-   " Routes.PrivacyViewRoute,"
-   " Routes.PrivacyViewRoute,"
-   " Routes.PrivacyViewRoute,"
-   " Routes.PrivacyViewRoute,"
-   " Routes.PrivacyViewRoute,"
+   " Routes.PrivacyViewRoute,",
+    CustomRouteNames.kEditProfileScreenRoute,
+   " Routes.PrivacyViewRoute,",
+   " Routes.PrivacyViewRoute,",
+   " Routes.PrivacyViewRoute,",
+   " Routes.PrivacyViewRoute,",
+   " Routes.PrivacyViewRoute,",
+   " Routes.PrivacyViewRoute,",
 
   ];
   @override
@@ -121,7 +121,6 @@ class _ProfileViewState extends State<ProfileView> {
                           physics: const NeverScrollableScrollPhysics(),
                           separatorBuilder: (context, index) => const SizedBox(
                             height: 8.0,
-                            //color: ColorManager.kGreyColor,
                           ),
                           itemBuilder: (context, index) => Padding(
                             padding:  EdgeInsets.only(top: index==0?10.0:0.0,),
@@ -129,7 +128,9 @@ class _ProfileViewState extends State<ProfileView> {
                               title: title[index],
                               leadingIcon:iconsList[index],
                               onTap: () {
-                               // Navigator.pushNamed(context, choicsRoute[index]);
+                                if(index==1){
+                                  Navigator.pushNamed(context, choicsRoute[1]);
+                                }
                               },
                             ),
                           ),

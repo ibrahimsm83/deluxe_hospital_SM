@@ -2,12 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:get/get.dart';
 
 import '../../../../export_dulex.dart';
 
 class FaceIdSetupScreen extends StatelessWidget {
-  const FaceIdSetupScreen({Key? key}) : super(key: key);
-
+   FaceIdSetupScreen({Key? key}) : super(key: key);
+  final UserController userController = Get.find();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -124,10 +125,27 @@ class FaceIdSetupScreen extends StatelessWidget {
                     context: context,
                     onTap: () {
                       //Home page navigator
-                      Navigator.pushNamed(
-                        context,
-                        CustomRouteNames.kDashboardScreenRoute,
-                      );
+                      if(userController.userRole.value== UserRole.Patient){
+                        Navigator.pushNamed(
+                          context,
+                          CustomRouteNames.kDashboardScreenRoute,
+                        );
+                      }
+                      else{
+                        CustomSnacksBar.showSnackBar(
+                          context,
+                          "HealthCare Dashboard Not Found",
+                          icon: Icon(
+                            Icons.check,
+                            color: ColorManager.kWhiteColor,
+                          ),
+                        );
+                        // Navigator.pushNamed(
+                        //   context,
+                        //   CustomRouteNames.kProfessionalInformationScreenRoute,
+                        // );
+                      }
+
                     }),
               ],
             ),

@@ -136,6 +136,8 @@ class AppStrings {
   static const String kArticlesDesc="You have successfully canceled your appointment with Dr. Alan Watson on December 24, 2024, 13:00 p.m. 80% of the funds will be returned to your account.ViewMore";
     ///My Profile
   static const String kMyProfile="MyProfile";
+  static const String kEditProfile="Edit Profile";
+  static const String kSave="Save";
 
   ///Validator
   static const String otpCode = "Otp Code";

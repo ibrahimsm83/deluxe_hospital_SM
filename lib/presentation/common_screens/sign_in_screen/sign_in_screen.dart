@@ -2,6 +2,7 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:get/get.dart';
 import '../../../../export_dulex.dart';
 
 class SignInScreen extends StatefulWidget {
@@ -14,7 +15,7 @@ class SignInScreen extends StatefulWidget {
 class _SignInScreenState extends State<SignInScreen> {
   final _formKey = GlobalKey<FormState>();
   bool rememberMe = false;
-
+  final UserController userController = Get.find();
   FocusNode node = FocusNode();
   final _emailController = TextEditingController();
   final _passwordController = TextEditingController();
@@ -159,10 +160,22 @@ class _SignInScreenState extends State<SignInScreen> {
                   color: ColorManager.secondary,
                   context: context,
                   onTap: () {
-                    Navigator.pushNamed(
-                      context,
-                      CustomRouteNames.kDashboardScreenRoute,
-                    );
+                    if(userController.userRole.value== UserRole.Patient){
+                      Navigator.pushNamed(
+                        context,
+                        CustomRouteNames.kDashboardScreenRoute,
+                      );
+                    }
+                    else {
+                      CustomSnacksBar.showSnackBar(
+                        context,
+                        "HealthCare Dashboard Not Found",
+                        icon: Icon(
+                          Icons.check,
+                          color: ColorManager.kWhiteColor,
+                        ),
+                      );
+                    }
 
                     //  if (_formKey.currentState!.validate()) {
                     //   print(_emailController.text);

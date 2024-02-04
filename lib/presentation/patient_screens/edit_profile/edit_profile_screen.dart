@@ -6,19 +6,18 @@ import 'package:get/get.dart';
 import 'package:intl_phone_field/intl_phone_field.dart';
 import '../../../../export_dulex.dart';
 
-class PersonalInformationScreen extends StatefulWidget {
-  const PersonalInformationScreen({Key? key}) : super(key: key);
+class EditProfileScreen extends StatefulWidget {
+  const EditProfileScreen({Key? key}) : super(key: key);
 
   @override
-  State<PersonalInformationScreen> createState() =>
-      _PersonalInformationScreenState();
+  State<EditProfileScreen> createState() => _EditProfileScreenState();
 }
 
-class _PersonalInformationScreenState extends State<PersonalInformationScreen> {
+class _EditProfileScreenState extends State<EditProfileScreen> {
   final formKey = GlobalKey<FormState>();
   final _emailController = TextEditingController();
-  final _firstNameController = TextEditingController();
-  final _lastNameController = TextEditingController();
+  final _firstNameController = TextEditingController(text: "Ali Ahmed");
+  final _lastNameController = TextEditingController(text: "Khan");
   final _stateAndRegionController = TextEditingController();
   final _countryController = TextEditingController();
   final _centimeterController = TextEditingController();
@@ -31,6 +30,7 @@ class _PersonalInformationScreenState extends State<PersonalInformationScreen> {
   String? selectedGender;
   String? selectedLanguage;
   String? speak;
+
   // GlobalKey<CSCPickerState> _cscPickerKey = GlobalKey();
   @override
   Widget build(BuildContext context) {
@@ -40,7 +40,7 @@ class _PersonalInformationScreenState extends State<PersonalInformationScreen> {
         elevation: 0.0,
         backgroundColor: Colors.transparent,
         title: Text(
-          AppStrings.kPersonalInformation,
+          AppStrings.kEditProfile,
           style: getboldStyle(
               color: ColorManager.secondary,
               fontSize: ScreenUtil().setSp(AppSize.s18)),
@@ -55,25 +55,24 @@ class _PersonalInformationScreenState extends State<PersonalInformationScreen> {
       body: SingleChildScrollView(
         child: Form(
           key: formKey,
-          child:  Column(
+          child: Column(
             children: [
               firstName(),
               CustomTextFormField(
                   hintText: AppStrings.kLastName,
                   controller: _lastNameController,
                   validator: (String? val) {
-                        (String? val) {
+                    (String? val) {
                       if (val == null || val.isEmpty) {
                         return "Enter Last Name";
                       }
                       return null;
                     };
-                  }
-              ),
+                  }),
               SizedBox(height: AppSize.s15.h),
               CustomTextFormField(
-                  hintText: AppStrings.kEmailHintText,
-                  controller: _emailController,
+                hintText: AppStrings.kEmailHintText,
+                controller: _emailController,
                 validator: (String? val) {
                   if (val == null || val.isEmpty) {
                     return AppStrings.enterEmailAddress;
@@ -84,6 +83,7 @@ class _PersonalInformationScreenState extends State<PersonalInformationScreen> {
                 },
               ),
               SizedBox(height: AppSize.s15.h),
+
               ///PhoneNumber
               phoneNumber(),
               SizedBox(height: AppSize.s15.h),
@@ -91,101 +91,87 @@ class _PersonalInformationScreenState extends State<PersonalInformationScreen> {
                   hintText: AppStrings.kDateOfBirth,
                   controller: _dateOfBirthController,
                   validator: (String? val) {
-                        (String? val) {
+                    (String? val) {
                       if (val == null || val.isEmpty) {
                         return "Enter Date of birth";
                       }
                       return null;
                     };
-                  }
-              ),
+                  }),
               SizedBox(height: AppSize.s15.h),
+
               ///Gender
               gender(),
+
               ///Select Country
-            SizedBox(height: AppSize.s15.h),
+              SizedBox(height: AppSize.s15.h),
               selectCountry(),
               SizedBox(height: AppSize.s15.h),
               CustomTextFormField(
                   hintText: AppStrings.kStateAndRegion,
                   controller: _stateAndRegionController,
                   validator: (String? val) {
-                        (String? val) {
+                    (String? val) {
                       if (val == null || val.isEmpty) {
                         return "Enter State And  Region";
                       }
                       return null;
                     };
-                  }
-              ),
+                  }),
               SizedBox(height: AppSize.s15.h),
               CustomTextFormField(
                   hintText: AppStrings.kCity,
                   controller: _cityController,
                   validator: (String? val) {
-                        (String? val) {
+                    (String? val) {
                       if (val == null || val.isEmpty) {
                         return "Enter City";
                       }
                       return null;
                     };
-                  }
-              ),
-            Obx(() {
-              return userController.userRole.value ==
-                  UserRole.Patient?
-              Column(
-                children: [
-                  SizedBox(height: AppSize.s15.h),
-                  height(),
-                  SizedBox(height: AppSize.s15.h),
-                  weight(),
-                  SizedBox(height: AppSize.s15.h),
-                  ///Language
-                  language(),
-                  ///Next Buttons
-                ],
-              ):iSpeak();}),
-
+                  }),
+              Obx(() {
+                return userController.userRole.value == UserRole.Patient
+                    ? Column(
+                        children: [
+                          SizedBox(height: AppSize.s15.h),
+                          height(),
+                          SizedBox(height: AppSize.s15.h),
+                          weight(),
+                          SizedBox(height: AppSize.s15.h),
+                          ///Language
+                          language(),
+                          ///Next Buttons
+                        ],
+                      )
+                    : iSpeak();
+              }),
               SizedBox(height: 10.h),
               button(
-                  text: AppStrings.kNext,
+                  text: AppStrings.kSave,
                   color: ColorManager.secondary,
                   context: context,
                   onTap: () {
                     /* if (_formKey.currentState!.validate()) {
                     }*/
-                    if(userController.userRole.value== UserRole.Patient){
-                      Navigator.pushNamed(
-                        context,
-                        CustomRouteNames.kMedicalDetailsScreenRoute,
-                      );
-                    }
-                    else{
-                      Navigator.pushNamed(
-                        context,
-                        CustomRouteNames.kProfessionalInformationScreenRoute,
-                      );
-                    }
-
-                    //   CustomSnacksBar.showSnackBar(
-                    //     context,
-                    //     "Please Enter Email address ",
-                    //     icon: Icon(
-                    //       Icons.error,
-                    //       color: ColorManager.kWhiteColor,
-                    //     ),
+                    CustomSnacksBar.showSnackBar(
+                        context, "Profile Edit Successfully",
+                        icon: Icon(
+                          Icons.check,
+                          color: ColorManager.kWhiteColor,
+                        ));
                   }),
+
               const SizedBox(height: 30.0),
-        ],
+            ],
           ),
         ),
       ),
     );
   }
 
-  Widget phoneNumber(){
-    return  Padding(
+  Widget phoneNumber() {
+    return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 20.0),
       child: Container(
         height: 70,
@@ -198,7 +184,7 @@ class _PersonalInformationScreenState extends State<PersonalInformationScreen> {
             labelStyle: TextStyle(color: Colors.white),
           ),
           initialCountryCode:
-          'US', // Initial country code, you can change it to the desired one
+              'US', // Initial country code, you can change it to the desired one
           onChanged: (phone) {
             print(phone.completeNumber);
             // Callback when phone number changes
@@ -210,15 +196,16 @@ class _PersonalInformationScreenState extends State<PersonalInformationScreen> {
       ),
     );
   }
-  Widget firstName(){
-    return  Padding(
+
+  Widget firstName() {
+    return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 20.0),
       child: Row(
         children: [
           Flexible(
             flex: 1,
             child: Padding(
-              padding: const EdgeInsets.only(top: 15.0,bottom: 15.0),
+              padding: const EdgeInsets.only(top: 15.0, bottom: 15.0),
               child: SizedBox(
                 height: 52,
                 child: DropdownButtonFormField<String>(
@@ -249,7 +236,8 @@ class _PersonalInformationScreenState extends State<PersonalInformationScreen> {
                       value: title,
                       child: Text(
                         title,
-                        style: getRegularStyle(color: ColorManager.kWhiteColor,fontSize: 10.sp),
+                        style: getRegularStyle(
+                            color: ColorManager.kWhiteColor, fontSize: 10.sp),
                       ),
                     );
                   }).toList(),
@@ -266,21 +254,21 @@ class _PersonalInformationScreenState extends State<PersonalInformationScreen> {
                 // focusNode: node,
                 controller: _firstNameController,
                 validator: (String? val) {
-                      (String? val) {
+                  (String? val) {
                     if (val == null || val.isEmpty) {
                       return "Enter First Name";
                     }
                     return null;
                   };
-                }
-            ),
+                }),
           ),
         ],
       ),
     );
   }
-  Widget gender(){
-    return   Padding(
+
+  Widget gender() {
+    return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 18.0),
       child: SizedBox(
         height: 55,
@@ -294,7 +282,7 @@ class _PersonalInformationScreenState extends State<PersonalInformationScreen> {
             border: OutlineInputBorder(
               borderRadius: BorderRadius.circular(10.0),
               borderSide: BorderSide(
-                color:ColorManager.kGreyColor,
+                color: ColorManager.kGreyColor,
               ),
             ),
             labelText: 'Select Gender',
@@ -316,9 +304,9 @@ class _PersonalInformationScreenState extends State<PersonalInformationScreen> {
     );
   }
 
-  Widget iSpeak(){
-    return   Padding(
-      padding: EdgeInsets.only(left: 18.0,right: 18,top:AppSize.s15.h),
+  Widget iSpeak() {
+    return Padding(
+      padding: EdgeInsets.only(left: 18.0, right: 18, top: AppSize.s15.h),
       child: SizedBox(
         height: 55,
         child: DropdownButtonFormField<String>(
@@ -331,7 +319,7 @@ class _PersonalInformationScreenState extends State<PersonalInformationScreen> {
             border: OutlineInputBorder(
               borderRadius: BorderRadius.circular(10.0),
               borderSide: BorderSide(
-                color:ColorManager.kGreyColor,
+                color: ColorManager.kGreyColor,
               ),
             ),
             labelText: AppStrings.kISpeakLanguage,
@@ -353,8 +341,8 @@ class _PersonalInformationScreenState extends State<PersonalInformationScreen> {
     );
   }
 
-  Widget language(){
-    return   Padding(
+  Widget language() {
+    return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 18.0),
       child: SizedBox(
         height: 55,
@@ -368,7 +356,7 @@ class _PersonalInformationScreenState extends State<PersonalInformationScreen> {
             border: OutlineInputBorder(
               borderRadius: BorderRadius.circular(10.0),
               borderSide: BorderSide(
-                color:ColorManager.kGreyColor,
+                color: ColorManager.kGreyColor,
               ),
             ),
             labelText: AppStrings.kSelectLanguage,
@@ -389,13 +377,14 @@ class _PersonalInformationScreenState extends State<PersonalInformationScreen> {
       ),
     );
   }
-  Widget selectCountry(){
+
+  Widget selectCountry() {
     return CustomTextFormField(
         hintText: AppStrings.kSelectCountry,
         controller: _countryController,
         suffixIcon: Icon(Icons.arrow_drop_down),
         readOnly: true,
-        onTextFiledTap: (){
+        onTextFiledTap: () {
           showCountryPicker(
             context: context,
             //Optional.  Can be used to exclude(remove) one ore more country from the countries list (optional).
@@ -406,7 +395,7 @@ class _PersonalInformationScreenState extends State<PersonalInformationScreen> {
             onSelect: (Country country) {
               print('Select country: ${country.displayName}');
               print('Select country: ${country.name}');
-              _countryController.text=country.name;
+              _countryController.text = country.name;
             },
             // Optional. Sets the theme for the country list picker.
             countryListTheme: CountryListThemeData(
@@ -435,77 +424,86 @@ class _PersonalInformationScreenState extends State<PersonalInformationScreen> {
           );
         },
         validator: (String? val) {
-              (String? val) {
+          (String? val) {
             if (val == null || val.isEmpty) {
               return "Select Country ";
             }
             return null;
           };
-        }
-    );
-}
+        });
+  }
 
-Widget height(){
+  Widget height() {
     return Padding(
-      padding: const EdgeInsets.only(left: 18.0,right: 8.0),
-      child: Row(children: [
-        Container(
-          height: 48,
-          width: 50,
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(10.0),
-            border: Border.all(color: ColorManager.kGreyColor),
+      padding: const EdgeInsets.only(left: 18.0, right: 8.0),
+      child: Row(
+        children: [
+          Container(
+            height: 48,
+            width: 50,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(10.0),
+              border: Border.all(color: ColorManager.kGreyColor),
+            ),
+            child: Center(
+                child: Text(
+              AppStrings.kCm,
+              style: getRegularStyle(color: ColorManager.kGreyColor),
+            )),
           ),
-          child: Center(child: Text(AppStrings.kCm,style: getRegularStyle(color: ColorManager.kGreyColor),)),
-        ),
-        Flexible(
-          child: CustomTextFormField(
-              hintText: AppStrings.kHeight,
-              horizontalMergin: 0.03,
-              controller: _centimeterController,
-              validator: (String? val) {
-                    (String? val) {
-                  if (val == null || val.isEmpty) {
-                    return "Enter height in cm";
-                  }
-                  return null;
-                };
-              }
+          Flexible(
+            child: CustomTextFormField(
+                hintText: AppStrings.kHeight,
+                horizontalMergin: 0.03,
+                controller: _centimeterController,
+                validator: (String? val) {
+                  (String? val) {
+                    if (val == null || val.isEmpty) {
+                      return "Enter height in cm";
+                    }
+                    return null;
+                  };
+                }),
           ),
-        ),
-      ],),
+        ],
+      ),
     );
-}
+  }
 
-Widget weight(){
+  Widget weight() {
     return Padding(
-      padding: const EdgeInsets.only(left: 18.0,right: 8.0),
-      child: Row(children: [
-        Container(
-          height: 48,
-          width: 50,
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(10.0),
-            border: Border.all(color: ColorManager.kGreyColor),
+      padding: const EdgeInsets.only(left: 18.0, right: 8.0),
+      child: Row(
+        children: [
+          Container(
+            height: 48,
+            width: 50,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(10.0),
+              border: Border.all(color: ColorManager.kGreyColor),
+            ),
+            child: Center(
+                child: Text(
+              AppStrings.kKg,
+              style: getRegularStyle(color: ColorManager.kGreyColor),
+            )),
           ),
-          child: Center(child: Text(AppStrings.kKg,style: getRegularStyle(color: ColorManager.kGreyColor),)),
-        ),
-        Flexible(
-          child: CustomTextFormField(
-              hintText: AppStrings.kWeight,
-              horizontalMergin: 0.03,
-              controller: _kiloGramController,
-              validator: (String? val) {
-                    (String? val) {
-                  if (val == null || val.isEmpty) {
-                    return "Enter weight in kg";
-                  }
-                  return null;
-                };
-              }
+          Flexible(
+            child: CustomTextFormField(
+                hintText: AppStrings.kWeight,
+                horizontalMergin: 0.03,
+                controller: _kiloGramController,
+                validator: (String? val) {
+                  (String? val) {
+                    if (val == null || val.isEmpty) {
+                      return "Enter weight in kg";
+                    }
+                    return null;
+                  };
+                }),
           ),
-        ),
-      ],),
+        ],
+      ),
     );
-}
+  }
 }

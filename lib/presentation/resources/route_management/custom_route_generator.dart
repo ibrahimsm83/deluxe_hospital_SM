@@ -1,5 +1,5 @@
 import 'package:deluxe_hospital_sm/presentation/deshboard/deshboard_screen.dart';
-import 'package:deluxe_hospital_sm/presentation/resources/route_management/export_route_management.dart';
+import 'package:deluxe_hospital_sm/presentation/patient_screens/edit_profile/edit_profile_screen.dart';
 import 'package:flutter/material.dart';
 import '../../../model/otp_screen_argument_Model.dart';
 import '../../export_presentation.dart';
@@ -98,7 +98,7 @@ class CustomRouteGenerator {
       case CustomRouteNames.kFaceIdSetupScreenRoute:
         return MaterialPageRoute(
           builder: (context) {
-            return const FaceIdSetupScreen();
+            return  FaceIdSetupScreen();
           },
         );
 
@@ -126,6 +126,13 @@ class CustomRouteGenerator {
         return MaterialPageRoute(
           builder: (context) {
             return const ProfessionalInformationScreen();
+          },
+        );
+
+        case CustomRouteNames.kEditProfileScreenRoute:
+        return MaterialPageRoute(
+          builder: (context) {
+            return const EditProfileScreen();
           },
         );
       // case CustomRouteNames.kOTPScreenRoute:

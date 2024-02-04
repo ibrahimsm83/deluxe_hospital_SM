@@ -15,9 +15,7 @@ class CreateNewPasswordScreen extends StatefulWidget {
 
 class _CreateNewPasswordScreenState extends State<CreateNewPasswordScreen> {
   final _newPasswordController = TextEditingController();
-
   final _confirmNewPasswordController = TextEditingController();
-
   final _formKey = GlobalKey<FormState>();
 
   @override
@@ -88,7 +86,7 @@ class _CreateNewPasswordScreenState extends State<CreateNewPasswordScreen> {
                 return AppStrings.passwordvalidator;
               },
             ),
-            Spacer(),
+           const Spacer(),
             button(
                 text: AppStrings.kContinue,
                 color: ColorManager.secondary,
@@ -107,7 +105,6 @@ class _CreateNewPasswordScreenState extends State<CreateNewPasswordScreen> {
                       );
                     }else{
                       _showCongratsDialog(context);
-
                     }
 
                   }
@@ -135,7 +132,7 @@ class _CreateNewPasswordScreenState extends State<CreateNewPasswordScreen> {
                mainAxisSize: MainAxisSize.min,
                children: [
                  Image.asset(ImageAssets.doneImage),
-                 SizedBox(height: 10),
+               const SizedBox(height: 10),
                  Text(
                    AppStrings.kCongratulations,
                    style: getboldStyle(
@@ -143,7 +140,7 @@ class _CreateNewPasswordScreenState extends State<CreateNewPasswordScreen> {
                        fontSize: ScreenUtil()
                            .setSp(AppSize.s24)), // Change title color
                  ),
-                 SizedBox(height: 10),
+                const SizedBox(height: 10),
                  Text(
                    AppStrings.kYourAccountIsReadyToUse,
                    textAlign: TextAlign.center,

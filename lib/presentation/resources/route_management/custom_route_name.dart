@@ -15,6 +15,7 @@ class CustomRouteNames {
   static const String kCreateNewPasswordScreenRoute = "/CreateNewPasswordScreenRoute";
   static const String kDashboardScreenRoute = "/DashboardScreenRoute";
   static const String kProfessionalInformationScreenRoute = "/ProfessionalInformationScreenRoute";
+  static const String kEditProfileScreenRoute = "/EditProfileScreenRoute";
   // static const String kAllBookPageScreenRoute = "/AllBookPageScreenRoute";
   // static const String kVideoPlayerScreenRoute = "/VideoPlayerScreenRoute";
   // static const String kSearchScreenRoute = "/SearchScreenRoute";
