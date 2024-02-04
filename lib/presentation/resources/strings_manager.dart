@@ -25,6 +25,7 @@ class AppStrings {
   ///SignUp
   static const String kFirstName = "First Name";
   static const String kLastName = "Last Name";
+  static const String kSelectProfession = "Select Profession";
   static const String kPasswordMustBeAtLeast8Chr = "Password must be at least 8 characters long & use alphanumeric";
   static const String kPhoneNumber = "Phone Number";
   static const String kCreateNewAccount = "Create New Account";
@@ -46,6 +47,7 @@ class AppStrings {
   static const String kWeight = "weight";
   static const String kHeight = "Height";
   static const String kSelectLanguage = "Select Language";
+  static const String kISpeakLanguage = "I Speak";
 
   ///Medical Details
   static const String kMedicalDetails = "Medical Details";
@@ -67,6 +69,7 @@ class AppStrings {
 
   ///Profile Setup
   static const String kAddYourProfilePhotoSetup ="Add Your Profile Photo";
+  static const String kAddAProfessionalPhoto="Add a Professional Photo";
   static const String kContinue ="Continue";
   static const String kTakePhoto ="Take Photo";
   static const String kUploadFromGallery ="Upload From Gallery";
@@ -92,8 +95,25 @@ class AppStrings {
   static const String kCreateYourNewPassword ="Create your new password !";
   static const String kNewPassword ="New password";
   static const String kConfirmNewPassword ="Confirm New Password";
+///Professional Information
+  static const String kProfession="Profession";
+  static const String kProfessionalInformation="Professional Information";
+  static const String kSelectSpecialtyOrRank="Select Specialty or Rank";
+  static const String kLicensingAuthority="Licensing Authority";
+  static const String kRegistrationNumber ="Registration Number";
+  static const String kIWorkAt="I Work at";
+  static const String kYearsOfExperience="Years of Experience";
+  static const String kAddBio="Add Bio";
+  static const String kDegree="Degree";
+  static const String kInstitution="Institution";
+  static const String kAddMore="Add More";
+  static const String kUploadYourIdCard="Upload your id Card";
+  static const String kUploadYourDegreeDocuments="Upload your Degree Documents";
+  static const String kUploadYourSignature="Upload your Signature";
+  static const String kDrawYourSignature="Draw your Signature";
 
-  ///Deshboard
+
+  ///Dashboard
   static const String kHome ="Home";
   static const String kAppointment ="Appointment";
   static const String kChat ="Chat";

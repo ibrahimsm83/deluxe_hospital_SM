@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
 import '../../export_dulex.dart';
 
 class ChooseAccountScreen extends StatelessWidget {
-  const ChooseAccountScreen({super.key});
-
+   ChooseAccountScreen({super.key});
+  final UserController userController = Get.put(UserController());
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -41,6 +42,7 @@ class ChooseAccountScreen extends StatelessWidget {
                         color: ColorManager.kLightBlueColor,
                         context: context,
                         onTap: () {
+                          userController.setUserRole(UserRole.Patient);
                           Navigator.pushNamedAndRemoveUntil(
                             context,
                             CustomRouteNames.kLoginScreenRoute,
@@ -52,7 +54,14 @@ class ChooseAccountScreen extends StatelessWidget {
                         text: AppStrings.continueAsAHealthProfessional,
                         color: ColorManager.secondary,
                         context: context,
-                        onTap: () {}),
+                        onTap: () {
+                          userController.setUserRole(UserRole.HealthProfessional);
+                          Navigator.pushNamedAndRemoveUntil(
+                            context,
+                            CustomRouteNames.kLoginScreenRoute,
+                                (page) => true,
+                          );
+                        }),
                   ],
                 ),
               ),

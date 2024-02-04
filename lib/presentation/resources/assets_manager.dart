@@ -4,7 +4,6 @@ const String ICON_PATH = "assets/icons/SVG";
 class ImageAssets {
 
   ImageAssets._();
-  // static const String splashImage = "$IMAGE_PATH/splashImage.png";
   static const String appLogo = "$ICON_PATH/appLogo.svg";
   static const String appLogoImage = "$IMAGE_PATH/Deluxe Hospital Logo.PNG";
   static const String demoUserImage = "$IMAGE_PATH/user.png";
@@ -15,7 +14,11 @@ class ImageAssets {
   static const String doneImage = "$IMAGE_PATH/done.png";
   static const String fingerPrintImage = "$IMAGE_PATH/Fingerprint.png";
 
-  ///Deshboard
+  ///Professional Information
+  static const String kIdCardIcon = "$ICON_PATH/idCard.svg";
+  static const String kSignatureIcon = "$ICON_PATH/signature.svg";
+
+  ///Dashboard
   static const String kAppointmentIcon = "$ICON_PATH/appointment.svg";
   static const String kArticlesIcon = "$ICON_PATH/articles.svg";
   static const String kChatIcon = "$ICON_PATH/chat.svg";

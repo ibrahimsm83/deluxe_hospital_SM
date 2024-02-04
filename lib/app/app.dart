@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
 import '../presentation/resources/color_manager.dart';
 import '../presentation/resources/export_resources.dart';
 
@@ -30,7 +31,7 @@ class _MyAppState extends State<MyApp> {
         minTextAdapt: true,
         splitScreenMode: true,
         builder: (context, child) {
-          return MaterialApp(
+          return GetMaterialApp(
             debugShowCheckedModeBanner: false,
             title: 'Deluxe Hospital',
             onGenerateRoute: CustomRouteGenerator.generateRoute,

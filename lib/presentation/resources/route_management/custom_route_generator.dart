@@ -1,7 +1,4 @@
 import 'package:deluxe_hospital_sm/presentation/deshboard/deshboard_screen.dart';
-import 'package:deluxe_hospital_sm/presentation/medical_details/medical_details_screen.dart';
-import 'package:deluxe_hospital_sm/presentation/otp_code_verification/otp_code_verification.dart';
-import 'package:deluxe_hospital_sm/presentation/profile_picture_setup/profile_picture_setup_screen.dart';
 import 'package:deluxe_hospital_sm/presentation/resources/route_management/export_route_management.dart';
 import 'package:flutter/material.dart';
 import '../../../model/otp_screen_argument_Model.dart';
@@ -42,7 +39,7 @@ class CustomRouteGenerator {
       case CustomRouteNames.kChooseAccountScreenRoute:
         return MaterialPageRoute(
           builder: (context) {
-            return const ChooseAccountScreen();
+            return ChooseAccountScreen();
           },
         );
 
@@ -122,6 +119,13 @@ class CustomRouteGenerator {
         return MaterialPageRoute(
           builder: (context) {
             return  DashboardScreen();
+          },
+        );
+
+        case CustomRouteNames.kProfessionalInformationScreenRoute:
+        return MaterialPageRoute(
+          builder: (context) {
+            return const ProfessionalInformationScreen();
           },
         );
       // case CustomRouteNames.kOTPScreenRoute:
