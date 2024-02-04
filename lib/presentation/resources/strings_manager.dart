@@ -112,43 +112,30 @@ class AppStrings {
   static const String kUploadYourSignature="Upload your Signature";
   static const String kDrawYourSignature="Draw your Signature";
 
-
   ///Dashboard
   static const String kHome ="Home";
   static const String kAppointment ="Appointment";
   static const String kChat ="Chat";
   static const String kArticles ="Articles";
   static const String kProfile ="Profile";
+  static const String kSeeAll ="See all";
+  static const String kProfessionalCategory ="Professional Category";
+  static const String kYourAbleProfessionals ="Your Able Professionals";
 
-
-  // /Forgot Password
-  // static const String Forgotpassword = "Forgot password";
-  // static const String selectWhichContactDetails =
-  //     "Select which contact details should we use to reset your password:";
-  // static const String viasms = "via sms:";
-  // static const String viaemail = "via email:";
-  // static const String phoneNumberHint = "*** *******61";
-  // static const String emailHintText = "****ic16@gmail.com";
-  //
-  // ///Otp verify Code
-  //
-  // static const String verify = "Verify";
-  // static const String verifyCode = "Verify Code";
-  // static const String resendCode = "Resend Code";
-  // static const String dontRecieveCode = "Dont Recieve Code?\t";
-  // static const String verifyCodeDesc =
-  //     "Enter your verification code from your email or phone number that we’ve sent";
-  //
-  // ///Verified
-  // static const String verified = "Code Verified";
-  // static const String verifiedDes =
-  //     "You have successfully verified your code.Please use your password when logging in";
-
-  ///Confirmation code
-  // static const String enterconfirmationcode = "Enter confirmation code";
-  // static const String a4digitCode = "A 4-digit code was sent ";
-  // static const String resendCode = "Resend code";
-  // static const String Continue = "Continue";
+  ///My Appointment
+  static const String kMyAppointment ="My Appointment";
+  static const String kUpcoming ="Upcoming";
+  static const String kComplete ="Complete";
+  static const String kCancelled ="Cancelled";
+  static const String kToday ="Today";
+   ///Chat
+  static const String kMessage ="Message";
+  static const String kSearchMessage ="Search Messages";
+  ///Articles
+  static const String kHowtoEatHealthy="How to Eat Healthy";
+  static const String kArticlesDesc="You have successfully canceled your appointment with Dr. Alan Watson on December 24, 2024, 13:00 p.m. 80% of the funds will be returned to your account.ViewMore";
+    ///My Profile
+  static const String kMyProfile="MyProfile";
 
   ///Validator
   static const String otpCode = "Otp Code";

@@ -1,6 +1,10 @@
 // ignore_for_file: deprecated_member_use
 
+import 'package:deluxe_hospital_sm/presentation/deshboard/Articles_screen.dart';
+import 'package:deluxe_hospital_sm/presentation/deshboard/appointment_screen.dart';
+import 'package:deluxe_hospital_sm/presentation/deshboard/chat_screen.dart';
 import 'package:deluxe_hospital_sm/presentation/deshboard/home_screen.dart';
+import 'package:deluxe_hospital_sm/presentation/deshboard/profile_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -40,16 +44,10 @@ class _DashboardScreenState extends State<DashboardScreen> {
           },
           children: <Widget>[
             HomeView(),
-            // Container(child: Center(child: Text("Home",style: TextStyle(color: Colors.white),)),),
-            Container(child: Center(child: Text("Appointment",style: TextStyle(color: Colors.white),)),),
-            Container(child: Center(child: Text("Chat",style: TextStyle(color: Colors.white),)),),
-            Container(child: Center(child: Text("Articles",style: TextStyle(color: Colors.white),)),),
-            Container(child: Center(child: Text("Profile",style: TextStyle(color: Colors.white),)),),
-            // DeshboardView(),
-            // StreamsView(),
-            // MessagesView(),
-            // NotificationView(),
-            // ProfileView(),
+            AppointmentView(),
+            ChatView(),
+            ArticlesView(),
+            ProfileView(),
           ],
         ),
       ),

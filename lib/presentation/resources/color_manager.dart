@@ -10,6 +10,8 @@ class ColorManager {
   static Color kGreyColor = const Color(0xffB5B5C3);
   static Color kLightBlackColor = const Color(0xff5F5F6B);
   static Color kGreenColor = const Color(0xff1CA046);
+  static Color kStarColor = const Color(0xffFFAD0A);
+  static Color kDarkGreyColor = const Color(0xff6F6F6F);
   // static Color textInputColor = const Color(0xff1F2024);
   // static Color headingColor = const Color(0xff666666);
   // static Color subheadingColor = const Color(0xff71727A);
