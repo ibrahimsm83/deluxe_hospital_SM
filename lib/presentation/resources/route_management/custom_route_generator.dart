@@ -1,8 +1,9 @@
 import 'package:deluxe_hospital_sm/presentation/deshboard/deshboard_screen.dart';
-import 'package:deluxe_hospital_sm/presentation/patient_screens/edit_profile/edit_profile_screen.dart';
 import 'package:flutter/material.dart';
+import '../../../export_dulex.dart';
 import '../../../model/otp_screen_argument_Model.dart';
-import '../../export_presentation.dart';
+import '../../patient_screens/pay_for_someone/pay_for_someone_screen.dart';
+
 
 
 class CustomRouteGenerator {
@@ -133,6 +134,36 @@ class CustomRouteGenerator {
         return MaterialPageRoute(
           builder: (context) {
             return const EditProfileScreen();
+          },
+        );
+        case CustomRouteNames.kNotificationsScreenRoute:
+        return MaterialPageRoute(
+          builder: (context) {
+            return  NotificationsScreen();
+          },
+        );
+        case CustomRouteNames.kPayForSomeOneScreenRoute:
+        return MaterialPageRoute(
+          builder: (context) {
+            return  const PayForSomeOneScreen();
+          },
+        );
+        case CustomRouteNames.kPayForSomeOneTwoScreenRoute:
+        return MaterialPageRoute(
+          builder: (context) {
+            return const PayForSomeOneTwoScreen();
+          },
+        );
+        case CustomRouteNames.kSubAccountScreenRoute:
+        return MaterialPageRoute(
+          builder: (context) {
+            return  SubAccountScreen();
+          },
+        );
+        case CustomRouteNames.kPaymentsScreenRoute:
+        return MaterialPageRoute(
+          builder: (context) {
+            return  PaymentsScreen();
           },
         );
       // case CustomRouteNames.kOTPScreenRoute:

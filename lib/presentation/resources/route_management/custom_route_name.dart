@@ -16,11 +16,11 @@ class CustomRouteNames {
   static const String kDashboardScreenRoute = "/DashboardScreenRoute";
   static const String kProfessionalInformationScreenRoute = "/ProfessionalInformationScreenRoute";
   static const String kEditProfileScreenRoute = "/EditProfileScreenRoute";
-  // static const String kAllBookPageScreenRoute = "/AllBookPageScreenRoute";
-  // static const String kVideoPlayerScreenRoute = "/VideoPlayerScreenRoute";
-  // static const String kSearchScreenRoute = "/SearchScreenRoute";
-  // static const String kAudioPlayerScreenRoute = "/AudioPlayerScreenRoute";
-  // static const String kUserSettingScreenRoute = "/UserSettingScreenRoute";
+  static const String kNotificationsScreenRoute = "/NotificationsScreenRoute";
+  static const String kPayForSomeOneScreenRoute = "/PayForSomeOneScreenRoute";
+  static const String kPayForSomeOneTwoScreenRoute = "/PayForSomeOneTwoScreenRoute";
+  static const String kSubAccountScreenRoute = "/SubAccountScreenRoute";
+  static const String kPaymentsScreenRoute = "/PaymentsScreenRoute";
   // static const String kSearchVoiceScreenRoute = "/SearchVoicePage";
   // static const String kSearchVoiceRecorderScreenRoute = "/SearchVoiceRecorderView";
   // static const String kAuthorScreenRoute = "/AuthorScreenRoute";

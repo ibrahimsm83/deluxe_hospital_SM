@@ -72,6 +72,15 @@ class ImageAssets {
   static const String kSubAccountIcon = "$ICON_PATH/subAccount.svg";
   static const String kLogoutIcon = "$ICON_PATH/logout.svg";
   static const String kWalletIcon = "$ICON_PATH/wallet.svg";
+   ///Home_HealthCare
+  static const String kEditIcon = "$ICON_PATH/editIcon.svg";
+  static const String kFlayerImage = "$IMAGE_PATH/flayer.png";
+ ///Payments
+
+  static const String kGiveMeDiscountIcon = "$ICON_PATH/giveMeDiscount.svg";
+  static const String kPayForMeIcon = "$ICON_PATH/payForMe.svg";
+  static const String kCashIcon = "$ICON_PATH/cash.svg";
+  static const String kCryptoIcon = "$ICON_PATH/crypto.svg";
 
    ///Login
  static const String arrowLeftIcon = "$ICON_PATH/backArrow.svg";

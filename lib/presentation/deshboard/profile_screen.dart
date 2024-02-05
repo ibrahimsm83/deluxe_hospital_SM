@@ -40,11 +40,11 @@ class _ProfileViewState extends State<ProfileView> {
   List choicsRoute = [
    " Routes.PrivacyViewRoute,",
     CustomRouteNames.kEditProfileScreenRoute,
+    CustomRouteNames.kNotificationsScreenRoute,
+    CustomRouteNames.kPaymentsScreenRoute,
    " Routes.PrivacyViewRoute,",
-   " Routes.PrivacyViewRoute,",
-   " Routes.PrivacyViewRoute,",
-   " Routes.PrivacyViewRoute,",
-   " Routes.PrivacyViewRoute,",
+    CustomRouteNames.kSubAccountScreenRoute,
+    CustomRouteNames.kPayForSomeOneScreenRoute,
    " Routes.PrivacyViewRoute,",
 
   ];
@@ -128,14 +128,14 @@ class _ProfileViewState extends State<ProfileView> {
                               title: title[index],
                               leadingIcon:iconsList[index],
                               onTap: () {
-                                if(index==1){
-                                  Navigator.pushNamed(context, choicsRoute[1]);
+                                if(index==1|| index==2||index==3|| index==6||index==5){
+                                  Navigator.pushNamed(context, choicsRoute[index]);
                                 }
                               },
                             ),
                           ),
                         ),
-                        SizedBox(height: 50),
+                       const SizedBox(height: 50),
                       ],
                     ),
                   ),

@@ -11,4 +11,13 @@ export 'common_screens/profile_picture_setup/profile_picture_setup_screen.dart';
 export 'common_screens/forgot_password/forgot_password_screen.dart';
 export 'common_screens/create_new_password//create_new_password_screen.dart';
 export 'common_screens/medical_details/medical_details_screen.dart';
+export 'common_screens/notifications/notifications_screen.dart';
 export 'health_professional_screens/professional_info/professional_info_screen.dart';
+export 'patient_screens/edit_profile/edit_profile_screen.dart';
+export 'health_professional_screens/dashboard/home_helath_screen.dart';
+export 'patient_screens/pay_for_someone/pay_for_someone_two_screen.dart';
+export 'patient_screens/sub_account/sub_account_screen.dart';
+export 'patient_screens/payments/payments_screen.dart';
+
+
+

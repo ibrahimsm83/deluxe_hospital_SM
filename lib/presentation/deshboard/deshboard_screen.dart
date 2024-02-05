@@ -8,8 +8,9 @@ import 'package:deluxe_hospital_sm/presentation/deshboard/profile_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-
+import 'package:get/get.dart';
 import '../../export_dulex.dart';
+import '../health_professional_screens/dashboard/home_helath_screen.dart';
 
 class DashboardScreen extends StatefulWidget {
   const DashboardScreen({Key? key}) : super(key: key);
@@ -26,6 +27,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
     _pagecontroller = PageController(initialPage: _currentIndex);
     super.initState();
   }
+  final UserController userController = Get.find();
 
   @override
   Widget build(BuildContext context) {
@@ -43,7 +45,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
             });
           },
           children: <Widget>[
-            HomeView(),
+            userController.userRole.value==UserRole.Patient?HomeView():HomeHealthView(),
             AppointmentView(),
             ChatView(),
             ArticlesView(),

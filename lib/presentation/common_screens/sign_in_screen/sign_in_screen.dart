@@ -160,22 +160,26 @@ class _SignInScreenState extends State<SignInScreen> {
                   color: ColorManager.secondary,
                   context: context,
                   onTap: () {
-                    if(userController.userRole.value== UserRole.Patient){
+                    if (userController.userRole.value == UserRole.Patient) {
+                      Navigator.pushNamed(
+                        context,
+                        CustomRouteNames.kDashboardScreenRoute,
+                      );
+                    } else {
                       Navigator.pushNamed(
                         context,
                         CustomRouteNames.kDashboardScreenRoute,
                       );
                     }
-                    else {
-                      CustomSnacksBar.showSnackBar(
-                        context,
-                        "HealthCare Dashboard Not Found",
-                        icon: Icon(
-                          Icons.check,
-                          color: ColorManager.kWhiteColor,
-                        ),
-                      );
-                    }
+                    // CustomSnacksBar.showSnackBar(
+                    //   context,
+                    //   "HealthCare Dashboard Not Found",
+                    //   icon: Icon(
+                    //     Icons.check,
+                    //     color: ColorManager.kWhiteColor,
+                    //   ),
+                    // );
+                    //}
 
                     //  if (_formKey.currentState!.validate()) {
                     //   print(_emailController.text);
@@ -190,7 +194,6 @@ class _SignInScreenState extends State<SignInScreen> {
                     //     ),
                     //   );
                     // }
-
                   }),
               SizedBox(height: 10.h),
               textspan(

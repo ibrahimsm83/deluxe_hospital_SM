@@ -139,6 +139,56 @@ class AppStrings {
   static const String kEditProfile="Edit Profile";
   static const String kSave="Save";
 
+ ///Home_HelathCare Professional
+  static const String kSetupYourAvailability="Set up your availability";
+  static const String kSetupNow="Set up now";
+  static const String kShareYourFlyer="Share Your Flyer";
+  static const String kEdit="Edit";
+  static const String kAddmore="Add more";
+  static const String kShare="Share";
+  static const String kTotalPatients="Total Patients";
+  static const String kNew="New";
+  static const String kRecovered="Recovered";
+  static const String kInTreatment="In Treatment";
+  static const String kCurrentPatientsQueue="Current Patients Queue";
+  static const String kReschedule="Reschedule";
+  static const String kStartConsult="Start Consult";
+  static const String kAllPatients="All Patients";
+  static const String kNewPatients="New Patients";
+  static const String kNumberOfAppointments="Number of Appointments";
+  static const String kPreviousAppointments="Previous Appointments";
+  static const String kUpcomingAppointments="Upcoming Appointments";
+  static const String kMissedAppointments="Missed Appointments";
+  static const String kCompletedConsultations="Completed Consultations";
+  static const String kInvestigationsList="Investigations List";
+  static const String kMyPatients="My Patients";
+  ///Notificaions
+  static const String kGeneralNotifications="General Notifications";
+  static const String kNotifications="Notifications";
+  static const String kSound="Sound";
+  static const String kNewServiceAvailable="New service available";
+  static const String kAppUpdates="App Updates";
+  static const String kPayments="Payments";
+  ///PayForSomeOne
+  static const String kPayForSomeone="Pay For Someone";
+  static const String kEnterTheCode="Enter the code";
+  static const String kEnterTheCopyWhichWasSentToYou="Enter the copy which was sent to you to make the appointment payment.";
+  ///PayForSomeOneTwo
+  static const String kScheduledAppointment="Scheduled Appointment";
+  static const String kPatientInformation="Patient Information";
+  static const String kYourPackage="Your Package";
+  static const String kDuration="Duration";
+  static const String kPay="Pay";
+  ///Sub Account
+  static const String kSubAccount="Sub Account";
+  static const String kCreateNew="Create new";
+  static const String kSelectThePaymentMethod="Select the payment method  you want to use";
+  ///Payments
+   static const String kCash="Cash";
+   static const String kCrypto="Crypto";
+   static const String kPayForMe="Pay for me";
+   static const String kGiveMeDiscount="Give me discount";
+
   ///Validator
   static const String otpCode = "Otp Code";
   static const String otpValidator = "Please fill all Fields";

@@ -178,45 +178,45 @@ class _HomeViewState extends State<HomeView> {
       Column(
         mainAxisAlignment: MainAxisAlignment.end,
         children: [
-          Container(
-              decoration: BoxDecoration(
-                shape: BoxShape.circle,
-                border: Border.all(
-                  color: ColorManager.secondary,
-                  width: 2.5, // Set your desired border width
-                ),
-              ),
-              child: FloatingActionButton(
-                onPressed: () {
-                },
-                backgroundColor: ColorManager.secondary.withOpacity(0.5),
-                child: SvgPicture.asset(
-                  ImageAssets.kSendIcon,
-                ),
-                shape: CircleBorder(),
-              )),
-         const SizedBox(height: 16.0),
-          Container(
-            decoration: BoxDecoration(
-              shape: BoxShape.circle,
-              border: Border.all(
-                color: ColorManager.secondary, // Set your desired border color
-                width: 2.0, // Set your desired border width
-              ),
-            ),
-            child: FloatingActionButton(
-              onPressed: () {
-                // Add your desired action when the button is pressed
-                // print('Button 2 pressed!');
-              },
-              backgroundColor: ColorManager.secondary.withOpacity(0.5),
-              child: SvgPicture.asset(
-                ImageAssets.kDoubleChatMessageIcon,
-              ),
-              shape: CircleBorder(),
-            ),
-          ),
-          const  SizedBox(height: 16.0), // Adjust the spacing between buttons
+         //  Container(
+         //      decoration: BoxDecoration(
+         //        shape: BoxShape.circle,
+         //        border: Border.all(
+         //          color: ColorManager.secondary,
+         //          width: 2.5, // Set your desired border width
+         //        ),
+         //      ),
+         //      child: FloatingActionButton(
+         //        onPressed: () {
+         //        },
+         //        backgroundColor: ColorManager.secondary.withOpacity(0.5),
+         //        child: SvgPicture.asset(
+         //          ImageAssets.kSendIcon,
+         //        ),
+         //        shape: CircleBorder(),
+         //      )),
+         // const SizedBox(height: 16.0),
+         //  Container(
+         //    decoration: BoxDecoration(
+         //      shape: BoxShape.circle,
+         //      border: Border.all(
+         //        color: ColorManager.secondary, // Set your desired border color
+         //        width: 2.0, // Set your desired border width
+         //      ),
+         //    ),
+         //    child: FloatingActionButton(
+         //      onPressed: () {
+         //        // Add your desired action when the button is pressed
+         //        // print('Button 2 pressed!');
+         //      },
+         //      backgroundColor: ColorManager.secondary.withOpacity(0.5),
+         //      child: SvgPicture.asset(
+         //        ImageAssets.kDoubleChatMessageIcon,
+         //      ),
+         //      shape: CircleBorder(),
+         //    ),
+         //  ),
+         //  const  SizedBox(height: 16.0), // Adjust the spacing between buttons
           Container(
             decoration: BoxDecoration(
               shape: BoxShape.circle,
