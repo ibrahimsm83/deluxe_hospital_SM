@@ -155,7 +155,7 @@ class _HomeViewState extends State<HomeView> {
                     return GestureDetector(
                       onTap: () {
                       },
-                      child: _UserCardWidget(data: userCardList![index]!),
+                      child: UserCardWidget(data: userCardList![index]!),
                     );
                   },
                 ),
@@ -369,38 +369,67 @@ class _HomeViewState extends State<HomeView> {
       child: Row(
         children: [
           Flexible(
-            child: TextField(
-              style: TextStyle(color: Colors.white),
-              decoration: InputDecoration(
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(10.0),
-                  borderSide: BorderSide(
+            child: InkWell(
+              onTap: (){
+                Navigator.pushNamed(
+                  context,
+                  CustomRouteNames.kSearchResultScreenRoute,
+                );
+              },
+              child: TextField(
+                enabled: false,
+                style: TextStyle(color: Colors.white),
+                decoration: InputDecoration(
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(10.0),
+                    borderSide: BorderSide(
+                      color: ColorManager.kGreyColor,
+                    ),
+                  ),
+                  enabledBorder:OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(10.0),
+                    borderSide: BorderSide(
+                      color: ColorManager.kGreyColor,
+                    ),
+                  ) ,
+                  disabledBorder:OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(10.0),
+                    borderSide: BorderSide(
+                      color: ColorManager.kGreyColor,
+                    ),
+                  )  ,
+                  prefixIcon: Icon(
+                    Icons.search,
+                    color: Colors.lightBlueAccent,
+                  ),
+                  labelText: 'Search a health professional',
+                  labelStyle: getRegularStyle(
                     color: ColorManager.kGreyColor,
                   ),
-                ),
-                prefixIcon: Icon(
-                  Icons.search,
-                  color: Colors.lightBlueAccent,
-                ),
-                labelText: 'Search a health professional',
-                labelStyle: getRegularStyle(
-                  color: ColorManager.kGreyColor,
                 ),
               ),
             ),
           ),
           SizedBox(width: 15),
-          Container(
-            padding: EdgeInsets.all(15),
-            height: 60,
-            width: 60,
-            decoration: BoxDecoration(
-                color: ColorManager.kLightBlueColor,
-                borderRadius: BorderRadius.circular(12)),
-            child: SvgPicture.asset(
-              ImageAssets.kFilterIcon,
-              // width: 10,
-              // height: 10,
+          InkWell(
+            onTap: (){
+              Navigator.pushNamed(
+                context,
+                CustomRouteNames.kSearchFilterScreenRoute,
+              );
+            },
+            child: Container(
+              padding: EdgeInsets.all(15),
+              height: 60,
+              width: 60,
+              decoration: BoxDecoration(
+                  color: ColorManager.kLightBlueColor,
+                  borderRadius: BorderRadius.circular(12)),
+              child: SvgPicture.asset(
+                ImageAssets.kFilterIcon,
+                // width: 10,
+                // height: 10,
+              ),
             ),
           )
         ],
@@ -585,134 +614,4 @@ class _HomeViewState extends State<HomeView> {
   }
 }
 
-class _UserCardWidget extends StatelessWidget {
-  final UserCardModel data;
 
-  const _UserCardWidget({Key? key, required this.data}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Card(
-      color: ColorManager.kLightBlueColor,
-      elevation: 0.0,
-      margin: const EdgeInsets.symmetric(horizontal: 8, vertical: 10),
-      child: Column(
-        children: [
-          Padding(
-            padding: const EdgeInsets.only(right: 8.0, top: 8.0),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.end,
-              children: [
-                SvgPicture.asset(
-                  ImageAssets.kMessageUserIcon,
-                  width: 12,
-                  height: 12,
-                ),
-                const SizedBox(width: 10),
-                SvgPicture.asset(
-                  ImageAssets.kAudioCallIcon,
-                  width: 12,
-                  height: 12,
-                ),
-                const SizedBox(width: 10),
-                SvgPicture.asset(
-                  ImageAssets.kVideoCallIcon,
-                  width: 12,
-                  height: 12,
-                ),
-              ],
-            ),
-          ),
-          Row(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Padding(
-                padding: const EdgeInsets.only(left: 10.0),
-                child: ClipRRect(
-                  borderRadius: BorderRadius.circular(12.0),
-                  child: Image.asset(
-                    data.userImage,
-                    height: 60,
-                    width: 60,
-                  ),
-                ),
-              ),
-              SizedBox(width: 5.w),
-              Flexible(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Text(data.name,
-                        style: getmediumStyle(
-                            color: ColorManager.kWhiteColor, fontSize: 14)),
-                    SizedBox(height: 2.h),
-                    Row(
-                      children: [
-                        SvgPicture.asset(
-                          ImageAssets.kHospitalIcon,
-                          width: 12,
-                          height: 12,
-                        ),
-                        const SizedBox(width: 5),
-                        Text(
-                          data.specialist,
-                          style: getRegularStyle(
-                            color: ColorManager.kWhiteColor,
-                          ),
-                        ),
-                        const SizedBox(width: 10),
-                        SvgPicture.asset(
-                          ImageAssets.kLocationIcon,
-                          width: 12,
-                          height: 12,
-                        ),
-                        const SizedBox(width: 5),
-                        Text(
-                          data.language,
-                          style: getRegularStyle(
-                            color: ColorManager.kWhiteColor,
-                          ),
-                        ),
-                      ],
-                    ),
-                    // SizedBox(height: 10.h),
-                    ///Buttons
-                    Padding(
-                      padding: const EdgeInsets.only(top: 5.0, bottom: 10.0),
-                      child: Row(
-                        children: [
-                          const SizedBox(width: 2),
-                          RatingBar.builder(
-                            itemSize: 15,
-                            initialRating: data.reviews.toDouble(),
-                            minRating: 0,
-                            direction: Axis.horizontal,
-                            allowHalfRating: false,
-                            ignoreGestures: true,
-                            itemCount: 5,
-                            itemPadding:
-                                const EdgeInsets.symmetric(horizontal: 1.0),
-                            itemBuilder: (context, _) => Icon(
-                              Icons.star,
-                              color: ColorManager.kStarColor,
-                            ),
-                            onRatingUpdate: (rating) {},
-                          ),
-                          Text("115 Reviews",
-                              style: getRegularStyle(
-                                color: ColorManager.kDarkGreyColor,
-                              )),
-                        ],
-                      ),
-                    ),
-                  ],
-                ),
-              )
-            ],
-          ),
-        ],
-      ),
-    );
-  }
-}

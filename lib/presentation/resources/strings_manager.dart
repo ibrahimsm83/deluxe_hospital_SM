@@ -193,7 +193,16 @@ class AppStrings {
   static const String kScheduleChanged="Schedule Changed";
   static const String kAppointmentSuccess="Appointment Success !";
   static const String kNotificaionDes="You have successfully canceled your appointment with Dr. Alan Watson on December 24, 2024, 13:00 p.m. 80% of the funds will be returned to your account.";
-
+ ///Search
+  static const String kSearch="Search";
+  static const String kSearchAHealthProfessional="Search a health professional";
+  static const String kFilters="Filters";
+  static const String kReset="Reset";
+  static const String kAvailability="Availability";
+  static const String kCardiologist="Cardiologist";
+  static const String kLocation="Location";
+  static const String kRating="Rating";
+  static const String kApplyFilter="Apply Filter";
 
   ///Validator
   static const String otpCode = "Otp Code";

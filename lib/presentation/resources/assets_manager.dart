@@ -84,7 +84,8 @@ class ImageAssets {
   ///Notification
   static const String kAppointmentCancelledIcon = "$ICON_PATH/appointmentCancelled.svg";
   static const String kScheduleChangedIcon = "$ICON_PATH/scheduleChanged.svg";
-
+///Search
+  static const String kFilterCloseIcon = "$ICON_PATH/filterClose.svg";
 
 
 

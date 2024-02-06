@@ -19,6 +19,8 @@ export 'patient_screens/pay_for_someone/pay_for_someone_two_screen.dart';
 export 'patient_screens/sub_account/sub_account_screen.dart';
 export 'patient_screens/payments/payments_screen.dart';
 export 'common_screens/home_notifications/home_notifications_screen.dart';
+export 'common_screens/search/search_filter_screen.dart';
+export 'common_screens/search/search_result_screen.dart';
 
 
 
