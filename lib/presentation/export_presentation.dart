@@ -21,6 +21,7 @@ export 'patient_screens/payments/payments_screen.dart';
 export 'common_screens/home_notifications/home_notifications_screen.dart';
 export 'common_screens/search/search_filter_screen.dart';
 export 'common_screens/search/search_result_screen.dart';
+export 'common_screens/doctor_profile/doctor_profile_screen.dart';
 
 
 

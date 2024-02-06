@@ -24,6 +24,6 @@ class CustomRouteNames {
   static const String kHomeNotificationsScreenRoute = "/HomeNotificationsScreenRoute";
   static const String kSearchFilterScreenRoute = "/SearchFilterScreenRoute";
   static const String kSearchResultScreenRoute = "/SearchResultScreenRoute";
-  // static const String kSubCategoryScreenRoute = "/SubCategoryScreenRoute";
+  static const String kDoctorProfileScreenRoute = "/DoctorProfileScreenRoute";
 
 }

@@ -154,6 +154,10 @@ class _HomeViewState extends State<HomeView> {
                   itemBuilder: (context, index) {
                     return GestureDetector(
                       onTap: () {
+                        Navigator.pushNamed(
+                          context,
+                          CustomRouteNames.kDoctorProfileScreenRoute,
+                        );
                       },
                       child: UserCardWidget(data: userCardList![index]!),
                     );

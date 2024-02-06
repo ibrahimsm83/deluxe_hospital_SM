@@ -185,31 +185,13 @@ class CustomRouteGenerator {
             return  SearchResultScreen();
           },
         );
+          case CustomRouteNames.kDoctorProfileScreenRoute:
+        return MaterialPageRoute(
+          builder: (context) {
+            return  DoctorProfileScreen();
+          },
+        );
 
-
-      // case CustomRouteNames.kOTPScreenRoute:
-      //   final String email = settings.arguments as String;
-      //   return MaterialPageRoute(
-      //     builder: (context) {
-      //       return BlocProvider<VerifyOtpCubit>(
-      //         create: (context) => VerifyOtpCubit(),
-      //         child: OtpScreen(
-      //           email: email,
-      //         ),
-      //       );
-      //     },
-      //   );
-
-
-      // case CustomRouteNames.kUserSettingScreenRoute:
-      //   return MaterialPageRoute(
-      //     builder: (context) {
-      //       return BlocProvider(
-      //         create: (context) => UserSettingCubit(),
-      //         child: const UserSettingsScreen(),
-      //       );
-      //     },
-      //   );
 
       default:
         return null;

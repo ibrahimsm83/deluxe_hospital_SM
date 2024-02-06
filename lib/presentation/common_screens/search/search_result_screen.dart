@@ -99,6 +99,10 @@ class _SearchResultScreenState extends State<SearchResultScreen> {
               itemBuilder: (context, index) {
                 return GestureDetector(
                   onTap: () {
+                    Navigator.pushNamed(
+                      context,
+                      CustomRouteNames.kDoctorProfileScreenRoute,
+                    );
                   },
                   child: UserCardWidget(data: userCardList![index]!),
                 );

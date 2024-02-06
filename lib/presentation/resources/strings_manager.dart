@@ -203,6 +203,20 @@ class AppStrings {
   static const String kLocation="Location";
   static const String kRating="Rating";
   static const String kApplyFilter="Apply Filter";
+  ///Doctor Profile
+  static const String kPatients="Patients";
+  static const String kYearsExp ="Years Exp..";
+  static const String kRatings="ratings";
+  static const String kReviews="Reviews";
+  static const String kAboutMe="About me";
+  static const String kCheckAvailability="Check Availability";
+  static const String kConsultationCharges="Consultation Charges";
+  static const String kWorksAt="Works at";
+  static const String kQualification="Qualification";
+  static const String kSpeaks="Speaks";
+  static const String kLoadMoreReviews="Load More Reviews...";
+  static const String kBookAppointment="Book Appointment";
+
 
   ///Validator
   static const String otpCode = "Otp Code";
