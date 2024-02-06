@@ -10,7 +10,8 @@ class ImageAssets {
   static const String demoUser1Image = "$IMAGE_PATH/doctorImage1.png";
   static const String demoUser2Image = "$IMAGE_PATH/doctorImage2.png";
   static const String doctorsImage = "$IMAGE_PATH/Doctors_Image.png";
-
+  ///Login
+  static const String arrowLeftIcon = "$ICON_PATH/backArrow.svg";
   ///FaceId,FingerPrint
   static const String faceIdImage = "$IMAGE_PATH/Faceid.png";
   static const String doneImage = "$IMAGE_PATH/done.png";
@@ -75,39 +76,16 @@ class ImageAssets {
    ///Home_HealthCare
   static const String kEditIcon = "$ICON_PATH/editIcon.svg";
   static const String kFlayerImage = "$IMAGE_PATH/flayer.png";
- ///Payments
-
+  ///Payments
   static const String kGiveMeDiscountIcon = "$ICON_PATH/giveMeDiscount.svg";
   static const String kPayForMeIcon = "$ICON_PATH/payForMe.svg";
   static const String kCashIcon = "$ICON_PATH/cash.svg";
   static const String kCryptoIcon = "$ICON_PATH/crypto.svg";
+  ///Notification
+  static const String kAppointmentCancelledIcon = "$ICON_PATH/appointmentCancelled.svg";
+  static const String kScheduleChangedIcon = "$ICON_PATH/scheduleChanged.svg";
 
-   ///Login
- static const String arrowLeftIcon = "$ICON_PATH/backArrow.svg";
-  // static const String mail = "$ICON_PATH/mail.svg";
-  // static const String signInTextImg = "$IMAGE_PATH/signIn.png";
-  // static const String googleIcon = "$ICON_PATH/google.svg";
-  // static const String facebookIcon = "$ICON_PATH/facebook.svg";
-  // static const String passwordIcon = "$ICON_PATH/Password.svg";
-  // static const String arrowRightIcon = "$ICON_PATH/arrowRight.svg";
-  // static const String loginHeaderImage = "$IMAGE_PATH/loginHeaderImage.png";
-  //
-  // //SignUp
-  // static const String profileIcon = "$ICON_PATH/Profile.svg";
-  // static const String signUpTextImg = "$IMAGE_PATH/SignUp.png";
-  //
-  // ///ForgotPassword
-  // static const String call = "$ICON_PATH/call.svg";
-  // static const String mailfpw = "$ICON_PATH/mailFpw.svg";
-  // static const String backArrow1 = "$ICON_PATH/backArrow1.svg";
-  // static const String leftArrow = "$ICON_PATH/leftArrow.svg";
-  //
-  // //emailOtpVerify
-  // static const String emailOtpTextImg = "$IMAGE_PATH/verifyCode.png";
-  //
-  // ///Verified
-  //
-  // static const String verifiedImg = "$IMAGE_PATH/verifyed.png";
+
 
 
 }

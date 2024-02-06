@@ -154,15 +154,6 @@ class _HomeViewState extends State<HomeView> {
                   itemBuilder: (context, index) {
                     return GestureDetector(
                       onTap: () {
-                        //
-                        // final argument = BookDetailPageArgumentModel.empty();
-                        // argument.bookModel = screenBloc.searchList![index];
-                        // argument.argumentIsBookModel = true;
-                        // Navigator.pushNamed(
-                        //   context,
-                        //   CustomRouteNames.kBookDetailScreenRoute,
-                        //   arguments: argument,
-                        // );
                       },
                       child: _UserCardWidget(data: userCardList![index]!),
                     );
@@ -356,7 +347,14 @@ class _HomeViewState extends State<HomeView> {
         ),
         Column(
           children: [
-            SvgPicture.asset(ImageAssets.kBellIcon),
+            InkWell(
+                onTap: (){
+                  Navigator.pushNamed(
+                    context,
+                    CustomRouteNames.kHomeNotificationsScreenRoute,
+                  );
+                },
+                child: SvgPicture.asset(ImageAssets.kBellIcon)),
             SizedBox(height: 7.0),
             SvgPicture.asset(ImageAssets.kEmergencyIcon),
           ],

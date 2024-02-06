@@ -1,7 +1,6 @@
 import 'package:deluxe_hospital_sm/presentation/deshboard/deshboard_screen.dart';
 import 'package:flutter/material.dart';
 import '../../../export_dulex.dart';
-import '../../../model/otp_screen_argument_Model.dart';
 import '../../patient_screens/pay_for_someone/pay_for_someone_screen.dart';
 
 
@@ -47,14 +46,14 @@ class CustomRouteGenerator {
         case CustomRouteNames.kLoginScreenRoute:
         return MaterialPageRoute(
           builder: (context) {
-            return   SignInScreen();
+            return   const SignInScreen();
           },
         );
 
         case CustomRouteNames.kSignUpScreenRoute:
         return MaterialPageRoute(
           builder: (context) {
-            return   SignUpScreen();
+            return  const SignUpScreen();
           },
         );
       case CustomRouteNames.kOtpVerificationScreenRoute:
@@ -164,6 +163,13 @@ class CustomRouteGenerator {
         return MaterialPageRoute(
           builder: (context) {
             return  PaymentsScreen();
+          },
+        );
+
+        case CustomRouteNames.kHomeNotificationsScreenRoute:
+        return MaterialPageRoute(
+          builder: (context) {
+            return  HomeNotificationsScreen();
           },
         );
       // case CustomRouteNames.kOTPScreenRoute:

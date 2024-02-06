@@ -171,10 +171,18 @@ class _HomeHealthViewState extends State<HomeHealthView> {
               ),
             ),
             const SizedBox(width: 7.0),
-            SvgPicture.asset(
-              ImageAssets.kBellIcon,
-              height: 20,
-              width: 20,
+            InkWell(
+              onTap: (){
+                Navigator.pushNamed(
+                  context,
+                  CustomRouteNames.kHomeNotificationsScreenRoute,
+                );
+              },
+              child: SvgPicture.asset(
+                ImageAssets.kBellIcon,
+                height: 20,
+                width: 20,
+              ),
             ),
           ],
         )

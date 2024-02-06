@@ -188,6 +188,12 @@ class AppStrings {
    static const String kCrypto="Crypto";
    static const String kPayForMe="Pay for me";
    static const String kGiveMeDiscount="Give me discount";
+   ///Notification
+  static const String kAppointmentCancelled="Appointment Cancelled !";
+  static const String kScheduleChanged="Schedule Changed";
+  static const String kAppointmentSuccess="Appointment Success !";
+  static const String kNotificaionDes="You have successfully canceled your appointment with Dr. Alan Watson on December 24, 2024, 13:00 p.m. 80% of the funds will be returned to your account.";
+
 
   ///Validator
   static const String otpCode = "Otp Code";

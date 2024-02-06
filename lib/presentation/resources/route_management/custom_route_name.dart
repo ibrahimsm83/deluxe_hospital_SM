@@ -21,7 +21,7 @@ class CustomRouteNames {
   static const String kPayForSomeOneTwoScreenRoute = "/PayForSomeOneTwoScreenRoute";
   static const String kSubAccountScreenRoute = "/SubAccountScreenRoute";
   static const String kPaymentsScreenRoute = "/PaymentsScreenRoute";
-  // static const String kSearchVoiceScreenRoute = "/SearchVoicePage";
+  static const String kHomeNotificationsScreenRoute = "/HomeNotificationsScreenRoute";
   // static const String kSearchVoiceRecorderScreenRoute = "/SearchVoiceRecorderView";
   // static const String kAuthorScreenRoute = "/AuthorScreenRoute";
   // static const String kSubCategoryScreenRoute = "/SubCategoryScreenRoute";
