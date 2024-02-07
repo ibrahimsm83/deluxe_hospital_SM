@@ -22,6 +22,12 @@ export 'common_screens/home_notifications/home_notifications_screen.dart';
 export 'common_screens/search/search_filter_screen.dart';
 export 'common_screens/search/search_result_screen.dart';
 export 'common_screens/doctor_profile/doctor_profile_screen.dart';
+export 'common_screens/book_appointment/book_appointment_screen.dart';
+export 'patient_screens/patient_details/patient_details_screen.dart';
+export 'patient_screens/give_me_discount/give_me_discount_screen.dart';
+export 'patient_screens/payment_setup/payment_setup_screen.dart';
+export 'patient_screens/review_summary/review_summary_screen.dart';
+export 'patient_screens/scheduled_appointment/scheduled_appointment_screen.dart';
 
 
 

@@ -419,28 +419,36 @@ class _AppointmentViewState extends State<AppointmentView>
                 SizedBox(width: 10),
                 Flexible(
                   flex: 2,
-                  child: Container(
-                    decoration: BoxDecoration(
-                      color: ColorManager.kWhiteColor,
-                      borderRadius: BorderRadius.circular(30.0),
-                    ),
-                    child: Padding(
-                      padding: const EdgeInsets.all(10.0),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          SvgPicture.asset(
-                            ImageAssets.kCalendarEditIcon,
-                            height: 15,
-                            width: 15,
-                          ),
-                          SizedBox(
-                              width: 3), // Adjust spacing between icon and text
-                          Text('Reschedule',
-                              style: getRegularStyle(
-                                  fontSize: 10.sp,
-                                  color: ColorManager.kGreenColor)),
-                        ],
+                  child: InkWell(
+                    onTap: (){
+                      Navigator.pushNamed(
+                        context,
+                        CustomRouteNames.kScheduledAppointmentScreenRoute,
+                      );
+                    },
+                    child: Container(
+                      decoration: BoxDecoration(
+                        color: ColorManager.kWhiteColor,
+                        borderRadius: BorderRadius.circular(30.0),
+                      ),
+                      child: Padding(
+                        padding: const EdgeInsets.all(10.0),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            SvgPicture.asset(
+                              ImageAssets.kCalendarEditIcon,
+                              height: 15,
+                              width: 15,
+                            ),
+                            SizedBox(
+                                width: 3), // Adjust spacing between icon and text
+                            Text('Reschedule',
+                                style: getRegularStyle(
+                                    fontSize: 10.sp,
+                                    color: ColorManager.kGreenColor)),
+                          ],
+                        ),
                       ),
                     ),
                   ),

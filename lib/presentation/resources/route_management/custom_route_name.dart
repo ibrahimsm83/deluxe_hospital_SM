@@ -25,5 +25,11 @@ class CustomRouteNames {
   static const String kSearchFilterScreenRoute = "/SearchFilterScreenRoute";
   static const String kSearchResultScreenRoute = "/SearchResultScreenRoute";
   static const String kDoctorProfileScreenRoute = "/DoctorProfileScreenRoute";
+  static const String kBookAppointmentScreenRoute = "/BookAppointmentScreenRoute";
+  static const String kPatientDetailsScreenRoute = "/PatientDetailsScreenRoute";
+  static const String kGiveMeDiscountScreenRoute = "/GiveMeDiscountScreenRoute";
+  static const String kPaymentSetupScreenRoute = "/PaymentSetupScreenRoute";
+  static const String kReviewSummaryScreenRoute = "/ReviewSummaryScreenRoute";
+  static const String kScheduledAppointmentScreenRoute = "/ScheduledAppointmentScreenRoute";
 
 }

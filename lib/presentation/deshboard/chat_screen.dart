@@ -1,7 +1,7 @@
 
+import 'package:deluxe_hospital_sm/presentation/common_screens/chat_audio_video/chat_inner_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
 import '../../export_dulex.dart';
 
 class ChatView extends StatefulWidget {
@@ -72,6 +72,13 @@ class _ChatViewState extends State<ChatView> {
                           // Navigator.push(context,
                           //     MaterialPageRoute(builder: (context) =>
                           //         InnerChat()));
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => InnerChat(
+                                    image: storiesprofile[index],
+                                    name: storiesname[index],
+                                  )));
                         },
                         child: chatUser(
                             storiesname[index],

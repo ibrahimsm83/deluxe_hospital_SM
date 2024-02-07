@@ -87,7 +87,11 @@ class ImageAssets {
 
   ///Search
   static const String kFilterCloseIcon = "$ICON_PATH/filterClose.svg";
-
+  ///Chat
+  static const String kMicrophoneIcon = "$ICON_PATH/microphone.svg";
+  static const String kAttachIcon = "$ICON_PATH/attach.svg";
+  static const String kemojiIcon = "$ICON_PATH/emoji.svg";
+  static const String kDoctorImage = "$IMAGE_PATH/doctor1.jpeg";
   ///Doc Profile
   static const String kRatingIcon = "$ICON_PATH/rating.svg";
   static const String kGraphIconIcon = "$ICON_PATH/graphIcon.svg";

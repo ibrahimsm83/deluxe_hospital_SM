@@ -133,10 +133,10 @@ class DoctorProfileScreen extends StatelessWidget {
                 onTap: () {
 
 
-                    // Navigator.pushNamed(
-                    //   context,
-                    //   CustomRouteNames.kDashboardScreenRoute,
-                   // );
+                    Navigator.pushNamed(
+                      context,
+                      CustomRouteNames.kBookAppointmentScreenRoute,
+                   );
                   }),
             ],
           ),

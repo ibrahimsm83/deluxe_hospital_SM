@@ -3,8 +3,6 @@ import 'package:flutter/material.dart';
 import '../../../export_dulex.dart';
 import '../../patient_screens/pay_for_someone/pay_for_someone_screen.dart';
 
-
-
 class CustomRouteGenerator {
   CustomRouteGenerator._();
 
@@ -32,8 +30,7 @@ class CustomRouteGenerator {
       case CustomRouteNames.kInitialRoute:
         return MaterialPageRoute(
           builder: (context) {
-            return
-              const SplashScreen();
+            return const SplashScreen();
           },
         );
       case CustomRouteNames.kChooseAccountScreenRoute:
@@ -43,17 +40,17 @@ class CustomRouteGenerator {
           },
         );
 
-        case CustomRouteNames.kLoginScreenRoute:
+      case CustomRouteNames.kLoginScreenRoute:
         return MaterialPageRoute(
           builder: (context) {
-            return   const SignInScreen();
+            return const SignInScreen();
           },
         );
 
-        case CustomRouteNames.kSignUpScreenRoute:
+      case CustomRouteNames.kSignUpScreenRoute:
         return MaterialPageRoute(
           builder: (context) {
-            return  const SignUpScreen();
+            return const SignUpScreen();
           },
         );
       case CustomRouteNames.kOtpVerificationScreenRoute:
@@ -62,13 +59,12 @@ class CustomRouteGenerator {
         // final String email = settings.arguments as String;
         // final bool isForgotPw = settings.arguments as bool;
 
-
         return MaterialPageRoute(
           builder: (context) {
             return OtpCodeVerificationScreen(
-              email: argumentModel.email,//email,
-              isForgotPassword: argumentModel.isForgotPwPage//isForgotPw,
-            );
+                email: argumentModel.email, //email,
+                isForgotPassword: argumentModel.isForgotPwPage //isForgotPw,
+                );
           },
         );
       case CustomRouteNames.kPersonalInformationScreenRoute:
@@ -77,13 +73,13 @@ class CustomRouteGenerator {
             return const PersonalInformationScreen();
           },
         );
-        case CustomRouteNames.kMedicalDetailsScreenRoute:
+      case CustomRouteNames.kMedicalDetailsScreenRoute:
         return MaterialPageRoute(
           builder: (context) {
             return const MedicalDetailsScreen();
           },
         );
-        case CustomRouteNames.kProfilePictureSetupScreenRoute:
+      case CustomRouteNames.kProfilePictureSetupScreenRoute:
         return MaterialPageRoute(
           builder: (context) {
             return const ProfilePictureSetup();
@@ -98,100 +94,136 @@ class CustomRouteGenerator {
       case CustomRouteNames.kFaceIdSetupScreenRoute:
         return MaterialPageRoute(
           builder: (context) {
-            return  FaceIdSetupScreen();
+            return FaceIdSetupScreen();
           },
         );
 
-        case CustomRouteNames.kForgotPasswordScreenRoute:
+      case CustomRouteNames.kForgotPasswordScreenRoute:
         return MaterialPageRoute(
           builder: (context) {
-            return  ForgotPasswordScreen();
+            return ForgotPasswordScreen();
           },
         );
-        case CustomRouteNames.kCreateNewPasswordScreenRoute:
+      case CustomRouteNames.kCreateNewPasswordScreenRoute:
         return MaterialPageRoute(
           builder: (context) {
-            return  CreateNewPasswordScreen();
-          },
-        );
-
-        case CustomRouteNames.kDashboardScreenRoute:
-        return MaterialPageRoute(
-          builder: (context) {
-            return  DashboardScreen();
+            return CreateNewPasswordScreen();
           },
         );
 
-        case CustomRouteNames.kProfessionalInformationScreenRoute:
+      case CustomRouteNames.kDashboardScreenRoute:
+        return MaterialPageRoute(
+          builder: (context) {
+            return DashboardScreen();
+          },
+        );
+
+      case CustomRouteNames.kProfessionalInformationScreenRoute:
         return MaterialPageRoute(
           builder: (context) {
             return const ProfessionalInformationScreen();
           },
         );
 
-        case CustomRouteNames.kEditProfileScreenRoute:
+      case CustomRouteNames.kEditProfileScreenRoute:
         return MaterialPageRoute(
           builder: (context) {
             return const EditProfileScreen();
           },
         );
-        case CustomRouteNames.kNotificationsScreenRoute:
+      case CustomRouteNames.kNotificationsScreenRoute:
         return MaterialPageRoute(
           builder: (context) {
-            return  NotificationsScreen();
+            return NotificationsScreen();
           },
         );
-        case CustomRouteNames.kPayForSomeOneScreenRoute:
+      case CustomRouteNames.kPayForSomeOneScreenRoute:
         return MaterialPageRoute(
           builder: (context) {
-            return  const PayForSomeOneScreen();
+            return const PayForSomeOneScreen();
           },
         );
-        case CustomRouteNames.kPayForSomeOneTwoScreenRoute:
+      case CustomRouteNames.kPayForSomeOneTwoScreenRoute:
         return MaterialPageRoute(
           builder: (context) {
             return const PayForSomeOneTwoScreen();
           },
         );
-        case CustomRouteNames.kSubAccountScreenRoute:
+      case CustomRouteNames.kSubAccountScreenRoute:
         return MaterialPageRoute(
           builder: (context) {
-            return  SubAccountScreen();
+            return SubAccountScreen();
           },
         );
-        case CustomRouteNames.kPaymentsScreenRoute:
+      case CustomRouteNames.kPaymentsScreenRoute:
         return MaterialPageRoute(
           builder: (context) {
-            return  PaymentsScreen();
-          },
-        );
-
-        case CustomRouteNames.kHomeNotificationsScreenRoute:
-        return MaterialPageRoute(
-          builder: (context) {
-            return  HomeNotificationsScreen();
-          },
-        );
-         case CustomRouteNames.kSearchFilterScreenRoute:
-        return MaterialPageRoute(
-          builder: (context) {
-            return  SearchFilterScreen();
+            return PaymentsScreen();
           },
         );
 
-        case CustomRouteNames.kSearchResultScreenRoute:
+      case CustomRouteNames.kHomeNotificationsScreenRoute:
         return MaterialPageRoute(
           builder: (context) {
-            return  SearchResultScreen();
+            return HomeNotificationsScreen();
           },
         );
-          case CustomRouteNames.kDoctorProfileScreenRoute:
+      case CustomRouteNames.kSearchFilterScreenRoute:
         return MaterialPageRoute(
           builder: (context) {
-            return  DoctorProfileScreen();
+            return SearchFilterScreen();
           },
         );
 
+      case CustomRouteNames.kSearchResultScreenRoute:
+        return MaterialPageRoute(
+          builder: (context) {
+            return SearchResultScreen();
+          },
+        );
+      case CustomRouteNames.kDoctorProfileScreenRoute:
+        return MaterialPageRoute(
+          builder: (context) {
+            return DoctorProfileScreen();
+          },
+        );
+      case CustomRouteNames.kBookAppointmentScreenRoute:
+        return MaterialPageRoute(
+          builder: (context) {
+            return const BookAppointmentScreen();
+          },
+        );
+      case CustomRouteNames.kPatientDetailsScreenRoute:
+        return MaterialPageRoute(
+          builder: (context) {
+            return const PatientDetailsScreen();
+          },
+        );
+      case CustomRouteNames.kGiveMeDiscountScreenRoute:
+        return MaterialPageRoute(
+          builder: (context) {
+            return GiveMeDiscountScreen();
+          },
+        );
+
+        case CustomRouteNames.kPaymentSetupScreenRoute:
+        return MaterialPageRoute(
+          builder: (context) {
+            return const PaymentSetupScreen();
+          },
+        );
+        case CustomRouteNames.kReviewSummaryScreenRoute:
+        return MaterialPageRoute(
+          builder: (context) {
+            return const ReviewSummaryScreen();
+          },
+        );
+        case CustomRouteNames.kScheduledAppointmentScreenRoute:
+        return MaterialPageRoute(
+          builder: (context) {
+            return const ScheduledAppointmentScreen();
+          },
+        );
 
       default:
         return null;

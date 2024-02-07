@@ -216,6 +216,35 @@ class AppStrings {
   static const String kSpeaks="Speaks";
   static const String kLoadMoreReviews="Load More Reviews...";
   static const String kBookAppointment="Book Appointment";
+///Book Appointment
+  static const String kSelectDay="Select Day";
+  static const String kSelectHour="Select Hour";
+  static const String kSelectConsult="Select Consult";
+///Patient Details
+  static const String kPatientDetails="Patient Details";
+  static const String kSelectAccount="Select Account";
+  static const String kSharifShaikh="Sharif Shaikh (Brother)";
+  static const String kGender="Gender";
+  static const String kAge="Age";
+  static const String kWriteYourProblem="Write Your Problem";
+///Give me discount
+  static const String kShareAppLink="Share App link";
+  static const String kShareTheAppLinkAndGetDiscount="Share the app link and get discount";
+///Payment Setup
+  static const String kPaymentSetup="Payment Setup";
+  static const String kDownloadTheAppHereIsLink="Download the app here is link";
+  static const String kDownloadTheAppAndPay="Download the app and pay for someone here is link below";
+  ///Review Summary
+  static const String kReviewSummary="Review Summary";
+  static const String kDateHour="Date & Hour";
+  static const String kAppointmentType="Appointment Type";
+  static const String kAmount="Amount";
+  static const String kPaymentMethod="Payment Method";
+  static const String kDiscount="Discount";
+  static const String kTotal="Total";
+  static const String kSubmit="Sumbit";
+  ///Chatinner
+  static const String kTypeYourTextHere="Type Your Text Here";
 
 
   ///Validator
