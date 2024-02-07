@@ -201,69 +201,16 @@ class _AppointmentViewState extends State<AppointmentView>
                     }),
 
                 ListView.separated(
-                    itemCount: 3,
+                    itemCount: 10,
                     separatorBuilder: (context, i) => SizedBox(height: 15.0),
                     itemBuilder: (context, index) {
                       return Padding(
-                        padding: EdgeInsets.symmetric(horizontal: 15.0),
+                        padding: EdgeInsets.symmetric(horizontal: 15.0,),
                         child: Column(
                           children: [
-                            Visibility(
-                              visible: index == 0,
-                              child: Row(
-                                children: [
-                                  Padding(
-                                    padding: const EdgeInsets.symmetric(
-                                        vertical: 10.0),
-                                    child: Text(
-                                      AppStrings.kToday,
-                                      style: getsemiboldStyle(
-                                          color: ColorManager.secondary),
-                                    ),
-                                  ),
-                                  Flexible(
-                                    child: Padding(
-                                      padding: const EdgeInsets.symmetric(
-                                        horizontal: 10.0,
-                                      ),
-                                      child: Container(
-                                        height: 1.5,
-                                        color: ColorManager.secondary,
-                                      ),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                            Visibility(
-                              visible: index == 1,
-                              child: Row(
-                                children: [
-                                  Padding(
-                                    padding: const EdgeInsets.symmetric(
-                                        vertical: 10.0),
-                                    child: Text(
-                                      "November, 2023",
-                                      style: getsemiboldStyle(
-                                          color: ColorManager.secondary),
-                                    ),
-                                  ),
-                                  Flexible(
-                                    child: Padding(
-                                      padding: const EdgeInsets.symmetric(
-                                        horizontal: 10.0,
-                                      ),
-                                      child: Container(
-                                        height: 1.5,
-                                        color: ColorManager.secondary,
-                                      ),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                            //SizedBox(height: 10),
-                            upComingAppointment(),
+                            SizedBox(height: 10.0),
+
+                            cancelAppointment(),
                           ],
                         ),
                       );
@@ -276,7 +223,65 @@ class _AppointmentViewState extends State<AppointmentView>
       ),
     );
   }
-
+  Widget cancelAppointment() {
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 0.0),
+      child: Container(
+        decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(10.0),
+            color: ColorManager.kLightBlueColor,
+            // gradient: LinearGradient(
+            //   begin: Alignment.topRight,
+            //   end: Alignment.bottomLeft,
+            //   colors: [
+            //     Colors.black45,
+            //     ColorManager.kLightBlueColor,
+            //
+            //   ],
+            // )
+        ),
+        child:Padding(
+          padding: const EdgeInsets.all(6.0),
+          child:
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              CircleAvatar(
+                radius: 24.0,
+                backgroundImage: AssetImage(ImageAssets.demoUserImage),
+              ),
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    "Edmund Halvorson",
+                    style: getboldStyle(
+                      color: ColorManager.secondary,
+                      fontSize: 12.sp,
+                    ),
+                  ),
+                  Text(
+                    "Appointment: 24 Jan 1:00PM - 2:30PM",
+                    style: TextStyle(
+                        fontSize: 9.sp, color: ColorManager.kGreyColor),
+                  ),
+                ],
+              ),
+              //const SizedBox(width: 5.0),
+              Padding(
+                padding: const EdgeInsets.only(right: 4.0),
+                child: Text(
+                  "Cancelled",
+                  style: getboldStyle(
+                      fontSize: 12.sp, color: ColorManager.kRedColor),
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
   Widget upComingAppointment() {
     return Container(
       padding: EdgeInsets.symmetric(vertical: 10.0),
@@ -651,21 +656,29 @@ class _AppointmentViewState extends State<AppointmentView>
           const SizedBox(height: 10),
           Padding(
             padding: const EdgeInsets.all(8.0),
-            child: Container(
-              decoration: BoxDecoration(
-                  color: ColorManager.secondary,
-                  borderRadius: BorderRadius.circular(30.0),
+            child: InkWell(
+              onTap: (){
+                Navigator.pushNamed(
+                  context,
+                  CustomRouteNames.kReviewSummaryScreenRoute,
+                );
+              },
+              child: Container(
+                decoration: BoxDecoration(
+                    color: ColorManager.secondary,
+                    borderRadius: BorderRadius.circular(30.0),
+                    ),
+                child: Padding(
+                  padding: const EdgeInsets.all(10.0),
+                  child: // Adjust spacing between icon and text
+                  Center(
+                    child: Text('View Summery',
+                        style: getRegularStyle(
+                            fontSize: 12.sp,
+                            color: ColorManager.kWhiteColor)),
                   ),
-              child: Padding(
-                padding: const EdgeInsets.all(10.0),
-                child: // Adjust spacing between icon and text
-                Center(
-                  child: Text('View Summery',
-                      style: getRegularStyle(
-                          fontSize: 12.sp,
-                          color: ColorManager.kWhiteColor)),
-                ),
 
+                ),
               ),
             ),
           ),

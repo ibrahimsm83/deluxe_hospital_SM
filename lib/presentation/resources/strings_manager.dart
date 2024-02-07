@@ -242,9 +242,15 @@ class AppStrings {
   static const String kPaymentMethod="Payment Method";
   static const String kDiscount="Discount";
   static const String kTotal="Total";
-  static const String kSubmit="Sumbit";
+  static const String kSubmit="Submit";
   ///Chatinner
   static const String kTypeYourTextHere="Type Your Text Here";
+  ///Wallet
+  static const String kWallet="Wallet";
+  static const String kDailyRevenueReport ="Daily Revenue Report ";
+  static const String kWithdraw="Withdraw";
+  static const String kPayouts="Payouts";
+
 
 
   ///Validator

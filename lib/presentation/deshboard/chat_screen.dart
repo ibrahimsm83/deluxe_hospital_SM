@@ -68,10 +68,6 @@ class _ChatViewState extends State<ChatView> {
                   itemBuilder: (context, index) {
                     return InkWell(
                         onTap: () {
-                          //InnerChat
-                          // Navigator.push(context,
-                          //     MaterialPageRoute(builder: (context) =>
-                          //         InnerChat()));
                           Navigator.push(
                               context,
                               MaterialPageRoute(

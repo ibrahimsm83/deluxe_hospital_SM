@@ -97,7 +97,14 @@ class ImageAssets {
   static const String kGraphIconIcon = "$ICON_PATH/graphIcon.svg";
   static const String kPatientIcon = "$ICON_PATH/patientIcon.svg";
   static const String kArrowDownIcon = "$ICON_PATH/arrowDown.svg";
-
+  ///My Profile PH
+  static const String kLogoutPHIcon = "$ICON_PATH/logoutPH.svg";
+  static const String kProfilePHIcon = "$ICON_PATH/profilePH.svg";
+  static const String kInfoCircleIcon = "$ICON_PATH/infoCircle.svg";
+  static const String kStarPatientReviewIcon = "$ICON_PATH/starPatientReview.svg";
+///Wallet screen
+  static const String kPayoutIcon = "$ICON_PATH/payout.svg";
+  static const String kRevenueIcon = "$ICON_PATH/revenue.svg";
 
 
 }

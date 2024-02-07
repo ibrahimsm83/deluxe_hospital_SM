@@ -47,6 +47,7 @@ dependencies:
   pie_chart: ^5.4.0
   horizontal_data_table: ^4.3.1
   table_calendar: ^3.0.9
+  fl_chart: ^0.66.1
 
 dev_dependencies:
   flutter_test:

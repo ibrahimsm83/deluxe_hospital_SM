@@ -224,6 +224,24 @@ class CustomRouteGenerator {
             return const ScheduledAppointmentScreen();
           },
         );
+        case CustomRouteNames.kProfileMedicalDetailsScreenRoute:
+        return MaterialPageRoute(
+          builder: (context) {
+            return const ProfileMedicalDetailsScreen();
+          },
+        );
+        case CustomRouteNames.kProfilePatientReviewsScreenRoute:
+        return MaterialPageRoute(
+          builder: (context) {
+            return  ProfilePatientReviewsScreen();
+          },
+        );
+        case CustomRouteNames.kProfileWalletScreenRoute:
+        return MaterialPageRoute(
+          builder: (context) {
+            return const ProfileWalletScreen();
+          },
+        );
 
       default:
         return null;

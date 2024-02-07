@@ -28,6 +28,9 @@ export 'patient_screens/give_me_discount/give_me_discount_screen.dart';
 export 'patient_screens/payment_setup/payment_setup_screen.dart';
 export 'patient_screens/review_summary/review_summary_screen.dart';
 export 'patient_screens/scheduled_appointment/scheduled_appointment_screen.dart';
+export 'health_professional_screens/profile_medical_details/profile_medical_details_screen.dart';
+export 'health_professional_screens/profile_patient_reviews/profile_patient_reviews_screen.dart';
+export 'health_professional_screens/profile_wallet/profile_wallet_screen.dart';
 
 
 

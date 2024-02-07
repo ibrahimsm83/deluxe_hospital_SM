@@ -11,6 +11,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import '../../export_dulex.dart';
 import '../health_professional_screens/dashboard/home_helath_screen.dart';
+import '../health_professional_screens/dashboard/profile_screen.dart';
 
 class DashboardScreen extends StatefulWidget {
   const DashboardScreen({Key? key}) : super(key: key);
@@ -49,7 +50,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
             AppointmentView(),
             ChatView(),
             ArticlesView(),
-            ProfileView(),
+            userController.userRole.value==UserRole.Patient?ProfileView():ProfileProfessionalHealthCareView(),
           ],
         ),
       ),

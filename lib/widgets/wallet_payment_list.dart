@@ -9,48 +9,54 @@ class InvestigationModel {
   InvestigationModel({this.heading, this.list});
 }
 
-class InvestigationsTable extends StatelessWidget {
-  InvestigationsTable({Key? key}) : super(key: key);
+class InvestigationsTable1 extends StatelessWidget {
+  InvestigationsTable1({Key? key}) : super(key: key);
 
   InvestigationModel patientId = InvestigationModel(
-      heading: "Patient ID", list: ["1", "1", "1", "1", "1", "1", "1"]);
-  InvestigationModel test = InvestigationModel(heading: "Test", list: [
-    "Blood Count",
-    "Blood Count",
-    "Blood Count",
-    "Blood Count",
-    "Blood Count",
-    "Blood Count",
-    "Blood Count"
+      heading: "Transaction #", list: ["1", "1", "1", "1", "1", "1","1","1",]);
+  InvestigationModel test = InvestigationModel(heading: "Amount", list: [
+    "\$20",
+    "\$20",
+    "\$20",
+    "\$20",
+    "\$20",
+    "\$20",
+    "\$20",
+    "\$20",
+
   ]);
-  InvestigationModel lab = InvestigationModel(heading: "Lab", list: [
-    "Micro Biology",
-    "Micro Biology",
-    "Micro Biology",
-    "Micro Biology",
-    "Micro Biology",
-    "Micro Biology",
-    "Micro Biology"
+  InvestigationModel lab = InvestigationModel(heading: "ConsultType", list: [
+    "Video Call",
+    "Video Call",
+    "Video Call",
+    "Video Call",
+    "Video Call",
+    "Video Call",
+    "Video Call",
+    "Video Call",
+
   ]);
   InvestigationModel dateOfSubmission =
-      InvestigationModel(heading: "Date of submission", list: [
-    "24 Jan 2024",
-    "24 Jan 2024",
-    "24 Jan 2024",
-    "24 Jan 2024",
-    "24 Jan 2024",
-    "24 Jan 2024",
-    "24 Jan 2024"
+  InvestigationModel(heading: "Date and Time", list: [
+    "2024/09/17",
+    "2024/09/17",
+    "2024/09/17",
+    "2024/09/17",
+    "2024/09/17",
+    "2024/09/17",
+    "2024/09/17",
+    "2024/09/17",
+
   ]);
-  InvestigationModel status = InvestigationModel(heading: "Status", list: [
-    "Result added",
-    "Result added",
-    "Result added",
-    "Result added",
-    "Result added",
-    "Result added",
-    "Result added"
-  ]);
+  // InvestigationModel status = InvestigationModel(heading: "Status", list: [
+  //   "Result added",
+  //   "Result added",
+  //   "Result added",
+  //   "Result added",
+  //   "Result added",
+  //   "Result added",
+  //   "Result added"
+  // ]);
 
   @override
   Widget build(BuildContext context) {

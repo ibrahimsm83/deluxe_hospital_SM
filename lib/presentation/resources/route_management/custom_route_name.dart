@@ -31,5 +31,8 @@ class CustomRouteNames {
   static const String kPaymentSetupScreenRoute = "/PaymentSetupScreenRoute";
   static const String kReviewSummaryScreenRoute = "/ReviewSummaryScreenRoute";
   static const String kScheduledAppointmentScreenRoute = "/ScheduledAppointmentScreenRoute";
+  static const String kProfileMedicalDetailsScreenRoute = "/ProfileMedicalDetailsScreenRoute";
+  static const String kProfilePatientReviewsScreenRoute = "/ProfilePatientReviewsScreenRoute";
+  static const String kProfileWalletScreenRoute = "/ProfileWalletScreenRoute";
 
 }
