@@ -199,29 +199,37 @@ class _HomeHealthViewState extends State<HomeHealthView> {
   }
 
   Widget setAvailability() {
-    return Container(
-      width: AppSize.sizeWidth(context),
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(10.0),
-        color: ColorManager.kLightBlueColor,
-      ),
-      child: Padding(
-        padding: const EdgeInsets.fromLTRB(20, 8, 8, 8),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(
-              AppStrings.kSetupYourAvailability,
-              style:
-                  getboldStyle(color: ColorManager.kWhiteColor, fontSize: 16),
-              // textAlign: TextAlign.left,
-            ),
-            Text(
-              AppStrings.kSetupNow,
-              style: getboldStyle(color: ColorManager.secondary, fontSize: 16),
-              //textAlign: TextAlign.left,
-            ),
-          ],
+    return InkWell(
+      onTap: (){
+        Navigator.pushNamed(
+          context,
+          CustomRouteNames.kSetUpAvailabilityScreenRoute,
+        );
+      },
+      child: Container(
+        width: AppSize.sizeWidth(context),
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(10.0),
+          color: ColorManager.kLightBlueColor,
+        ),
+        child: Padding(
+          padding: const EdgeInsets.fromLTRB(20, 8, 8, 8),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                AppStrings.kSetupYourAvailability,
+                style:
+                    getboldStyle(color: ColorManager.kWhiteColor, fontSize: 16),
+                // textAlign: TextAlign.left,
+              ),
+              Text(
+                AppStrings.kSetupNow,
+                style: getboldStyle(color: ColorManager.secondary, fontSize: 16),
+                //textAlign: TextAlign.left,
+              ),
+            ],
+          ),
         ),
       ),
     );

@@ -32,6 +32,7 @@ export 'health_professional_screens/profile_medical_details/profile_medical_deta
 export 'health_professional_screens/profile_patient_reviews/profile_patient_reviews_screen.dart';
 export 'health_professional_screens/profile_wallet/profile_wallet_screen.dart';
 export 'health_professional_screens/finish_consultation/finish_consultation_screen.dart';
+export 'health_professional_screens/set_up_availability/set_up_availability_screen.dart';
 
 
 

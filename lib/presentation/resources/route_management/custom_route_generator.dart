@@ -248,6 +248,12 @@ class CustomRouteGenerator {
             return const FinishConsultationScreen();
           },
         );
+  case CustomRouteNames.kSetUpAvailabilityScreenRoute:
+        return MaterialPageRoute(
+          builder: (context) {
+            return const SetUpAvailabilityScreen();
+          },
+        );
 
       default:
         return null;

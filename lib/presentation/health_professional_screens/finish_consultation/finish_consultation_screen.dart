@@ -200,7 +200,7 @@ class _FinishConsultationScreenState extends State<FinishConsultationScreen> {
 
   Widget PreviousClinicalNotes() {
     return SizedBox(
-        height: 230,
+        height: 250,
         child: ListView.builder(
             scrollDirection: Axis.horizontal,
             itemCount: 3,
