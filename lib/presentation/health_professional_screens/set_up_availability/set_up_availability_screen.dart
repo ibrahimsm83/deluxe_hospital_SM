@@ -525,20 +525,28 @@ separatorBuilder: (context,i)=>SizedBox(height: 10.0),
                   SizedBox(
                     height: 50.h,
                   ),
-                  Container(
-                    width: 1.sw,
-                    margin: const EdgeInsets.symmetric(horizontal: 50),
-                    padding: const EdgeInsets.all(15),
-                    decoration: BoxDecoration(
-                      color: ColorManager.secondary,
-                      borderRadius: BorderRadius.circular(25),
-                    ),
-                    child: Text(
-                      "Continue",
-                      style: getsemiboldStyle(
-                        color: ColorManager.kWhiteColor,
+                  InkWell(
+                    onTap: (){
+                      Navigator.pushNamed(
+                        context,
+                        CustomRouteNames.kManageAppointmentScreenRoute,
+                      );
+                    },
+                    child: Container(
+                      width: 1.sw,
+                      margin: const EdgeInsets.symmetric(horizontal: 50),
+                      padding: const EdgeInsets.all(15),
+                      decoration: BoxDecoration(
+                        color: ColorManager.secondary,
+                        borderRadius: BorderRadius.circular(25),
                       ),
-                      textAlign: TextAlign.center,
+                      child: Text(
+                        "Continue",
+                        style: getsemiboldStyle(
+                          color: ColorManager.kWhiteColor,
+                        ),
+                        textAlign: TextAlign.center,
+                      ),
                     ),
                   ),
                   SizedBox(

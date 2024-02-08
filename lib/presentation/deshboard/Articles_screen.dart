@@ -19,6 +19,32 @@ class ArticlesView extends StatelessWidget {
                 color: ColorManager.secondary,
                 fontSize: ScreenUtil().setSp(AppSize.s18))),
       ),
+      floatingActionButton:    Container(
+        height: 40,
+        width: 40,
+        decoration: BoxDecoration(
+
+          shape: BoxShape.circle,
+         // color: ColorManager.secondary,
+         //  border: Border.all(
+         //    color: ColorManager.secondary, // Set your desired border color
+         //    width: 2.0, // Set your desired border width
+         //  ),
+        ),
+        child: FloatingActionButton(
+          onPressed: () {
+            // Add your desired action when the button is pressed
+            // print('Button 3 pressed!');
+            Navigator.pushNamed(
+                context,
+                CustomRouteNames.kArticlesUploadScreenRoute);
+
+          },
+          backgroundColor: ColorManager.secondary,
+          child: Icon(Icons.add,color: ColorManager.kWhiteColor),
+          shape: CircleBorder(),
+        ),
+      ),
       body: Column(
         children: [
           Flexible(
@@ -29,7 +55,12 @@ class ArticlesView extends StatelessWidget {
                       )),
                   itemCount: 3,
                   itemBuilder: (context, index) {
-                    return userDetails();
+                    return InkWell(
+                        onTap: () {
+                          Navigator.pushNamed(context,
+                              CustomRouteNames.kArticlesDetailsScreenRoute);
+                        },
+                        child: userDetails());
                   })),
         ],
       ),

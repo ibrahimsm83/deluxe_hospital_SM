@@ -14,7 +14,7 @@ class ToggleButtonList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 50,
+      height: 70,
       child: ListView.builder(
           scrollDirection: Axis.horizontal,
           itemCount: categories!.length,
@@ -24,7 +24,7 @@ class ToggleButtonList extends StatelessWidget {
               child: Container(
                 margin: EdgeInsets.only(
                     left: index == AppMargin.m0 ? AppMargin.m5 : AppMargin.m0,
-                    right: AppMargin.m15,
+                    right: AppMargin.m10,
                     top: AppMargin.m15,
                     bottom: AppMargin.m8),
                 padding: const EdgeInsets.symmetric(horizontal: AppPadding.p20),
@@ -32,7 +32,7 @@ class ToggleButtonList extends StatelessWidget {
                     color: selected == index
                         ? ColorManager.secondary
                         : ColorManager.kLightBlueColor,
-                    borderRadius: BorderRadius.circular(AppSize.s30),
+                    borderRadius: BorderRadius.circular(AppSize.s15),
                     boxShadow: [
                       BoxShadow(color: Colors.grey.withOpacity(0.3)),
                     ]),

@@ -112,5 +112,9 @@ class ImageAssets {
   static const String kEditGreenIcon = "$ICON_PATH/editGreen.svg";
   static const String kRecentImage = "$IMAGE_PATH/recentImage.png";
 
+  ///Upload Articles
+  static const String kCameraIcon = "$ICON_PATH/cameraIcon.svg";
+  static const String kTextEditorImage = "$IMAGE_PATH/text-editor.png";
+
 
 }

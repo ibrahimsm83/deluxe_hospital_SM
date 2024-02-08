@@ -259,7 +259,13 @@ class AppStrings {
    static const String kMostRecentVitals="Most Recent Vitals";
    static const String kPreviousClinicalNotes="Previous Clinical notes";
    static const String kFinishConsultation="Finish Consultation";
-
+   ///Manage Appointment
+  static const String kManageAppointment="Manage Appointment";
+  static const String kManageAppointmentDec="Your Information will be share with our Medical Expert team who will verify your identity.";
+  static const String kConsultationFee="Consultation Fee";
+  static const String kAppointmentDuration="Appointment Duration";
+///Articles Upload
+  static const String kArticleUpload="Article upload";
 
 
   ///Validator

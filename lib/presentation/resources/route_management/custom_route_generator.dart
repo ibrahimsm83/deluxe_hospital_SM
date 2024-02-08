@@ -206,52 +206,70 @@ class CustomRouteGenerator {
           },
         );
 
-        case CustomRouteNames.kPaymentSetupScreenRoute:
+      case CustomRouteNames.kPaymentSetupScreenRoute:
         return MaterialPageRoute(
           builder: (context) {
             return const PaymentSetupScreen();
           },
         );
-        case CustomRouteNames.kReviewSummaryScreenRoute:
+      case CustomRouteNames.kReviewSummaryScreenRoute:
         return MaterialPageRoute(
           builder: (context) {
             return const ReviewSummaryScreen();
           },
         );
-        case CustomRouteNames.kScheduledAppointmentScreenRoute:
+      case CustomRouteNames.kScheduledAppointmentScreenRoute:
         return MaterialPageRoute(
           builder: (context) {
             return const ScheduledAppointmentScreen();
           },
         );
-        case CustomRouteNames.kProfileMedicalDetailsScreenRoute:
+      case CustomRouteNames.kProfileMedicalDetailsScreenRoute:
         return MaterialPageRoute(
           builder: (context) {
             return const ProfileMedicalDetailsScreen();
           },
         );
-        case CustomRouteNames.kProfilePatientReviewsScreenRoute:
+      case CustomRouteNames.kProfilePatientReviewsScreenRoute:
         return MaterialPageRoute(
           builder: (context) {
-            return  ProfilePatientReviewsScreen();
+            return ProfilePatientReviewsScreen();
           },
         );
-        case CustomRouteNames.kProfileWalletScreenRoute:
+      case CustomRouteNames.kProfileWalletScreenRoute:
         return MaterialPageRoute(
           builder: (context) {
             return const ProfileWalletScreen();
           },
         );
-        case CustomRouteNames.kFinishConsultationScreenRoute:
+      case CustomRouteNames.kFinishConsultationScreenRoute:
         return MaterialPageRoute(
           builder: (context) {
             return const FinishConsultationScreen();
           },
         );
-  case CustomRouteNames.kSetUpAvailabilityScreenRoute:
+      case CustomRouteNames.kSetUpAvailabilityScreenRoute:
         return MaterialPageRoute(
           builder: (context) {
             return const SetUpAvailabilityScreen();
+          },
+        );
+      case CustomRouteNames.kManageAppointmentScreenRoute:
+        return MaterialPageRoute(
+          builder: (context) {
+            return const ManageAppointmentScreen();
+          },
+        );
+      case CustomRouteNames.kArticlesDetailsScreenRoute:
+        return MaterialPageRoute(
+          builder: (context) {
+            return const ArticlesDetailsScreen();
+          },
+        );
+        case CustomRouteNames.kArticlesUploadScreenRoute:
+        return MaterialPageRoute(
+          builder: (context) {
+            return const ArticlesUploadScreen();
           },
         );
 
