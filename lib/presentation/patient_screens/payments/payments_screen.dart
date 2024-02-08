@@ -20,6 +20,7 @@ class _PaymentsScreenState extends State<PaymentsScreen> {
       appBar: AppBar(
         elevation: 0.0,
         backgroundColor: Colors.transparent,
+        centerTitle: true,
         title: Text(
           AppStrings.kPayments,
           style: getboldStyle(

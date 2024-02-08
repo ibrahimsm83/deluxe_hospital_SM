@@ -23,6 +23,7 @@ class _BookAppointmentScreenState extends State<BookAppointmentScreen> {
       appBar: AppBar(
         elevation: 0.0,
         backgroundColor: Colors.transparent,
+        centerTitle: true,
         title: Text(
           AppStrings.kBookAppointment,
           style: getboldStyle(

@@ -52,6 +52,7 @@ class _OtpCodeVerificationScreenState extends State<OtpCodeVerificationScreen> {
       appBar: AppBar(
         elevation: 0.0,
         backgroundColor: Colors.transparent,
+        centerTitle: true,
         title: Text(AppStrings.otpCodeVerification,style: getboldStyle(color: ColorManager.secondary,fontSize:  ScreenUtil().setSp(AppSize.s18) ),),
         leading: Padding(
           padding: const EdgeInsets.all(20.0),

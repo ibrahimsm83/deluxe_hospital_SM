@@ -34,6 +34,7 @@ class _ProfessionalInformationScreenState
       appBar: AppBar(
         elevation: 0.0,
         backgroundColor: Colors.transparent,
+        centerTitle: true,
         title: Text(
           AppStrings.kProfessionalInformation,
           style: getboldStyle(

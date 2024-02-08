@@ -16,6 +16,7 @@ class ReviewSummaryScreen extends StatelessWidget {
       appBar: AppBar(
         elevation: 0.0,
         backgroundColor: Colors.transparent,
+        centerTitle: true,
         title: Text(
           AppStrings.kReviewSummary,
           style: getboldStyle(

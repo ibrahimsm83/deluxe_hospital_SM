@@ -442,35 +442,6 @@ separatorBuilder: (context,i)=>SizedBox(height: 10.0),
     );
   }
 
-  // Row goodMorningWidget() {
-  //   return Row(children: [
-  //     const CircleAvatar(
-  //       minRadius: 20,
-  //       backgroundColor: Colors.grey,
-  //     ),
-  //     SizedBox(
-  //       width: 8.w,
-  //     ),
-  //     Column(
-  //       crossAxisAlignment: CrossAxisAlignment.start,
-  //       children: [
-  //         const Text(
-  //           "Good Morning",
-  //           style: TextStyle(color: Colors.blue),
-  //         ),
-  //         const Text(
-  //           "John Doe",
-  //           style: TextStyle(color: Colors.white),
-  //         )
-  //       ],
-  //     ),
-  //     const Spacer(),
-  //     const Icon(
-  //       Icons.notifications_outlined,
-  //       color: Colors.blue,
-  //     )
-  //   ]);
-  // }
 
   Widget bottomSheetWidget() {
     return AnimatedContainer(

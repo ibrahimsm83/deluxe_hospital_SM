@@ -24,6 +24,7 @@ class _ManageAppointmentScreenState extends State<ManageAppointmentScreen> {
       appBar: AppBar(
         elevation: 0.0,
         backgroundColor: Colors.transparent,
+        centerTitle: true,
         title: Text(
           AppStrings.kManageAppointment,
           style: getboldStyle(

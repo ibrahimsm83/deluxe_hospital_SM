@@ -16,6 +16,7 @@ class FaceIdSetupScreen extends StatelessWidget {
       appBar: AppBar(
         elevation: 0.0,
         backgroundColor: Colors.transparent,
+        centerTitle: true,
         title: Text(
           AppStrings.kSetupYourFaceId,
           style: getboldStyle(

@@ -23,6 +23,7 @@ class _SearchFilterScreenState extends State<SearchFilterScreen> {
       appBar: AppBar(
         elevation: 0.0,
         backgroundColor: Colors.transparent,
+        centerTitle: true,
         title: Text(
           AppStrings.kSearch,
           style: getboldStyle(

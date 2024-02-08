@@ -25,6 +25,7 @@ class _PatientDetailsScreenState extends State<PatientDetailsScreen> {
       appBar: AppBar(
         elevation: 0.0,
         backgroundColor: Colors.transparent,
+        centerTitle: true,
         title: Text(
           AppStrings.kPatientDetails,
           style: getboldStyle(

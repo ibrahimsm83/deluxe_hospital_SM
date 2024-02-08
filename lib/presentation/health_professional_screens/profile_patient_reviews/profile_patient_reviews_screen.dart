@@ -50,6 +50,7 @@ class ProfilePatientReviewsScreen extends StatelessWidget {
       appBar: AppBar(
         elevation: 0.0,
         backgroundColor: Colors.transparent,
+        centerTitle: true,
         title: Text(
          "Patient reviews",
           style: getboldStyle(

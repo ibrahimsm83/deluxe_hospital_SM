@@ -27,6 +27,7 @@ class _NotificationsScreenState extends State<NotificationsScreen> {
       appBar: AppBar(
         elevation: 0.0,
         backgroundColor: Colors.transparent,
+        centerTitle: true,
         title: Text(
           AppStrings.kNotifications,
           style: getboldStyle(

@@ -17,6 +17,7 @@ class GiveMeDiscountScreen extends StatelessWidget {
       appBar: AppBar(
         elevation: 0.0,
         backgroundColor: Colors.transparent,
+        centerTitle: true,
         title: Text(
           AppStrings.kPatientDetails,
           style: getboldStyle(

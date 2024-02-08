@@ -25,6 +25,7 @@ class _CreateNewPasswordScreenState extends State<CreateNewPasswordScreen> {
       appBar: AppBar(
         elevation: 0.0,
         backgroundColor: Colors.transparent,
+        centerTitle: true,
         title: Text(
           AppStrings.kCreateANewPassword,
           style: getboldStyle(

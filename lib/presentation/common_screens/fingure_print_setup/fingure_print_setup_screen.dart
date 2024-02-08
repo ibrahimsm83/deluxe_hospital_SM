@@ -13,6 +13,7 @@ class FingerPrintSetupScreen extends StatelessWidget {
       appBar: AppBar(
         elevation: 0.0,
         backgroundColor: Colors.transparent,
+        centerTitle: true,
         title: Text(
           AppStrings.kSetupYourFingerPrint,
           style: getboldStyle(

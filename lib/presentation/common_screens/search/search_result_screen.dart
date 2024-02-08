@@ -57,6 +57,7 @@ class _SearchResultScreenState extends State<SearchResultScreen> {
       appBar: AppBar(
         elevation: 0.0,
         backgroundColor: Colors.transparent,
+        centerTitle: true,
         title: Text(
           AppStrings.kSearch,
           style: getboldStyle(

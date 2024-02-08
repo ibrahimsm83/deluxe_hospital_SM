@@ -20,6 +20,7 @@ class _ProfilePictureSetupState extends State<ProfilePictureSetup> {
       appBar: AppBar(
         elevation: 0.0,
         backgroundColor: Colors.transparent,
+        centerTitle: true,
         title: Text(
           userController.userRole.value ==
               UserRole.HealthProfessional? AppStrings.kAddAProfessionalPhoto:AppStrings.kAddYourProfilePhotoSetup,

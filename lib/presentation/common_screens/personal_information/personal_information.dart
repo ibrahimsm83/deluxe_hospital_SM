@@ -39,6 +39,7 @@ class _PersonalInformationScreenState extends State<PersonalInformationScreen> {
       appBar: AppBar(
         elevation: 0.0,
         backgroundColor: Colors.transparent,
+        centerTitle: true,
         title: Text(
           AppStrings.kPersonalInformation,
           style: getboldStyle(

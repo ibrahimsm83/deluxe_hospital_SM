@@ -30,6 +30,7 @@ class _ProfileMedicalDetailsScreenState extends State<ProfileMedicalDetailsScree
       appBar: AppBar(
         elevation: 0.0,
         backgroundColor: Colors.transparent,
+        centerTitle: true,
         title: Text(
           AppStrings.kMedicalDetails,
           style: getboldStyle(

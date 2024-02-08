@@ -21,6 +21,7 @@ class _ProfileWalletScreenState extends State<ProfileWalletScreen> {
       appBar: AppBar(
         elevation: 0.0,
         backgroundColor: Colors.transparent,
+        centerTitle: true,
         title: Text(
           AppStrings.kWallet,
           style: getboldStyle(

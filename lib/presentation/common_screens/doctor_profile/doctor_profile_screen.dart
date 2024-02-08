@@ -14,6 +14,7 @@ class DoctorProfileScreen extends StatelessWidget {
       appBar: AppBar(
         elevation: 0.0,
         backgroundColor: Colors.transparent,
+        centerTitle: true,
         title: Text(
           "Dr Awaiz Shaikh",
           style: getboldStyle(

@@ -27,6 +27,7 @@ class _WorkingHourScreenState extends State<WorkingHourScreen> {
       appBar: AppBar(
         elevation: 0.0,
         backgroundColor: Colors.transparent,
+        centerTitle: true,
         title: Text(
           AppStrings.kWorkingHours,
           style: getboldStyle(
