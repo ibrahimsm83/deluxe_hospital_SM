@@ -106,5 +106,11 @@ class ImageAssets {
   static const String kPayoutIcon = "$ICON_PATH/payout.svg";
   static const String kRevenueIcon = "$ICON_PATH/revenue.svg";
 
+  ///about
+  static const String kDoubleCommentsIcon = "$ICON_PATH/doubleComments.svg";
+  static const String kDeleteIcon = "$ICON_PATH/Delete.svg";
+  static const String kEditGreenIcon = "$ICON_PATH/editGreen.svg";
+  static const String kRecentImage = "$IMAGE_PATH/recentImage.png";
+
 
 }

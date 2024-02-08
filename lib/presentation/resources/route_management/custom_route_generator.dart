@@ -242,6 +242,12 @@ class CustomRouteGenerator {
             return const ProfileWalletScreen();
           },
         );
+        case CustomRouteNames.kFinishConsultationScreenRoute:
+        return MaterialPageRoute(
+          builder: (context) {
+            return const FinishConsultationScreen();
+          },
+        );
 
       default:
         return null;

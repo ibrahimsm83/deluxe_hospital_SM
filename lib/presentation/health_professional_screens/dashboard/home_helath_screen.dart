@@ -131,12 +131,20 @@ class _HomeHealthViewState extends State<HomeHealthView> {
       children: [
         Row(
           children: [
-            ClipOval(
-                child: Image.asset(
-              ImageAssets.demoUser2Image,
-              height: 60,
-              width: 60,
-            )),
+            InkWell(
+              onTap: (){
+                Navigator.pushNamed(
+                  context,
+                  CustomRouteNames.kFinishConsultationScreenRoute,
+                );
+              },
+              child: ClipOval(
+                  child: Image.asset(
+                ImageAssets.demoUser2Image,
+                height: 60,
+                width: 60,
+              )),
+            ),
             const SizedBox(width: 12.0),
             Column(
               children: [

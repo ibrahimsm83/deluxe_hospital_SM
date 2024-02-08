@@ -31,6 +31,7 @@ export 'patient_screens/scheduled_appointment/scheduled_appointment_screen.dart'
 export 'health_professional_screens/profile_medical_details/profile_medical_details_screen.dart';
 export 'health_professional_screens/profile_patient_reviews/profile_patient_reviews_screen.dart';
 export 'health_professional_screens/profile_wallet/profile_wallet_screen.dart';
+export 'health_professional_screens/finish_consultation/finish_consultation_screen.dart';
 
 
 

@@ -250,6 +250,15 @@ class AppStrings {
   static const String kDailyRevenueReport ="Daily Revenue Report ";
   static const String kWithdraw="Withdraw";
   static const String kPayouts="Payouts";
+  ///
+   static const String kAbout="About";
+   static const String kNatureOfConsult="Nature of Consult";
+   static const String kRochelleBackground="Rochelle’s Background";
+   static const String kMedicalInformation="Medical Information";
+   static const String kAddVitals="Add Vitals";
+   static const String kMostRecentVitals="Most Recent Vitals";
+   static const String kPreviousClinicalNotes="Previous Clinical notes";
+   static const String kFinishConsultation="Finish Consultation";
 
 
 
