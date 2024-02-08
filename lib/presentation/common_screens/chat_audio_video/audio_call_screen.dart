@@ -56,10 +56,6 @@ class AudioCall extends StatelessWidget {
               'Ringing...',
               style: TextStyle(color: Colors.white, fontSize: 16),
             ),
-            // Text(
-            //   '(Takaful Real Estate)',
-            //   style: TextStyle(color: Colors.white),
-            // ),
             SizedBox(
               height: MediaQuery.of(context).size.height * 0.13,
             ),
@@ -94,7 +90,11 @@ class AudioCall extends StatelessWidget {
                     children: [
                       GestureDetector(
                         onTap: () {
-                          Navigator.pop(context);
+
+                          Navigator.pushNamed(
+                            context,
+                            CustomRouteNames.kSessionEndScreenRoute,
+                          );
                         },
                         child: CircleAvatar(
                           maxRadius: 35,

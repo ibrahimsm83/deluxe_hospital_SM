@@ -125,10 +125,10 @@ class _ArticlesUploadScreenState extends State<ArticlesUploadScreen> {
                   context: context,
                   onTap: () {
                     //Home page
-                    Navigator.pushNamed(
-                      context,
-                      CustomRouteNames.kDashboardScreenRoute,
-                    );
+                    // Navigator.pushNamed(
+                    //   context,
+                    //   CustomRouteNames.kDashboardScreenRoute,
+                    // );
                   }),
 
               button(
@@ -137,10 +137,10 @@ class _ArticlesUploadScreenState extends State<ArticlesUploadScreen> {
                   context: context,
                   onTap: () {
                     //Home page
-                    Navigator.pushNamed(
-                      context,
-                      CustomRouteNames.kDashboardScreenRoute,
-                    );
+                    // Navigator.pushNamed(
+                    //   context,
+                    //   CustomRouteNames.kDashboardScreenRoute,
+                    // );
                   }),
               const SizedBox(height: 30),
             ],

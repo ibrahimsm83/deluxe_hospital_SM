@@ -46,10 +46,8 @@ class ReviewSummaryScreen extends StatelessWidget {
                 color: ColorManager.secondary,
                 context: context,
                 onTap: () {
-                  Navigator.pushNamed(
-                    context,
-                    CustomRouteNames.kReviewSummaryScreenRoute,
-                  );
+                  ///Dialog box
+                   _showCongratsDialog(context);
                 }),
           ],),
         ),
@@ -226,5 +224,92 @@ Widget paymentDetails(BuildContext context){
 
     );
 }
+
+  void _showCongratsDialog(BuildContext context) {
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return Theme(
+          data: Theme.of(context).copyWith(
+            dialogBackgroundColor: Colors.lightBlueAccent,
+            // Change dialog background color
+          ),
+          child: AlertDialog(
+            content: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Image.asset(ImageAssets.doneImage),
+                ),
+                SizedBox(height: 10),
+                Text(
+                  AppStrings.kCongratulations,
+                  style: getboldStyle(
+                      color: ColorManager.kWhiteColor,
+                      fontSize: ScreenUtil()
+                          .setSp(AppSize.s24)), // Change title color
+                ),
+                 SizedBox(height: 10),
+                Text(
+                  "Appointment Successfully Booked. you will received a notification and the doctor you selected will contact you",
+                  textAlign: TextAlign.center,
+                  style: getRegularStyle(
+                      color: ColorManager.kWhiteColor,
+                      fontSize: ScreenUtil()
+                          .setSp(AppSize.s14)), // Change title color
+                ),
+                SizedBox(
+                  height: AppSize.sizeHeight(context) * 0.02,
+                ),
+                button(
+                    text: AppStrings.kViewAppointment,
+                    color: ColorManager.secondary,
+                    context: context,
+                    onTap: () {
+
+                      //Navigate to View Appointment
+                      Navigator.pushNamed(
+                        context,
+                        CustomRouteNames.kMyAppointmentScreenRoute,
+                      );
+                     // Navigator.pop(context);
+
+                    }),
+
+                button(
+                    text: AppStrings.kCancel,
+                    color: ColorManager.kRedColor,
+                    context: context,
+                    onTap: () {
+
+                      Navigator.pop(context);
+                        // Navigator.pushNamed(
+                        //   context,
+                        //   CustomRouteNames.kProfessionalInformationScreenRoute,
+                        // );
+
+                    }),
+              ],
+            ),
+
+            // actions: [
+            //   TextButton(
+            //     onPressed: () {
+            //       Navigator.of(context).pop(); // Close the dialog
+            //     },
+            //     child: GestureDetector(
+            //         onTap: () {
+            //           // Navigate to the sign-up screen when "Sign up" is clicked
+            //           //    Get.to(() => homeScreen());
+            //         },
+            //         child: Text('Close')),
+            //   ),
+            // ],
+          ),
+        );
+      },
+    );
+  }
 
 }

@@ -266,10 +266,34 @@ class CustomRouteGenerator {
             return const ArticlesDetailsScreen();
           },
         );
-        case CustomRouteNames.kArticlesUploadScreenRoute:
+      case CustomRouteNames.kArticlesUploadScreenRoute:
         return MaterialPageRoute(
           builder: (context) {
             return const ArticlesUploadScreen();
+          },
+        );
+      case CustomRouteNames.kWorkingHourScreenRoute:
+        return MaterialPageRoute(
+          builder: (context) {
+            return const WorkingHourScreen();
+          },
+        );
+      case CustomRouteNames.kMyAppointmentScreenRoute:
+        return MaterialPageRoute(
+          builder: (context) {
+            return const MyAppointmentScreen();
+          },
+        );
+      case CustomRouteNames.kSessionEndScreenRoute:
+        return MaterialPageRoute(
+          builder: (context) {
+            return const SessionEndScreen();
+          },
+        );
+      case CustomRouteNames.kWriteReviewScreenRoute:
+        return MaterialPageRoute(
+          builder: (context) {
+            return const WriteReviewScreen();
           },
         );
 

@@ -125,26 +125,27 @@ class FaceIdSetupScreen extends StatelessWidget {
                     context: context,
                     onTap: () {
                       //Home page navigator
-                      if(userController.userRole.value== UserRole.Patient){
-                        Navigator.pushNamed(
-                          context,
-                          CustomRouteNames.kDashboardScreenRoute,
-                        );
-                      }
-                      else{
-                        CustomSnacksBar.showSnackBar(
-                          context,
-                          "HealthCare Dashboard Not Found",
-                          icon: Icon(
-                            Icons.check,
-                            color: ColorManager.kWhiteColor,
-                          ),
-                        );
-                        // Navigator.pushNamed(
-                        //   context,
-                        //   CustomRouteNames.kProfessionalInformationScreenRoute,
-                        // );
-                      }
+                      Navigator.pushNamed(
+                        context,
+                        CustomRouteNames.kDashboardScreenRoute,
+                      );
+                      // if(userController.userRole.value== UserRole.Patient){
+                      //   Navigator.pushNamed(
+                      //     context,
+                      //     CustomRouteNames.kDashboardScreenRoute,
+                      //   );
+                      // }
+                      // else{
+                      //   CustomSnacksBar.showSnackBar(
+                      //     context,
+                      //     "HealthCare Dashboard Not Found",
+                      //     icon: Icon(
+                      //       Icons.check,
+                      //       color: ColorManager.kWhiteColor,
+                      //     ),
+                      //   );
+                      //
+                      // }
 
                     }),
               ],

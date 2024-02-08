@@ -115,6 +115,10 @@ class ImageAssets {
   ///Upload Articles
   static const String kCameraIcon = "$ICON_PATH/cameraIcon.svg";
   static const String kTextEditorImage = "$IMAGE_PATH/text-editor.png";
+  ///Working hours
+  static const String kAddCircleIcon = "$ICON_PATH/addCircle.svg";
+  ///Session End
+  static const String kSessionEndIcon = "$ICON_PATH/sessionEnd.svg";
 
 
 }

@@ -90,6 +90,7 @@ class _ManageAppointmentScreenState extends State<ManageAppointmentScreen> {
                 color: ColorManager.secondary,
                 context: context,
                 onTap: () {
+                  Navigator.pushNamed(context, CustomRouteNames.kWorkingHourScreenRoute);
                 }),
         ],),
       ),

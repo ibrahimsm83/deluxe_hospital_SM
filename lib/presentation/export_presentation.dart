@@ -36,6 +36,10 @@ export 'health_professional_screens/set_up_availability/set_up_availability_scre
 export 'health_professional_screens/manage_appointment/manage_appointment_screen.dart';
 export 'common_screens/articles_detail/article_details_screen.dart';
 export 'common_screens/article_upload/article_upload_screen.dart';
+export 'health_professional_screens/working_hours/working_hours_screen.dart';
+export 'patient_screens/my_appointment/my_appointment_screen.dart';
+export 'patient_screens/session_end/session-end_screen.dart';
+export 'patient_screens/write_review/write_review_screen.dart';
 
 
 

@@ -81,8 +81,13 @@ class VideoCall extends StatelessWidget {
                         children: [
                           GestureDetector(
                             onTap: () {
-                              Navigator.pop(context);
+                              // Navigator.pop(context);
+                              Navigator.pushNamed(
+                                context,
+                                CustomRouteNames.kSessionEndScreenRoute,
+                              );
                             },
+
                             child: CircleAvatar(
                               maxRadius: 35,
                               backgroundColor: Colors.red,

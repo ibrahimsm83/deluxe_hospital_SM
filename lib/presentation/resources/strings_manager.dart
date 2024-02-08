@@ -266,6 +266,21 @@ class AppStrings {
   static const String kAppointmentDuration="Appointment Duration";
 ///Articles Upload
   static const String kArticleUpload="Article upload";
+  ///Working Hour
+  static const String kWorkingHours="Working Hours";
+  ///Pay
+  static const String kViewAppointment="View Appointment";
+  static const String kCancel="Cancel";
+  ///Session End
+  static const String kSessionEnd="Session end";
+  static const String kLeaveAReview="Leave a review";
+  static const String kBackToHome="Back to home";
+  static const String kTheConsultationSessionHasEnded="The Consultation Session Has Ended";
+  ///Write a Review
+  static const String kWriteAReview="Write a review";
+
+
+
 
 
   ///Validator
