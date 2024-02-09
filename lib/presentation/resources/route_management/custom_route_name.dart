@@ -43,5 +43,8 @@ class CustomRouteNames {
   static const String kMyAppointmentScreenRoute = "/MyAppointmentScreenRoute";
   static const String kSessionEndScreenRoute = "/SessionEndScreenRoute";
   static const String kWriteReviewScreenRoute = "/WriteReviewScreenRoute";
+  static const String kOnlineConsultationScreenRoute = "/OnlineConsultationScreenRoute";
+  static const String kPresentingComplaintScreenRoute = "/PresentingComplaintScreenRoute";
+  static const String kPrescriptionScreenRoute = "/PrescriptionScreenRoute";
 
 }

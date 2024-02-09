@@ -40,6 +40,9 @@ export 'health_professional_screens/working_hours/working_hours_screen.dart';
 export 'patient_screens/my_appointment/my_appointment_screen.dart';
 export 'patient_screens/session_end/session-end_screen.dart';
 export 'patient_screens/write_review/write_review_screen.dart';
+export 'patient_screens/online_consultation/online_consultation_screen.dart';
+export 'patient_screens/presenting_complaint/presenting_complaint_screen.dart';
+export 'patient_screens/prescription/prescription_screen.dart';
 
 
 

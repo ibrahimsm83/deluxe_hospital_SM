@@ -296,6 +296,24 @@ class CustomRouteGenerator {
             return const WriteReviewScreen();
           },
         );
+      case CustomRouteNames.kOnlineConsultationScreenRoute:
+        return MaterialPageRoute(
+          builder: (context) {
+            return const OnlineConsultationScreen();
+          },
+        );
+      case CustomRouteNames.kPresentingComplaintScreenRoute:
+        return MaterialPageRoute(
+          builder: (context) {
+            return const PresentingComplaintScreen();
+          },
+        );
+        case CustomRouteNames.kPrescriptionScreenRoute:
+        return MaterialPageRoute(
+          builder: (context) {
+            return const PrescriptionScreen();
+          },
+        );
 
       default:
         return null;

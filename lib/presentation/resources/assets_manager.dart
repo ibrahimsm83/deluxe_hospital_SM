@@ -119,6 +119,8 @@ class ImageAssets {
   static const String kAddCircleIcon = "$ICON_PATH/addCircle.svg";
   ///Session End
   static const String kSessionEndIcon = "$ICON_PATH/sessionEnd.svg";
-
+  ///Online Consultation
+  static const String kMessageOnlineIcon = "$ICON_PATH/messageOnline.svg";
+  static const String kSpeakingLanguageIcon = "$ICON_PATH/speakingLanguage.svg";
 
 }

@@ -56,7 +56,8 @@ class _HomeViewState extends State<HomeView> {
     ),
   ];
   List professionalCategoryRouteList = [
-    " CustomRouteNames.kDashboardScreenRoute,",
+    CustomRouteNames.kOnlineConsultationScreenRoute,
+    CustomRouteNames.kPresentingComplaintScreenRoute,
     " CustomRouteNames.kDashboardScreenRoute,",
     " CustomRouteNames.kDashboardScreenRoute,",
     " CustomRouteNames.kDashboardScreenRoute,",
@@ -137,9 +138,12 @@ class _HomeViewState extends State<HomeView> {
                   itemCount: professionalCatList.length,
                   itemBuilder: (context, index) {
                     return professionalCategoryGridview(
-                        professionalCatList[index],
-                        (() => Navigator.pushNamed(
-                            context, professionalCategoryRouteList[index])));
+                        professionalCatList[index], (() {
+                      if (index == 0 || index == 1) {
+                        Navigator.pushNamed(
+                            context, professionalCategoryRouteList[index]);
+                      }
+                    }));
                   },
                 ),
                 const SizedBox(height: 10),
@@ -168,50 +172,48 @@ class _HomeViewState extends State<HomeView> {
           ),
         ),
       ),
-      floatingActionButton:
-
-      Column(
+      floatingActionButton: Column(
         mainAxisAlignment: MainAxisAlignment.end,
         children: [
-         //  Container(
-         //      decoration: BoxDecoration(
-         //        shape: BoxShape.circle,
-         //        border: Border.all(
-         //          color: ColorManager.secondary,
-         //          width: 2.5, // Set your desired border width
-         //        ),
-         //      ),
-         //      child: FloatingActionButton(
-         //        onPressed: () {
-         //        },
-         //        backgroundColor: ColorManager.secondary.withOpacity(0.5),
-         //        child: SvgPicture.asset(
-         //          ImageAssets.kSendIcon,
-         //        ),
-         //        shape: CircleBorder(),
-         //      )),
-         // const SizedBox(height: 16.0),
-         //  Container(
-         //    decoration: BoxDecoration(
-         //      shape: BoxShape.circle,
-         //      border: Border.all(
-         //        color: ColorManager.secondary, // Set your desired border color
-         //        width: 2.0, // Set your desired border width
-         //      ),
-         //    ),
-         //    child: FloatingActionButton(
-         //      onPressed: () {
-         //        // Add your desired action when the button is pressed
-         //        // print('Button 2 pressed!');
-         //      },
-         //      backgroundColor: ColorManager.secondary.withOpacity(0.5),
-         //      child: SvgPicture.asset(
-         //        ImageAssets.kDoubleChatMessageIcon,
-         //      ),
-         //      shape: CircleBorder(),
-         //    ),
-         //  ),
-         //  const  SizedBox(height: 16.0), // Adjust the spacing between buttons
+          //  Container(
+          //      decoration: BoxDecoration(
+          //        shape: BoxShape.circle,
+          //        border: Border.all(
+          //          color: ColorManager.secondary,
+          //          width: 2.5, // Set your desired border width
+          //        ),
+          //      ),
+          //      child: FloatingActionButton(
+          //        onPressed: () {
+          //        },
+          //        backgroundColor: ColorManager.secondary.withOpacity(0.5),
+          //        child: SvgPicture.asset(
+          //          ImageAssets.kSendIcon,
+          //        ),
+          //        shape: CircleBorder(),
+          //      )),
+          // const SizedBox(height: 16.0),
+          //  Container(
+          //    decoration: BoxDecoration(
+          //      shape: BoxShape.circle,
+          //      border: Border.all(
+          //        color: ColorManager.secondary, // Set your desired border color
+          //        width: 2.0, // Set your desired border width
+          //      ),
+          //    ),
+          //    child: FloatingActionButton(
+          //      onPressed: () {
+          //        // Add your desired action when the button is pressed
+          //        // print('Button 2 pressed!');
+          //      },
+          //      backgroundColor: ColorManager.secondary.withOpacity(0.5),
+          //      child: SvgPicture.asset(
+          //        ImageAssets.kDoubleChatMessageIcon,
+          //      ),
+          //      shape: CircleBorder(),
+          //    ),
+          //  ),
+          //  const  SizedBox(height: 16.0), // Adjust the spacing between buttons
           Container(
             decoration: BoxDecoration(
               shape: BoxShape.circle,
@@ -263,7 +265,7 @@ class _HomeViewState extends State<HomeView> {
   Widget professionalCategoryGridview(
       ProfessionalCategoryModel data, Function()? onTap) {
     return InkWell(
-      onTap: () {}, //onTap,
+      onTap: onTap, //() {}, //onTap,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
@@ -352,7 +354,7 @@ class _HomeViewState extends State<HomeView> {
         Column(
           children: [
             InkWell(
-                onTap: (){
+                onTap: () {
                   Navigator.pushNamed(
                     context,
                     CustomRouteNames.kHomeNotificationsScreenRoute,
@@ -374,7 +376,7 @@ class _HomeViewState extends State<HomeView> {
         children: [
           Flexible(
             child: InkWell(
-              onTap: (){
+              onTap: () {
                 Navigator.pushNamed(
                   context,
                   CustomRouteNames.kSearchResultScreenRoute,
@@ -390,18 +392,18 @@ class _HomeViewState extends State<HomeView> {
                       color: ColorManager.kGreyColor,
                     ),
                   ),
-                  enabledBorder:OutlineInputBorder(
+                  enabledBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(10.0),
                     borderSide: BorderSide(
                       color: ColorManager.kGreyColor,
                     ),
-                  ) ,
-                  disabledBorder:OutlineInputBorder(
+                  ),
+                  disabledBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(10.0),
                     borderSide: BorderSide(
                       color: ColorManager.kGreyColor,
                     ),
-                  )  ,
+                  ),
                   prefixIcon: Icon(
                     Icons.search,
                     color: Colors.lightBlueAccent,
@@ -416,7 +418,7 @@ class _HomeViewState extends State<HomeView> {
           ),
           SizedBox(width: 15),
           InkWell(
-            onTap: (){
+            onTap: () {
               Navigator.pushNamed(
                 context,
                 CustomRouteNames.kSearchFilterScreenRoute,
@@ -617,5 +619,3 @@ class _HomeViewState extends State<HomeView> {
     );
   }
 }
-
-

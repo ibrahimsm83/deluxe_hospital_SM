@@ -279,9 +279,18 @@ class AppStrings {
   ///Write a Review
   static const String kWriteAReview="Write a review";
 
-
-
-
+  ///Online Consultation
+  static const String kOnlineConsultation="Online Consultation";
+  static const String kLenoxHellHospitaln="Lenox Hell Hospital";
+  static const String kAppointmentDate="Appointment Date";
+  static const String kSpeakingLanguage="Speaking Language";
+  static const String kConsultDetails="Consult Details";
+  static const String kStartConsultation="Start Consultation";
+  static const String kPersonalInfo="Personal Info";
+  ///Presenting Complaint
+  static const String kPresentingComplaint="Presenting Complaint";
+  static const String kPrescription="Prescription";
+  static const String kReferral="Referral";
 
   ///Validator
   static const String otpCode = "Otp Code";
