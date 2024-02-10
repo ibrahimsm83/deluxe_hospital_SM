@@ -77,7 +77,10 @@ class ProfilePatientReviewsScreen extends StatelessWidget {
                   CustomRouteNames.kDoctorProfileScreenRoute,
                 );
               },
-              child: UserCardWidget(data: userCardList![index]!),
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 10.0),
+                child: UserCardWidget(data: userCardList![index]!),
+              ),
             );
           },
         ),

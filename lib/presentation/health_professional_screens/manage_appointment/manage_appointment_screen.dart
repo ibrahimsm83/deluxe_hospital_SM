@@ -29,7 +29,7 @@ class _ManageAppointmentScreenState extends State<ManageAppointmentScreen> {
           AppStrings.kManageAppointment,
           style: getboldStyle(
               color: ColorManager.secondary,
-              fontSize: ScreenUtil().setSp(AppSize.s18)),
+              fontSize: ScreenUtil().setSp(AppSize.s17)),
         ),
         leading: Padding(
           padding: const EdgeInsets.all(20.0),
@@ -56,7 +56,7 @@ class _ManageAppointmentScreenState extends State<ManageAppointmentScreen> {
               AppStrings.kAppointmentType,
               style: getboldStyle(
                   color: ColorManager.kWhiteColor,
-                  fontSize: ScreenUtil().setSp(AppSize.s14)),
+                  fontSize: ScreenUtil().setSp(AppSize.s13)),
             ),
           ),
           appointType(),
@@ -67,7 +67,7 @@ class _ManageAppointmentScreenState extends State<ManageAppointmentScreen> {
               AppStrings.kConsultationFee,
               style: getboldStyle(
                   color: ColorManager.kWhiteColor,
-                  fontSize: ScreenUtil().setSp(AppSize.s14)),
+                  fontSize: ScreenUtil().setSp(AppSize.s13)),
             ),
           ),
           feeField(),
@@ -78,7 +78,7 @@ class _ManageAppointmentScreenState extends State<ManageAppointmentScreen> {
               AppStrings.kAppointmentDuration,
               style: getboldStyle(
                   color: ColorManager.kWhiteColor,
-                  fontSize: ScreenUtil().setSp(AppSize.s14)),
+                  fontSize: ScreenUtil().setSp(AppSize.s13)),
             ),
           ),
           Padding(
@@ -122,7 +122,7 @@ class _ManageAppointmentScreenState extends State<ManageAppointmentScreen> {
           Flexible(
             flex: 1,
             child: Padding(
-              padding: const EdgeInsets.only(top: 15.0,bottom: 15.0),
+              padding: const EdgeInsets.only(top: 8.0,bottom: 15.0),
               child: SizedBox(
                 height: 52,
                 child: DropdownButtonFormField<String>(
@@ -187,7 +187,7 @@ class _ManageAppointmentScreenState extends State<ManageAppointmentScreen> {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 18.0),
       child: SizedBox(
-        height: 55,
+        height: 45,
         child: DropdownButtonFormField<String>(
           value: selectedType,
           style: const TextStyle(
@@ -195,6 +195,7 @@ class _ManageAppointmentScreenState extends State<ManageAppointmentScreen> {
           ),
           dropdownColor: ColorManager.primary,
           decoration: InputDecoration(
+            contentPadding: EdgeInsets.only(left: 10.0),
             border: OutlineInputBorder(
               borderRadius: BorderRadius.circular(10.0),
               borderSide: BorderSide(

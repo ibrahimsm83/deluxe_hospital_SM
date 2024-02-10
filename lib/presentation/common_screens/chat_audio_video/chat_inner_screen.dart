@@ -67,13 +67,11 @@ class _InnerChatState extends State<InnerChat> {
             ),
             Container(
                 height: 60,
-
                 padding: EdgeInsets.symmetric(horizontal: 0.0),
                 child: Row(
                   children: [
                     SvgPicture.asset(
                       ImageAssets.kemojiIcon,
-
                     ),
 
                     Expanded(

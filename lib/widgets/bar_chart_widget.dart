@@ -90,26 +90,26 @@ class BarChartSample1State extends State<BarChartSample1> {
               ],
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.all(8),
-            child: Align(
-              alignment: Alignment.topRight,
-              child: IconButton(
-                icon: Icon(
-                  isPlaying ? Icons.pause : Icons.play_arrow,
-                  color: ColorManager.kGreenColor,//AppColors.contentColorGreen,
-                ),
-                onPressed: () {
-                  setState(() {
-                    isPlaying = !isPlaying;
-                    if (isPlaying) {
-                      refreshState();
-                    }
-                  });
-                },
-              ),
-            ),
-          )
+          // Padding(
+          //   padding: const EdgeInsets.all(8),
+          //   child: Align(
+          //     alignment: Alignment.topRight,
+          //     child: IconButton(
+          //       icon: Icon(
+          //         isPlaying ? Icons.pause : Icons.play_arrow,
+          //         color: ColorManager.kGreenColor,//AppColors.contentColorGreen,
+          //       ),
+          //       onPressed: () {
+          //         setState(() {
+          //           isPlaying = !isPlaying;
+          //           if (isPlaying) {
+          //             refreshState();
+          //           }
+          //         });
+          //       },
+          //     ),
+          //   ),
+          // )
         ],
       ),
     );

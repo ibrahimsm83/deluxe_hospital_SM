@@ -30,7 +30,7 @@ class _SetUpAvailabilityScreenState extends State<SetUpAvailabilityScreen> {
           AppStrings.kSetupYourAvailability,
           style: getboldStyle(
               color: ColorManager.secondary,
-              fontSize: ScreenUtil().setSp(AppSize.s18)),
+              fontSize: ScreenUtil().setSp(AppSize.s17)),
         ),
         centerTitle: true,
         leading: Padding(
@@ -59,7 +59,7 @@ class _SetUpAvailabilityScreenState extends State<SetUpAvailabilityScreen> {
               Text(
                 "Invite Patien",
                 style:
-                    getboldStyle(color: ColorManager.kWhiteColor, fontSize: 18),
+                    getboldStyle(color: ColorManager.kWhiteColor, fontSize: 16),
                 // textAlign: TextAlign.left,
               ),
               Padding(
@@ -67,7 +67,7 @@ class _SetUpAvailabilityScreenState extends State<SetUpAvailabilityScreen> {
                 child: Text(
                   "to invite your patient to your room, you can share the below link",
                   style: getRegularStyle(
-                      color: ColorManager.kGreyColor, fontSize: 14),
+                      color: ColorManager.kGreyColor, fontSize: 12),
                 ),
               ),
               SizedBox(height: 20.h),
@@ -81,7 +81,7 @@ class _SetUpAvailabilityScreenState extends State<SetUpAvailabilityScreen> {
               Text(
                 AppStrings.kScheduledAppointment,
                 style:
-                    getboldStyle(color: ColorManager.kWhiteColor, fontSize: 18),
+                    getboldStyle(color: ColorManager.kWhiteColor, fontSize: 16),
               ),
               SizedBox(
                 height: 10.h,
@@ -120,8 +120,8 @@ class _SetUpAvailabilityScreenState extends State<SetUpAvailabilityScreen> {
               child: ClipOval(
                   child: Image.asset(
                 ImageAssets.demoUser2Image,
-                height: 60,
-                width: 60,
+                height: 50,
+                width: 50,
               )),
             ),
             const SizedBox(width: 12.0),
@@ -137,7 +137,7 @@ class _SetUpAvailabilityScreenState extends State<SetUpAvailabilityScreen> {
                   "John Doe",
                   style: getsemiboldStyle(
                       color: ColorManager.kWhiteColor,
-                      fontSize: ScreenUtil().setSp(AppSize.s16)),
+                      fontSize: ScreenUtil().setSp(AppSize.s14)),
                 ),
               ],
             ),
@@ -195,7 +195,7 @@ class _SetUpAvailabilityScreenState extends State<SetUpAvailabilityScreen> {
                 Text(
                   AppStrings.kSetupYourAvailability,
                   style: getboldStyle(
-                      color: ColorManager.kWhiteColor, fontSize: 16),
+                      color: ColorManager.kWhiteColor, fontSize: 14),
                   // textAlign: TextAlign.left,
                 ),
                 Icon(
@@ -207,10 +207,10 @@ class _SetUpAvailabilityScreenState extends State<SetUpAvailabilityScreen> {
             Text(
               "lorem lorem lorem lorem lorem",
               style:
-                  getRegularStyle(color: ColorManager.kGreyColor, fontSize: 12),
+                  getRegularStyle(color: ColorManager.kGreyColor, fontSize: 10),
               // textAlign: TextAlign.left,
             ),
-            SizedBox(height: 10.0),
+            SizedBox(height: 4.0),
             InkWell(
               onTap: () {
                 showModalBottomSheet(
@@ -230,7 +230,7 @@ class _SetUpAvailabilityScreenState extends State<SetUpAvailabilityScreen> {
               child: Text(
                 AppStrings.kSetupNow,
                 style:
-                    getboldStyle(color: ColorManager.secondary, fontSize: 16),
+                    getboldStyle(color: ColorManager.secondary, fontSize: 14),
                 //textAlign: TextAlign.left,
               ),
             ),
@@ -256,6 +256,8 @@ separatorBuilder: (context,i)=>SizedBox(height: 10.0),
 
   Widget userListTile() {
     return ListTile(
+      dense:true,
+      contentPadding: EdgeInsets.only(left: 0.0, right: 0.0,top: 0.0),
       leading: ClipOval(
         child: Image.asset(
           ImageAssets.demoUser2Image,
@@ -278,54 +280,59 @@ separatorBuilder: (context,i)=>SizedBox(height: 10.0),
 
   Container currentPatient() {
     return Container(
-        width: 1.sw,
-        padding: const EdgeInsets.all(10),
+        //width: 1.sw,
+        padding: const EdgeInsets.symmetric(horizontal: 10.0),
         decoration: BoxDecoration(
             color: ColorManager.kLightBlueColor,
-            borderRadius: BorderRadius.circular(15)),
+            borderRadius: BorderRadius.circular(10)),
         child: Column(
           children: [
             userListTile(),
-            SizedBox(height: 20.h),
+            // SizedBox(height: 5.h),
             Row(
               children: [
                 Expanded(
                   child: Container(
-                    width: 1.sw,
-                    // margin: const EdgeInsets.only(bottom: 15),
-                    padding: const EdgeInsets.all(15),
+                    height: 40,
+                    //padding: const EdgeInsets.all(15),
                     decoration: BoxDecoration(
                       color: Colors.red.withOpacity(0.4),
                       borderRadius: BorderRadius.circular(5),
                     ),
-                    child:  Text(
-                      "Reject",
-                      style: getRegularStyle(color: ColorManager.kRedColor,fontSize: 14),
-                      textAlign: TextAlign.center,
+                    child:  Center(
+                      child: Text(
+                        "Reject",
+                        style: getRegularStyle(color: ColorManager.kRedColor,fontSize: 14),
+                        textAlign: TextAlign.center,
+                      ),
                     ),
                   ),
                 ),
                 SizedBox(width: 15.w),
                 Expanded(
                   child: Container(
-                    width: 1.sw,
+                    height: 40,
+                   // width: 1.sw,
                     // margin: const EdgeInsets.only(bottom: 15),
-                    padding: const EdgeInsets.all(15),
+                    //padding: const EdgeInsets.all(15),
                     decoration: BoxDecoration(
                       color: Colors.green,
                       borderRadius: BorderRadius.circular(5),
                     ),
-                    child: const Text(
-                      "Admit",
-                      style: TextStyle(
-                        color: Colors.white,
+                    child: Center(
+                      child: const Text(
+                        "Admit",
+                        style: TextStyle(
+                          color: Colors.white,
+                        ),
+                        textAlign: TextAlign.center,
                       ),
-                      textAlign: TextAlign.center,
                     ),
                   ),
                 ),
               ],
             ),
+            SizedBox(height: 10.0),
           ],
         ));
   }
@@ -361,22 +368,21 @@ separatorBuilder: (context,i)=>SizedBox(height: 10.0),
 
   Container scheduledAppointments() {
     return Container(
-        width: 1.sw,
-        padding: const EdgeInsets.all(10),
+        padding: const EdgeInsets.all(8),
         decoration: BoxDecoration(
             color: ColorManager.kLightBlueColor,
-            borderRadius: BorderRadius.circular(15)),
+            borderRadius: BorderRadius.circular(10)),
         child: Row(
           children: [
             Icon(Icons.calendar_month,
-                size: 50.sp, color: ColorManager.secondary),
+                size: 40.sp, color: ColorManager.secondary),
             SizedBox(
               width: 10,
             ),
             Text(
               "No appointments yet",
               style:
-                  getboldStyle(color: ColorManager.kWhiteColor, fontSize: 16),
+                  getboldStyle(color: ColorManager.kWhiteColor, fontSize: 14),
             ),
           ],
         ));
@@ -465,7 +471,6 @@ separatorBuilder: (context,i)=>SizedBox(height: 10.0),
                 child: Container(
                   margin:
                       EdgeInsets.symmetric(vertical: 5.h, horizontal: 0.43.sw),
-                  width: 1.sw,
                   padding: EdgeInsets.symmetric(vertical: 2.h),
                   decoration: BoxDecoration(
                       color: ColorManager.secondary,
@@ -485,16 +490,16 @@ separatorBuilder: (context,i)=>SizedBox(height: 10.0),
                   Text(
                     "Set up your availability",
                     style: getboldStyle(
-                        color: ColorManager.secondary, fontSize: 22),
+                        color: ColorManager.secondary, fontSize: 19),
                   ),
                   SizedBox(height: 10.h),
                   Text(
                     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus et felis dapibus, vulputate libero eget, suscipit nulla. Morbi a finibus lectus. Nulla tincidunt pretium purus.",
                     style: getRegularStyle(
-                        color: ColorManager.kWhiteColor, fontSize: 12),
+                        color: ColorManager.kWhiteColor, fontSize: 11),
                   ),
                   SizedBox(
-                    height: 50.h,
+                    height: 45.h,
                   ),
                   InkWell(
                     onTap: (){

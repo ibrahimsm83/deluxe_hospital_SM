@@ -122,6 +122,77 @@ class _HomeHealthViewState extends State<HomeHealthView> {
           ),
         ),
       ),
+      floatingActionButton: Column(
+        mainAxisAlignment: MainAxisAlignment.end,
+        children: [
+          //  Container(
+          //   height: 50,
+          //             width: 50,
+          //      decoration: BoxDecoration(
+          //        shape: BoxShape.circle,
+          //        border: Border.all(
+          //          color: ColorManager.secondary,
+          //          width: 2.0, // Set your desired border width
+          //        ),
+          //      ),
+          //      child: FloatingActionButton(
+          //        onPressed: () {
+          //        },
+          //        backgroundColor: ColorManager.secondary.withOpacity(0.5),
+          //        child: SvgPicture.asset(
+          //          ImageAssets.kSendIcon,
+          //        ),
+          //        shape: CircleBorder(),
+          //      )),
+          // const SizedBox(height: 16.0),
+           Container(
+          height: 50,
+          width: 50,
+             decoration: BoxDecoration(
+               shape: BoxShape.circle,
+               border: Border.all(
+                 color: ColorManager.secondary, // Set your desired border color
+                 width: 2.0, // Set your desired border width
+               ),
+             ),
+             child: FloatingActionButton(
+               onPressed: () {
+                 // Add your desired action when the button is pressed
+                 // print('Button 2 pressed!');
+               },
+               backgroundColor: ColorManager.secondary.withOpacity(0.5),
+               child: SvgPicture.asset(
+                 ImageAssets.kDoubleChatMessageIcon,
+               ),
+               shape: CircleBorder(),
+             ),
+           ),
+           const  SizedBox(height: 16.0), //0 Adjust the spacing between buttons
+          Container(
+            height: 50,
+            width: 50,
+            decoration: BoxDecoration(
+              shape: BoxShape.circle,
+              border: Border.all(
+                color: ColorManager.secondary, // Set your desired border color
+                width: 2.0, // Set your desired border width
+              ),
+            ),
+            child: FloatingActionButton(
+              onPressed: () {
+                // Add your desired action when the button is pressed
+                // print('Button 3 pressed!');
+              },
+              backgroundColor: ColorManager.secondary.withOpacity(0.5),
+              child: SvgPicture.asset(
+                ImageAssets.kShareIcon,
+              ),
+              shape: CircleBorder(),
+            ),
+          ),
+        ],
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
     );
   }
 
@@ -141,8 +212,8 @@ class _HomeHealthViewState extends State<HomeHealthView> {
               child: ClipOval(
                   child: Image.asset(
                 ImageAssets.demoUser2Image,
-                height: 60,
-                width: 60,
+                height: 50,
+                width: 50,
               )),
             ),
             const SizedBox(width: 12.0),
@@ -220,12 +291,12 @@ class _HomeHealthViewState extends State<HomeHealthView> {
               Text(
                 AppStrings.kSetupYourAvailability,
                 style:
-                    getboldStyle(color: ColorManager.kWhiteColor, fontSize: 16),
+                    getsemiboldStyle(color: ColorManager.kWhiteColor, fontSize: 14),
                 // textAlign: TextAlign.left,
               ),
               Text(
                 AppStrings.kSetupNow,
-                style: getboldStyle(color: ColorManager.secondary, fontSize: 16),
+                style: getsemiboldStyle(color: ColorManager.secondary, fontSize: 13),
                 //textAlign: TextAlign.left,
               ),
             ],
@@ -243,7 +314,7 @@ class _HomeHealthViewState extends State<HomeHealthView> {
         children: [
           Text(
             text1 ?? "",
-            style: getboldStyle(color: ColorManager.kWhiteColor, fontSize: 18),
+            style: getboldStyle(color: ColorManager.kWhiteColor, fontSize: 16),
             textAlign: TextAlign.left,
           ),
           Row(
@@ -336,10 +407,10 @@ class _HomeHealthViewState extends State<HomeHealthView> {
           contentPadding: EdgeInsets.zero,
           title: Text(AppStrings.kTotalPatients,
               style: getboldStyle(
-                  color: ColorManager.kWhiteColor, fontSize: AppSize.s16.sp)),
+                  color: ColorManager.kWhiteColor, fontSize: AppSize.s14.sp)),
           subtitle: Text("412,435 people",
               style: getRegularStyle(
-                  color: ColorManager.kWhiteColor, fontSize: AppSize.s12.sp)),
+                  color: ColorManager.kWhiteColor, fontSize: AppSize.s10.sp)),
         ),
         PieChart(
           dataMap: dataMap,

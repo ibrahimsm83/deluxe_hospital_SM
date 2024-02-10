@@ -202,17 +202,19 @@ class _AppointmentViewState extends State<AppointmentView>
 
                 ListView.separated(
                     itemCount: 10,
-                    separatorBuilder: (context, i) => SizedBox(height: 15.0),
+                    separatorBuilder: (context, i) => SizedBox(height: 12.0),
                     itemBuilder: (context, index) {
                       return Padding(
-                        padding: EdgeInsets.symmetric(horizontal: 15.0,),
-                        child: Column(
-                          children: [
-                            SizedBox(height: 10.0),
+                        padding: EdgeInsets.only(left: 15.0,right: 10.0,top: index==0?20.0:0.0),
+                        child: cancelAppointment(),
 
-                            cancelAppointment(),
-                          ],
-                        ),
+                        // Column(
+                        //   children: [
+                        //     SizedBox(height: 10.0),
+                        //
+                        //
+                        //   ],
+                        // ),
                       );
                     }),
 

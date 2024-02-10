@@ -91,37 +91,41 @@ class _ChatViewState extends State<ChatView> {
   Widget searchWidget() {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 15.0,vertical: 5.0),
-      child: TextField(
-        style: TextStyle(color: ColorManager.kWhiteColor),
-        decoration: InputDecoration(
-          hintText: AppStrings.kSearchMessage,
-          prefixIcon: Icon(Icons.search, color: ColorManager.kWhiteColor),
-          hintStyle: TextStyle(color: ColorManager.kGreyColor),
-          border: const OutlineInputBorder( // won't be used if the state-specific arguments are defined
-            borderRadius: BorderRadius.all(Radius.circular(10)),
-          ),
-          enabledBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.all(Radius.circular(10)),
-            borderSide: BorderSide(color: ColorManager.kGreyColor, width: 2.0),
-          ),
-          disabledBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.all(Radius.circular(10)),
-            borderSide: BorderSide(color: ColorManager.kGreyColor, width: 2.0),
-          ),
-          focusedBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.all(Radius.circular(10)),
-            borderSide: BorderSide(color: ColorManager.kGreyColor, width: 5.0),
-          ),
-          errorBorder: const OutlineInputBorder(
+      child: Container(
+        height: 45,
+        child: TextField(
+          style: TextStyle(color: ColorManager.kWhiteColor),
+          decoration: InputDecoration(
+            contentPadding: EdgeInsets.zero,
+            hintText: AppStrings.kSearchMessage,
+            prefixIcon: Icon(Icons.search, color: ColorManager.kWhiteColor),
+            hintStyle: TextStyle(color: ColorManager.kGreyColor),
+            border: const OutlineInputBorder( // won't be used if the state-specific arguments are defined
+              borderRadius: BorderRadius.all(Radius.circular(10)),
+            ),
+            enabledBorder: OutlineInputBorder(
+              borderRadius: BorderRadius.all(Radius.circular(10)),
+              borderSide: BorderSide(color: ColorManager.kGreyColor, width: 1.0),
+            ),
+            disabledBorder: OutlineInputBorder(
+              borderRadius: BorderRadius.all(Radius.circular(10)),
+              borderSide: BorderSide(color: ColorManager.kGreyColor, width: 1.0),
+            ),
+            focusedBorder: OutlineInputBorder(
+              borderRadius: BorderRadius.all(Radius.circular(10)),
+              borderSide: BorderSide(color: ColorManager.kGreyColor, width: 1.0),
+            ),
+            errorBorder: const OutlineInputBorder(
 
-            borderSide: BorderSide(color: Colors.red, width: 2.0),
-            borderRadius: BorderRadius.all(Radius.circular(10)),
-          ),
-          focusedErrorBorder: const OutlineInputBorder(
-            borderSide: BorderSide(color: Colors.red, width: 5.0),
-            borderRadius: BorderRadius.all(Radius.circular(10)),
-          ),
+              borderSide: BorderSide(color: Colors.red, width: 1.0),
+              borderRadius: BorderRadius.all(Radius.circular(10)),
+            ),
+            focusedErrorBorder: const OutlineInputBorder(
+              borderSide: BorderSide(color: Colors.red, width: 1.0),
+              borderRadius: BorderRadius.all(Radius.circular(10)),
+            ),
 
+          ),
         ),
       ),
     );

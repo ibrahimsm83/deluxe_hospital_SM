@@ -4,14 +4,11 @@ import 'package:deluxe_hospital_sm/presentation/common_screens/chat_audio_video/
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-
-
-
-appBarForChatScreen(BuildContext context,{String? image,String? name}) {
+appBarForChatScreen(BuildContext context, {String? image, String? name}) {
   return PreferredSize(
       preferredSize: Size(double.infinity, 100),
       child: Container(
-        decoration: BoxDecoration( color: ColorManager.primary, boxShadow: [
+        decoration: BoxDecoration(color: ColorManager.primary, boxShadow: [
           BoxShadow(color: Colors.black12, spreadRadius: 1, blurRadius: 1)
         ]),
         height: 56,
@@ -46,8 +43,7 @@ appBarForChatScreen(BuildContext context,{String? image,String? name}) {
                           decoration: BoxDecoration(
                             shape: BoxShape.circle,
                             image: DecorationImage(
-                                image: AssetImage(image!),
-                                fit: BoxFit.cover),
+                                image: AssetImage(image!), fit: BoxFit.cover),
                             color: Colors.white,
                           ),
                         ),
@@ -73,10 +69,14 @@ appBarForChatScreen(BuildContext context,{String? image,String? name}) {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Text(name!,style: getsemiboldStyle(color: ColorManager.secondary),),
+                      Text(
+                        name!,
+                        style: getsemiboldStyle(color: ColorManager.secondary),
+                      ),
                       Text(
                         'online',
-                        style: getsemiboldStyle(color: ColorManager.kGreenColor),
+                        style:
+                            getsemiboldStyle(color: ColorManager.kGreenColor),
                       )
                     ],
                   ),
@@ -86,48 +86,43 @@ appBarForChatScreen(BuildContext context,{String? image,String? name}) {
             Spacer(),
             GestureDetector(
               onTap: () {
-
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => AudioCall()));
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => AudioCall()));
                 // Navigator.pushNamed(context, 'AudioCall');
               },
               child: Container(
-                  height: 40,
-                  width: 40,
-                  padding: EdgeInsets.all(8.0),
-                  decoration: BoxDecoration(
-                      color: ColorManager.kLightBlueColor.withOpacity(0.5),
-                      shape: BoxShape.circle,
-                  ),
-                  child: SvgPicture.asset(
-                    ImageAssets.kAudioCallIcon,
-
-                  )),
-            ),
-            SizedBox(width: 10.0),
-            GestureDetector(
-              onTap: () {
-
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) =>   VideoCall()));
-                //Navigator.pushNamed(context, 'VideoCall');
-              },
-              child: Container(
-                  height: 40,
-                  width: 40,
-                  padding: EdgeInsets.all(8.0),
+                  height: 30,
+                  width: 30,
+                  padding: EdgeInsets.all(6.0),
                   decoration: BoxDecoration(
                     color: ColorManager.kLightBlueColor.withOpacity(0.5),
                     shape: BoxShape.circle,
                   ),
                   child: SvgPicture.asset(
-                    ImageAssets.kVideoCallIcon,
-
+                    ImageAssets.kAudioCallIcon,
                   )),
+            ),
+            SizedBox(width: 10.0),
+            GestureDetector(
+              onTap: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => VideoCall()));
+                //Navigator.pushNamed(context, 'VideoCall');
+              },
+              child: Padding(
+                padding: const EdgeInsets.only(right: 15.0),
+                child: Container(
+                    height: 30,
+                    width: 30,
+                    padding: EdgeInsets.all(6.0),
+                    decoration: BoxDecoration(
+                      color: ColorManager.kLightBlueColor.withOpacity(0.5),
+                      shape: BoxShape.circle,
+                    ),
+                    child: SvgPicture.asset(
+                      ImageAssets.kVideoCallIcon,
+                    )),
+              ),
             ),
 
           ],
@@ -154,7 +149,6 @@ userChatBubble(String message) {
                   colors: [
                     Colors.black45,
                     ColorManager.kLightBlueColor,
-
                   ],
                 ),
                 borderRadius: BorderRadius.only(
@@ -163,9 +157,9 @@ userChatBubble(String message) {
                     topLeft: Radius.circular(30.0))),
             child: Center(
                 child: Text(
-                  message,
-                  style: TextStyle(color: Colors.white),
-                )),
+              message,
+              style: TextStyle(color: Colors.white),
+            )),
           ),
           SizedBox(
             width: 5,
@@ -173,8 +167,8 @@ userChatBubble(String message) {
           Container(
             height: 40,
             width: 40,
-            margin: EdgeInsets.only(
-                left: 0.0, right: 8.0, top: 8.0, bottom: 8.0),
+            margin:
+                EdgeInsets.only(left: 0.0, right: 8.0, top: 8.0, bottom: 8.0),
             decoration: BoxDecoration(
               shape: BoxShape.circle,
               image: DecorationImage(
@@ -196,23 +190,21 @@ userChatBubble(String message) {
   );
 }
 
-otherUserChatBubble(String message,String image) {
+otherUserChatBubble(String message, String image) {
   return Column(
     crossAxisAlignment: CrossAxisAlignment.start,
     children: [
       Row(
         children: [
-
           Container(
             height: 40,
             width: 40,
-            margin: EdgeInsets.only(
-                left: 0.0, right: 8.0, top: 8.0, bottom: 8.0),
+            margin:
+                EdgeInsets.only(left: 0.0, right: 8.0, top: 8.0, bottom: 8.0),
             decoration: BoxDecoration(
               shape: BoxShape.circle,
-              image: DecorationImage(
-                  image: AssetImage(image),
-                  fit: BoxFit.cover),
+              image:
+                  DecorationImage(image: AssetImage(image), fit: BoxFit.cover),
               color: Colors.white,
             ),
           ),
@@ -230,7 +222,6 @@ otherUserChatBubble(String message,String image) {
                   colors: [
                     ColorManager.secondary,
                     Colors.black12,
-
                   ],
                 ),
                 borderRadius: BorderRadius.only(
@@ -239,9 +230,9 @@ otherUserChatBubble(String message,String image) {
                     topLeft: Radius.circular(30.0))),
             child: Center(
                 child: Text(
-                  message,
-                  style: TextStyle(color: Colors.white),
-                )),
+              message,
+              style: TextStyle(color: Colors.white),
+            )),
           ),
         ],
       ),

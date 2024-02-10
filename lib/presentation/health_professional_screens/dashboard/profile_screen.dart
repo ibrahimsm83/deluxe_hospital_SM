@@ -33,9 +33,11 @@ class _ProfileProfessionalHealthCareViewState
   ];
 
   List choicsRoute = [
-     CustomRouteNames.kProfileMedicalDetailsScreenRoute,
+    CustomRouteNames.kProfileMedicalDetailsScreenRoute,
     CustomRouteNames.kProfilePatientReviewsScreenRoute,
     CustomRouteNames.kNotificationsScreenRoute,
+    "CustomRouteNames.kNotificationsScreenRoute,",
+    CustomRouteNames.kLoginScreenRoute,
   ];
 
   @override
@@ -72,12 +74,11 @@ class _ProfileProfessionalHealthCareViewState
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         InkWell(
-                          onTap: (){
+                          onTap: () {
                             Navigator.pushNamed(
                               context,
                               CustomRouteNames.kProfileWalletScreenRoute,
                             );
-
                           },
                           child: Container(
                             decoration: BoxDecoration(
@@ -93,7 +94,7 @@ class _ProfileProfessionalHealthCareViewState
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
-                               const SizedBox(width: 2.0),
+                                const SizedBox(width: 2.0),
                                 SvgPicture.asset(ImageAssets.kWalletIcon),
                                 Container(
                                   height: 50,
@@ -145,8 +146,7 @@ class _ProfileProfessionalHealthCareViewState
                           child: Text(
                             "Settings",
                             style: getboldStyle(
-                                color: ColorManager.secondary,
-                                fontSize: 16.sp),
+                                color: ColorManager.secondary, fontSize: 16.sp),
                           ),
                         ),
                         ListView.separated(
@@ -164,16 +164,15 @@ class _ProfileProfessionalHealthCareViewState
                               title: title[index],
                               leadingIcon: iconsList[index],
                               onTap: () {
-                                if (index == 0
-                                     ||
-                                     index == 1
-                                ||
-                                     index == 2
+                                if (index == 0 ||
+                                        index == 1 ||
+                                        index == 2
                                 //||
-                                    // index == 6 ||
+                                        // index == 4
+                                    // ||
                                     // index == 5
 
-                                ) {
+                                    ) {
                                   Navigator.pushNamed(
                                       context, choicsRoute[index]);
                                 }

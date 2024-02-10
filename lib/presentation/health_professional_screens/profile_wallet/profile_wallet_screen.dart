@@ -57,7 +57,7 @@ class _ProfileWalletScreenState extends State<ProfileWalletScreen> {
                 child: Text(
                   AppStrings.kWallet,
                   style: getboldStyle(
-                    fontSize: 18,
+                    fontSize: 16,
                     color: ColorManager.kWhiteColor,
                   ),
                 ),
@@ -83,23 +83,22 @@ class _ProfileWalletScreenState extends State<ProfileWalletScreen> {
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.only(left: 15.0,bottom: 10.0,top: 10.0),
+                padding: const EdgeInsets.only(left: 15.0,bottom: 0.0,top: 15.0),
                 child: Text(
                   AppStrings.kWithdraw,
                   style: getboldStyle(
-                    fontSize: 18,
+                    fontSize: 16,
                     color: ColorManager.kWhiteColor,
                   ),
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 10.0,vertical: 10.0),
+                padding: const EdgeInsets.symmetric(horizontal: 10.0,vertical: 5.0),
                 child: Withdraw(),
               ),
         Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 10.0,vertical: 10.0),
+              padding: const EdgeInsets.symmetric(horizontal: 10.0,vertical: 5.0),
             child:  Withdraw1()),
-
               const SizedBox(height: 10.0),
               Text(
                 AppStrings.kPayments,
@@ -197,14 +196,14 @@ class _ProfileWalletScreenState extends State<ProfileWalletScreen> {
                   "Available",
 
                   style: getsemiboldStyle(
-                    fontSize: 16,
+                    fontSize: 14,
                     color: ColorManager.kWhiteColor,
                   ),
                 ),
                 Text(
                   "\$15,500.00",
                   style: getsemiboldStyle(
-                    fontSize: 14,
+                    fontSize: 12,
                     color: ColorManager.kGreyColor,
                   ),
                 ),
@@ -219,7 +218,7 @@ class _ProfileWalletScreenState extends State<ProfileWalletScreen> {
                 padding: const EdgeInsets.symmetric(horizontal: 12.0,vertical: 8.0),
                 child: Text(
                   AppStrings.kWithdraw,
-                  style: getsemiboldStyle(color: ColorManager.kWhiteColor),
+                  style: getsemiboldStyle(color: ColorManager.kWhiteColor,fontSize: 13),
                 ),
               ),
             ),
@@ -245,14 +244,14 @@ class _ProfileWalletScreenState extends State<ProfileWalletScreen> {
               "Escrow",
 
               style: getsemiboldStyle(
-                fontSize: 16,
+                fontSize: 14,
                 color: ColorManager.kWhiteColor,
               ),
             ),
             Text(
               "\$10,000.00",
               style: getsemiboldStyle(
-                fontSize: 14,
+                fontSize: 12,
                 color: ColorManager.kGreyColor,
               ),
             ),
