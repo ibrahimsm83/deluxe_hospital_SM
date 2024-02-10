@@ -4,6 +4,7 @@ class ColorManager {
   static Color primary = const Color(0xff0C1A32);
   static Color secondary = const Color(0xff00CAFD);
   static Color kLightBlueColor = const Color(0xff255899);
+  static Color kLightBlueColor1 = const Color(0xff2F579A);
   static Color kWhiteColor = Colors.white;
   static Color kBlackColor = Colors.black;
   static Color kRedColor = Colors.red;
@@ -13,8 +14,8 @@ class ColorManager {
   static Color kStarColor = const Color(0xffFFAD0A);
   static Color kDarkGreyColor = const Color(0xff6F6F6F);
   static Color kbtnBgColor = const Color(0xff707070);
-  // static Color textInputColor = const Color(0xff1F2024);
-  // static Color headingColor = const Color(0xff666666);
+  static Color textInputColor = const Color(0xff1F2024);
+  static Color dialogBoxColor = const Color(0xff00CCFF);
   // static Color subheadingColor = const Color(0xff71727A);
   // static Color borderColor = const Color(0xffC5C6CC);
   // static Color redColor = const Color(0xffED3241);

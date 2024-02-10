@@ -18,10 +18,10 @@ class ChooseAccountScreen extends StatelessWidget {
               padding: const EdgeInsets.symmetric(horizontal: 30.0),
               child: Container(
                 height: AppSize.sizeHeight(context) * 0.5,
-                decoration: const BoxDecoration(
+                decoration: BoxDecoration(
                   image: DecorationImage(
                     image: AssetImage(ImageAssets.doctorsImage),
-                    fit: BoxFit.contain,
+                    fit: BoxFit.cover,
                   ),
                 ),
               ),
@@ -39,107 +39,57 @@ class ChooseAccountScreen extends StatelessWidget {
                 // color: Colors.yellow,
                 child: Padding(
                   padding:
-                      const EdgeInsets.symmetric(horizontal: 25, vertical: 35),
-                  child: Column(children: [
+                      const EdgeInsets.symmetric(horizontal: 25),
+                  child: Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+
                     Padding(
                       padding:
-                          const EdgeInsets.symmetric(horizontal: 15.0),
+                          const EdgeInsets.symmetric(horizontal: 60.0),
                       child: Image.asset(
                         ImageAssets.appLogoImage,
+                        height: 210,
                       ),
                     ),
-                    SizedBox(height: 20.h),
-                    button(
-                        text: AppStrings.continueOfPatient,
-                        color: ColorManager.kLightBlueColor,
-                        context: context,
-                        onTap: () {
-                          userController.setUserRole(UserRole.Patient);
-                          Navigator.pushNamedAndRemoveUntil(
-                            context,
-                            CustomRouteNames.kLoginScreenRoute,
-                            (page) => true,
-                          );
-                        }),
-                    button(
-                        text: AppStrings.continueAsAHealthProfessional,
-                        color: ColorManager.secondary,
-                        context: context,
-                        onTap: () {
-                          userController
-                              .setUserRole(UserRole.HealthProfessional);
-                          Navigator.pushNamedAndRemoveUntil(
-                            context,
-                            CustomRouteNames.kLoginScreenRoute,
-                            (page) => true,
-                          );
-                        }),
+
+                    Column(
+                      children: [
+                        button(
+                            text: AppStrings.continueOfPatient,
+                            color: ColorManager.kLightBlueColor,
+                            context: context,
+                            onTap: () {
+                              userController.setUserRole(UserRole.Patient);
+                              Navigator.pushNamedAndRemoveUntil(
+                                context,
+                                CustomRouteNames.kLoginScreenRoute,
+                                (page) => true,
+                              );
+                            }),
+                        button(
+                            text: AppStrings.continueAsAHealthProfessional,
+                            color: ColorManager.secondary,
+                            context: context,
+                            onTap: () {
+                              userController
+                                  .setUserRole(UserRole.HealthProfessional);
+                              Navigator.pushNamedAndRemoveUntil(
+                                context,
+                                CustomRouteNames.kLoginScreenRoute,
+                                    (page) => true,
+                              );
+                            }),
+                      ],
+                    ),
+
                   ]),
                 ),
               ),
             )
           ],
         )
-
-        // Column(
-        //   children: [
-        //     // const SizedBox(height: 20),
-        //     // Center(child: Image.asset(ImageAssets.doctorsImage)),
-        //     // Container(
-        //     //   margin: EdgeInsets.only(top: AppSize.sizeHeight(context) * 0.38),
-        //     //   height: AppSize.sizeHeight(context) / 1.2,
-        //     //   decoration: BoxDecoration(
-        //     //       color: ColorManager.primary,
-        //     //       borderRadius: const BorderRadius.only(
-        //     //           topLeft: Radius.circular(AppSize.s30),
-        //     //           topRight: Radius.circular(AppSize.s30))),
-        //     //   child: Padding(
-        //     //     padding:
-        //     //         const EdgeInsets.symmetric(horizontal: 25, vertical: 35),
-        //     //     child: Column(
-        //     //       children: [
-        //     //         Padding(
-        //     //           padding:
-        //     //               const EdgeInsets.only(top: 10, left: 10, right: 10),
-        //     //           child: Image.asset(
-        //     //             ImageAssets.appLogoImage,
-        //     //           ),
-        //     //         ),
-        //     //         // Add some spacing
-        //     //         SizedBox(height: 30.h),
-        //     //         button(
-        //     //             text: AppStrings.continueOfPatient,
-        //     //             color: ColorManager.kLightBlueColor,
-        //     //             context: context,
-        //     //             onTap: () {
-        //     //               userController.setUserRole(UserRole.Patient);
-        //     //               Navigator.pushNamedAndRemoveUntil(
-        //     //                 context,
-        //     //                 CustomRouteNames.kLoginScreenRoute,
-        //     //                     (page) => true,
-        //     //               );
-        //     //             }),
-        //     //
-        //     //         button(
-        //     //             text: AppStrings.continueAsAHealthProfessional,
-        //     //             color: ColorManager.secondary,
-        //     //             context: context,
-        //     //             onTap: () {
-        //     //               userController.setUserRole(UserRole.HealthProfessional);
-        //     //               Navigator.pushNamedAndRemoveUntil(
-        //     //                 context,
-        //     //                 CustomRouteNames.kLoginScreenRoute,
-        //     //                     (page) => true,
-        //     //               );
-        //     //             }),
-        //     //       ],
-        //     //     ),
-        //     //   ),
-        //     // ),
-        //     //
-        //   ],
-        // ),
-        );
+    );
   }
 
   Widget button(

@@ -35,6 +35,7 @@ class ReviewSummaryScreen extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 15.0),
           child: Column(children: [
+            SizedBox(height: AppSize.s15.h),
             info(),
             Padding(
               padding: const EdgeInsets.symmetric(vertical: 15.0),
@@ -71,8 +72,8 @@ class ReviewSummaryScreen extends StatelessWidget {
                   borderRadius: BorderRadius.circular(12.0),
                   child: Image.asset(
                     ImageAssets.demoUserImage,
-                    height: 60,
-                    width: 60,
+                    height: 75,
+                    width: 75,
                   ),
                 ),
                 Padding(
@@ -85,10 +86,13 @@ class ReviewSummaryScreen extends StatelessWidget {
                             style: getmediumStyle(
                                 color: ColorManager.kWhiteColor, fontSize: 16)),
                         //Divider(color: ColorManager.kGreyColor,thickness: 3,),
-                        Container(
-                          color: ColorManager.secondary,
-                          height: 1,
-                          width: 250,
+                        Padding(
+                          padding: const EdgeInsets.symmetric(vertical: 10.0),
+                          child: Container(
+                            color: ColorManager.secondary,
+                            height: 0.5,
+                            width: 250,
+                          ),
                         ),
                         Text("immunologist | Christ Hospital",
                             style: getRegularStyle(
@@ -229,10 +233,12 @@ Widget paymentDetails(BuildContext context){
   void _showCongratsDialog(BuildContext context) {
     showDialog(
       context: context,
+
       builder: (BuildContext context) {
+
         return Theme(
           data: Theme.of(context).copyWith(
-            dialogBackgroundColor: Colors.lightBlueAccent,
+            dialogBackgroundColor:ColorManager.dialogBoxColor //Colors.lightBlueAccent,
             // Change dialog background color
           ),
           child: AlertDialog(
@@ -241,7 +247,7 @@ Widget paymentDetails(BuildContext context){
               children: [
                 Padding(
                   padding: const EdgeInsets.all(8.0),
-                  child: Image.asset(ImageAssets.doneImage),
+                  child: Image.asset(ImageAssets.doneImage,height: 150,width: 150,),
                 ),
                 SizedBox(height: 10),
                 Text(
@@ -249,16 +255,16 @@ Widget paymentDetails(BuildContext context){
                   style: getboldStyle(
                       color: ColorManager.kWhiteColor,
                       fontSize: ScreenUtil()
-                          .setSp(AppSize.s24)), // Change title color
+                          .setSp(AppSize.s20)), // Change title color
                 ),
-                 SizedBox(height: 10),
+                 SizedBox(height: 15),
                 Text(
                   "Appointment Successfully Booked. you will received a notification and the doctor you selected will contact you",
                   textAlign: TextAlign.center,
                   style: getRegularStyle(
                       color: ColorManager.kWhiteColor,
                       fontSize: ScreenUtil()
-                          .setSp(AppSize.s14)), // Change title color
+                          .setSp(AppSize.s12)), // Change title color
                 ),
                 SizedBox(
                   height: AppSize.sizeHeight(context) * 0.02,

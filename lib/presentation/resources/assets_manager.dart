@@ -38,6 +38,7 @@ class ImageAssets {
   static const String kCalendarEditIcon = "$ICON_PATH/calendarEdit.svg";
   static const String kCloseCircleIcon = "$ICON_PATH/close-circle.svg";
   static const String kMessageIcon = "$ICON_PATH/message.svg";
+  static const String kChatMoreIcon = "$ICON_PATH/chatMoreIcon.svg";
 
   static const String kmoreIcon = "$ICON_PATH/more.svg";
   static const String kRadioloIcon = "$ICON_PATH/Radiolo.svg";

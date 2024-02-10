@@ -11,7 +11,7 @@ class AppLogoView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.symmetric(horizontal: AppSize.sizeWidth(context) * 0.2),
+      padding: EdgeInsets.symmetric(horizontal: AppSize.sizeWidth(context) * 0.25),
       child: Container(
         alignment: Alignment.center,
         child: Image.asset(

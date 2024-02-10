@@ -19,7 +19,7 @@ class DoctorProfileScreen extends StatelessWidget {
           "Dr Awaiz Shaikh",
           style: getboldStyle(
               color: ColorManager.kWhiteColor,
-              fontSize: ScreenUtil().setSp(AppSize.s18)),
+              fontSize: ScreenUtil().setSp(AppSize.s16)),
         ),
         leading: Padding(
           padding: const EdgeInsets.all(20.0),
@@ -36,7 +36,7 @@ class DoctorProfileScreen extends StatelessWidget {
             children: [
               info(),
               Padding(
-                padding: const EdgeInsets.symmetric(vertical: 20.0),
+                padding: const EdgeInsets.symmetric(vertical: 20.0,horizontal: 10.0),
                 child: reportWidget(),
               ),
               aboutMe(),
@@ -46,53 +46,79 @@ class DoctorProfileScreen extends StatelessWidget {
                   AppStrings.kCheckAvailability,
                   style: getboldStyle(
                       color: ColorManager.kWhiteColor,
-                      fontSize: ScreenUtil().setSp(AppSize.s16)),
+                      fontSize: ScreenUtil().setSp(AppSize.s14)),
                 ),
               ),
 
               checkAvailablity(),
               Padding(
-                padding: const EdgeInsets.only(bottom: 10.0),
+                padding: const EdgeInsets.only(bottom: 15.0,top: 10.0),
                 child: Text(
                   AppStrings.kConsultationCharges,
                   style: getboldStyle(
                       color: ColorManager.kWhiteColor,
-                      fontSize: ScreenUtil().setSp(AppSize.s16)),
+                      fontSize: ScreenUtil().setSp(AppSize.s14)),
                 ),
               ),
               consultationChagres(),
+              const SizedBox(height: 8),
               Padding(
-                padding: const EdgeInsets.symmetric(vertical: 10.0),
+                padding: const EdgeInsets.only(top: 15.0,bottom: 8.0),
                 child: Text(
                   AppStrings.kWorksAt,
                   style: getboldStyle(
                       color: ColorManager.kWhiteColor,
-                      fontSize: ScreenUtil().setSp(AppSize.s16)),
+                      fontSize: ScreenUtil().setSp(AppSize.s14)),
                 ),
               ),
               Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text("Location:",
-                      style: getsemiboldStyle(
+                      style: getRegularStyle(
                           color: ColorManager.kWhiteColor, fontSize: 14)),
                   SizedBox(width: 10.0),
-                  Text("Streams Hospital Street A-3, London",
-                      style: getsemiboldStyle(
+                  Text("\t\t\tStreams Hospital Street A-3, London",
+                      style: getRegularStyle(
                           color: ColorManager.secondary, fontSize: 14)),
                 ],
               ),
-
-              // Padding(
-              //   padding: const EdgeInsets.symmetric(vertical: 10.0),
-              //   child: Text(
-              //     AppStrings.kQualification,
-              //     style: getboldStyle(
-              //         color: ColorManager.kWhiteColor,
-              //         fontSize: ScreenUtil().setSp(AppSize.s16)),
-              //   ),
-              // ),
-
+              const SizedBox(height: 15),
+              Padding(
+                padding: const EdgeInsets.symmetric(vertical: 10.0),
+                child: Text(
+                  AppStrings.kQualification,
+                  style: getboldStyle(
+                      color: ColorManager.kWhiteColor,
+                      fontSize: ScreenUtil().setSp(AppSize.s14)),
+                ),
+              ),
+              Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text("Institution:",
+                      style: getRegularStyle(
+                          color: ColorManager.kWhiteColor, fontSize: 14)),
+                  SizedBox(width: 10.0),
+                  Text("\t\t\tAbc School",
+                      style: getRegularStyle(
+                          color: ColorManager.secondary, fontSize: 14)),
+                ],
+              ),
+              const SizedBox(height: 8),
+              Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text("Degree:",
+                      style: getRegularStyle(
+                          color: ColorManager.kWhiteColor, fontSize: 14)),
+                  SizedBox(width: 10.0),
+                  Text("\t\t\t\t\t\t\t\tAbc School",
+                      style: getRegularStyle(
+                          color: ColorManager.secondary, fontSize: 14)),
+                ],
+              ),
+              const SizedBox(height: 15),
               Padding(
                 padding: const EdgeInsets.symmetric(vertical: 10.0),
                 child: Text(
@@ -104,13 +130,13 @@ class DoctorProfileScreen extends StatelessWidget {
               ),
               Text(
                 "Eng - Spanish",
-                style: getsemiboldStyle(
+                style: getRegularStyle(
                     color: ColorManager.secondary,
-                    fontSize: ScreenUtil().setSp(AppSize.s14)),
+                    fontSize: ScreenUtil().setSp(AppSize.s13)),
               ),
 
-              const SizedBox(height: 10),
-              rowText(text1: AppStrings.kReviews, text2: AppStrings.kSeeAll),
+              const SizedBox(height: 20),
+              rowText(text1: AppStrings.kReviews, text2: "See All"),
               const SizedBox(height: 10),
               Reviews(),
               Reviews(),
@@ -123,7 +149,7 @@ class DoctorProfileScreen extends StatelessWidget {
                  AppStrings.kLoadMoreReviews,
                   style: getsemiboldStyle(
                       color: ColorManager.secondary,
-                      fontSize: ScreenUtil().setSp(AppSize.s14)),
+                      fontSize: ScreenUtil().setSp(AppSize.s13)),
                 ),
               ),
 
@@ -132,17 +158,31 @@ class DoctorProfileScreen extends StatelessWidget {
                 color: ColorManager.secondary,
                 context: context,
                 onTap: () {
-
-
                     Navigator.pushNamed(
                       context,
                       CustomRouteNames.kBookAppointmentScreenRoute,
                    );
                   }),
+              const SizedBox(height: 10),
             ],
           ),
         ),
       ),
+    );
+  }
+  Widget button(
+      {Function()? onTap, String? text, Color? color, BuildContext? context}) {
+    return Padding(
+      padding: EdgeInsets.symmetric(
+          horizontal: AppSize.sizeWidth(context!) * 0.01, vertical: 8.0),
+      child: CustomButton(
+          color: color!,
+          text: text ?? "",
+          style: getboldStyle(
+            color: ColorManager.kWhiteColor,
+            fontSize: AppSize.s14.sp,
+          ),
+          onTap: onTap),
     );
   }
 Widget Reviews(){
@@ -169,8 +209,10 @@ Widget Reviews(){
                 padding: const EdgeInsets.symmetric(horizontal: 5.0),
                 child: Row(
                   mainAxisSize: MainAxisSize.min,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    Icon(Icons.star_rate_rounded,size: 16,color: ColorManager.kStarColor),
+                    Icon(Icons.star_rate_rounded,size: 15,color: ColorManager.kStarColor),
                     Text("5.0",style: getRegularStyle(color: ColorManager.kWhiteColor)),
                   ],),
               ),
@@ -180,7 +222,7 @@ Widget Reviews(){
       ),
       subtitle: Text(
         "Dr Awaiz Shaikh is very professional in his work and very responsible. i have consulted and my problem is solved,",
-        style: getmediumStyle(
+        style: getRegularStyle(
             color: ColorManager.kWhiteColor, fontSize: 10.sp),
       ),
       // trailing:
@@ -200,8 +242,8 @@ Widget Reviews(){
           GestureDetector(
             onTap: onTap,
             child: Text(text2 ?? "", //AppStrings.viewAll,
-                style: getmediumStyle(
-                    color: ColorManager.secondary, fontSize: AppSize.s12.sp)),
+                style: getboldStyle(
+                    color: ColorManager.secondary, fontSize: AppSize.s13.sp)),
           ),
         ],
       ),
@@ -298,8 +340,8 @@ Widget Reviews(){
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Container(
-            height: 60,
-            width: 60,
+            height: 55,
+            width: 55,
             decoration: BoxDecoration(
                 color: ColorManager.kLightBlueColor, shape: BoxShape.circle),
             child: Padding(
@@ -345,7 +387,7 @@ Widget Reviews(){
           AppStrings.kAboutMe,
           style: getboldStyle(
               color: ColorManager.kWhiteColor,
-              fontSize: ScreenUtil().setSp(AppSize.s16)),
+              fontSize: ScreenUtil().setSp(AppSize.s14)),
         ),
         Padding(
           padding: const EdgeInsets.symmetric(vertical: 10.0),
@@ -354,7 +396,7 @@ Widget Reviews(){
             textAlign: TextAlign.left,
             style: getRegularStyle(
                 color: ColorManager.kWhiteColor,
-                fontSize: ScreenUtil().setSp(AppSize.s14)),
+                fontSize: ScreenUtil().setSp(AppSize.s12)),
           ),
         ),
       ],
@@ -366,7 +408,7 @@ Widget Reviews(){
         children: List.generate(
       weekdays.length,
       (index) => Padding(
-        padding: const EdgeInsets.all(8.0),
+        padding: const EdgeInsets.all(6.0),
         child: Container(
           width: 100,
           decoration: BoxDecoration(
@@ -375,17 +417,18 @@ Widget Reviews(){
           ),
           child: Padding(
             padding:
-                const EdgeInsets.symmetric(horizontal: 15.0, vertical: 10.0),
+                const EdgeInsets.symmetric(horizontal: 15.0, vertical: 4.0),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
+                SizedBox(),
                 Text(
                   weekdays[index],
-                  style: getboldStyle(
+                  style: getmediumStyle(
                       color: ColorManager.secondary,
-                      fontSize: ScreenUtil().setSp(AppSize.s16)),
+                      fontSize: ScreenUtil().setSp(AppSize.s12)),
                 ),
-                SvgPicture.asset(ImageAssets.kArrowDownIcon),
+                SvgPicture.asset(ImageAssets.kArrowDownIcon,height: 6,width: 6),
               ],
             ),
           ),
@@ -401,17 +444,17 @@ Widget Reviews(){
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             SvgPicture.asset(
-              ImageAssets.kmoreIcon,
-              height: 20,
-              width: 20,
+              ImageAssets.kChatMoreIcon,
+              height: 18,
+              width: 18,
             ),
             SizedBox(width: 10.0),
             Text("Chat: \t\t\t\t\t\t\t",
-                style: getsemiboldStyle(
+                style: getRegularStyle(
                     color: ColorManager.kWhiteColor, fontSize: 14)),
             SizedBox(width: 3.0),
-            Text("\$6.00:",
-                style: getsemiboldStyle(
+            Text("\t\t\t\$6.00:",
+                style: getRegularStyle(
                     color: ColorManager.secondary, fontSize: 14)),
           ],
         ),
@@ -423,11 +466,11 @@ Widget Reviews(){
             ),
             SizedBox(width: 10.0),
             Text("\t\tVoice Call:",
-                style: getsemiboldStyle(
+                style: getRegularStyle(
                     color: ColorManager.kWhiteColor, fontSize: 14)),
             SizedBox(width: 5.0),
-            Text("\$10.00:",
-                style: getsemiboldStyle(
+            Text("\t\t\$10.00:",
+                style: getRegularStyle(
                     color: ColorManager.secondary, fontSize: 14)),
           ],
         ),
@@ -437,11 +480,11 @@ Widget Reviews(){
             SvgPicture.asset(ImageAssets.kVideoCallIcon),
             SizedBox(width: 10.0),
             Text("\tVideo Call:",
-                style: getsemiboldStyle(
+                style: getRegularStyle(
                     color: ColorManager.kWhiteColor, fontSize: 14)),
             SizedBox(width: 5.0),
-            Text("\$20.00:",
-                style: getsemiboldStyle(
+            Text("\t\t\$20.00:",
+                style: getRegularStyle(
                     color: ColorManager.secondary, fontSize: 14)),
           ],
         ),

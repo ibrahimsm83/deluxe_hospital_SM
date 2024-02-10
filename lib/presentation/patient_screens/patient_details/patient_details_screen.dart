@@ -52,7 +52,7 @@ class _PatientDetailsScreenState extends State<PatientDetailsScreen> {
                 AppStrings.kSelectAccount,
                 style: getboldStyle(
                     color: ColorManager.secondary,
-                    fontSize: ScreenUtil().setSp(AppSize.s16)),
+                    fontSize: ScreenUtil().setSp(AppSize.s14)),
               ),
             ),
             selectAccount(),
@@ -62,7 +62,7 @@ class _PatientDetailsScreenState extends State<PatientDetailsScreen> {
                 AppStrings.kGender,
                 style: getboldStyle(
                     color: ColorManager.secondary,
-                    fontSize: ScreenUtil().setSp(AppSize.s16)),
+                    fontSize: ScreenUtil().setSp(AppSize.s14)),
               ),
             ),
             gender(),
@@ -72,7 +72,7 @@ class _PatientDetailsScreenState extends State<PatientDetailsScreen> {
                 AppStrings.kAge,
                 style: getboldStyle(
                     color: ColorManager.secondary,
-                    fontSize: ScreenUtil().setSp(AppSize.s16)),
+                    fontSize: ScreenUtil().setSp(AppSize.s14)),
               ),
             ),
             CustomTextFormField(
@@ -93,7 +93,7 @@ class _PatientDetailsScreenState extends State<PatientDetailsScreen> {
                 AppStrings.kWriteYourProblem,
                 style: getboldStyle(
                     color: ColorManager.secondary,
-                    fontSize: ScreenUtil().setSp(AppSize.s16)),
+                    fontSize: ScreenUtil().setSp(AppSize.s14)),
               ),
             ),
             CustomTextFormField(
@@ -108,7 +108,7 @@ class _PatientDetailsScreenState extends State<PatientDetailsScreen> {
                     return null;
                   };
                 }),
-            SizedBox(height: AppSize.s30.h),
+            SizedBox(height: AppSize.sizeHeight(context)*0.15),
               button(
                   text: AppStrings.kNext,
                   color: ColorManager.secondary,
@@ -119,6 +119,7 @@ class _PatientDetailsScreenState extends State<PatientDetailsScreen> {
                       CustomRouteNames.kGiveMeDiscountScreenRoute,
                     );
                   }),
+              SizedBox(height: AppSize.s10.h),
           ],),
         ),
       ),
@@ -128,7 +129,7 @@ class _PatientDetailsScreenState extends State<PatientDetailsScreen> {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 18.0),
       child: SizedBox(
-        height: 55,
+        height: 45,
         child: DropdownButtonFormField<String>(
           value: selectedAccount,
           style: TextStyle(
@@ -136,6 +137,7 @@ class _PatientDetailsScreenState extends State<PatientDetailsScreen> {
           ),
           dropdownColor: ColorManager.primary,
           decoration: InputDecoration(
+            contentPadding: EdgeInsets.only(left: 10.0),
             border: OutlineInputBorder(
               borderRadius: BorderRadius.circular(10.0),
               borderSide: BorderSide(
@@ -165,7 +167,7 @@ class _PatientDetailsScreenState extends State<PatientDetailsScreen> {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 18.0),
       child: SizedBox(
-        height: 55,
+        height: 45,
         child: DropdownButtonFormField<String>(
           value: selectedGender,
           style: TextStyle(
@@ -173,6 +175,7 @@ class _PatientDetailsScreenState extends State<PatientDetailsScreen> {
           ),
           dropdownColor: ColorManager.primary,
           decoration: InputDecoration(
+            contentPadding: EdgeInsets.only(left: 10.0),
             border: OutlineInputBorder(
               borderRadius: BorderRadius.circular(10.0),
               borderSide: BorderSide(

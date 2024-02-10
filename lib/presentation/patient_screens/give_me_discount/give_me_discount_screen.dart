@@ -19,10 +19,10 @@ class GiveMeDiscountScreen extends StatelessWidget {
         backgroundColor: Colors.transparent,
         centerTitle: true,
         title: Text(
-          AppStrings.kPatientDetails,
+          AppStrings.kGiveMeDiscount,
           style: getboldStyle(
               color: ColorManager.secondary,
-              fontSize: ScreenUtil().setSp(AppSize.s18)),
+              fontSize: ScreenUtil().setSp(AppSize.s16)),
         ),
         leading: Padding(
           padding: const EdgeInsets.all(20.0),
@@ -31,54 +31,56 @@ class GiveMeDiscountScreen extends StatelessWidget {
               child: SvgPicture.asset(ImageAssets.arrowLeftIcon)),
         ),
       ),
-      body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 15.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Padding(
-              padding: const EdgeInsets.symmetric(vertical: 10.0,horizontal: 15),
-              child: Text(
-                AppStrings.kShareAppLink,
-                style: getboldStyle(
-                    color: ColorManager.secondary,
-                    fontSize: ScreenUtil().setSp(AppSize.s16)),
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 15.0),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Padding(
+                padding: const EdgeInsets.symmetric(vertical: 10.0,horizontal: 15),
+                child: Text(
+                  AppStrings.kShareAppLink,
+                  style: getsemiboldStyle(
+                      color: ColorManager.secondary,
+                      fontSize: ScreenUtil().setSp(AppSize.s14)),
+                ),
               ),
-            ),
-            CustomTextFormField(
-                hintText: "Sharif Shaikh",
-                controller: _linkController,
-                validator: (String? val) {
-                      (String? val) {
-                    if (val == null || val.isEmpty) {
-                      return "Paste App Link";
-                    }
-                    return null;
-                  };
-                }),
-            SizedBox(height: AppSize.s15.h),
-            listTile(),
-            Padding(
-              padding: const EdgeInsets.symmetric(vertical: 10.0,horizontal: 15),
-              child: Text(
-                AppStrings.kShareTheAppLinkAndGetDiscount,
-                style: getsemiboldStyle(
-                    color: ColorManager.kWhiteColor,
-                    fontSize: ScreenUtil().setSp(AppSize.s13)),
+              CustomTextFormField(
+                  hintText: "Sharif Shaikh",
+                  controller: _linkController,
+                  validator: (String? val) {
+                        (String? val) {
+                      if (val == null || val.isEmpty) {
+                        return "Paste App Link";
+                      }
+                      return null;
+                    };
+                  }),
+              SizedBox(height: AppSize.s15.h),
+              listTile(),
+              Padding(
+                padding: const EdgeInsets.symmetric(vertical: 10.0,horizontal: 15),
+                child: Text(
+                  AppStrings.kShareTheAppLinkAndGetDiscount,
+                  style: getsemiboldStyle(
+                      color: ColorManager.kWhiteColor,
+                      fontSize: ScreenUtil().setSp(AppSize.s12)),
+                ),
               ),
-            ),
-            SizedBox(height: AppSize.sizeHeight(context)/4),
-            button(
-                text: AppStrings.kShare,
-                color: ColorManager.secondary,
-                context: context,
-                onTap: () {
-                  Navigator.pushNamed(
-                    context,
-                    CustomRouteNames.kPaymentSetupScreenRoute,
-                  );
-                }),
-          ],
+              SizedBox(height: AppSize.sizeHeight(context)/2),
+              button(
+                  text: AppStrings.kShare,
+                  color: ColorManager.secondary,
+                  context: context,
+                  onTap: () {
+                    Navigator.pushNamed(
+                      context,
+                      CustomRouteNames.kPaymentSetupScreenRoute,
+                    );
+                  }),
+            ],
+          ),
         ),
       ),
     );
@@ -92,11 +94,11 @@ class GiveMeDiscountScreen extends StatelessWidget {
            color: ColorManager.kLightBlueColor,
          ),
          child: ListTile(
-           title: Text("www.invite.deluxehospital.com/",
-               style: getsemiboldStyle(
+           title: Text("www.invite.deluxehospital.com..../",
+               style: getRegularStyle(
                    color: ColorManager.secondary, fontSize: 12.sp)),
            trailing:Text("Copy",
-               style: getsemiboldStyle(
+               style: getRegularStyle(
                    color: ColorManager.secondary, fontSize: 12.sp)),
          ),
        ),

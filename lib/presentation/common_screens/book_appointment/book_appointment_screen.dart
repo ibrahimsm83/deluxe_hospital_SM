@@ -44,36 +44,39 @@ class _BookAppointmentScreenState extends State<BookAppointmentScreen> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               calenderWidget(),
+              const SizedBox(height: 20.0),
               Padding(
                 padding: const EdgeInsets.symmetric(vertical: 10.0),
                 child: Text(
                   AppStrings.kSelectDay,
                   style: getboldStyle(
                       color: ColorManager.kWhiteColor,
-                      fontSize: ScreenUtil().setSp(AppSize.s18)),
+                      fontSize: ScreenUtil().setSp(AppSize.s15)),
                 ),
               ),
               selectDateAndHour("Mon"),
+              const SizedBox(height: 15.0),
               Padding(
                 padding: const EdgeInsets.symmetric(vertical: 10.0),
                 child: Text(
                   AppStrings.kSelectHour,
                   style: getboldStyle(
                       color: ColorManager.kWhiteColor,
-                      fontSize: ScreenUtil().setSp(AppSize.s18)),
+                      fontSize: ScreenUtil().setSp(AppSize.s15)),
                 ),
               ),
               selectDateAndHour("10.00 AM"),
+              const SizedBox(height: 15.0),
               Padding(
                 padding: const EdgeInsets.symmetric(vertical: 10.0),
                 child: Text(
                   AppStrings.kSelectConsult,
                   style: getboldStyle(
                       color: ColorManager.kWhiteColor,
-                      fontSize: ScreenUtil().setSp(AppSize.s18)),
+                      fontSize: ScreenUtil().setSp(AppSize.s15)),
                 ),
               ),
-              listTile("Chat - \$40", ImageAssets.kmoreIcon),
+              listTile("Chat - \$40", ImageAssets.kChatMoreIcon),
               listTile("Voice - \$40", ImageAssets.kAudioCallIcon),
               listTile("Video - \$40", ImageAssets.kVideoCallIcon),
               const SizedBox(height: 50.0),
@@ -118,7 +121,7 @@ class _BookAppointmentScreenState extends State<BookAppointmentScreen> {
         borderRadius: BorderRadius.circular(10.0),
       ),
       child: Padding(
-        padding: const EdgeInsets.all(8.0),
+        padding: const EdgeInsets.all(20.0),
         child: TableCalendar(
           firstDay: DateTime.utc(2010, 10, 16),
           lastDay: DateTime.utc(2030, 3, 14),
@@ -136,10 +139,9 @@ class _BookAppointmentScreenState extends State<BookAppointmentScreen> {
 
           daysOfWeekStyle: DaysOfWeekStyle(
             weekdayStyle:
-                getboldStyle(color: ColorManager.kWhiteColor, fontSize: 16),
+                getRegularStyle(color: ColorManager.secondary, fontSize: 14),
             weekendStyle:
-                getboldStyle(color: ColorManager.kWhiteColor, fontSize: 16),
-            //decoration: BoxDecoration(shape: BoxShape.circle, color: ColorManager.kWhiteColor,
+            getRegularStyle(color: ColorManager.secondary, fontSize: 14),
 
             //),
           ),
@@ -149,29 +151,25 @@ class _BookAppointmentScreenState extends State<BookAppointmentScreen> {
             headerPadding: const EdgeInsets.symmetric(horizontal: 40.0),
             formatButtonVisible: false,
             titleCentered: true,
+            titleTextStyle:getRegularStyle(color: ColorManager.kWhiteColor,fontSize: 14),
 
-            titleTextStyle: TextStyle(
-              fontWeight: FontWeight.bold,
-              color: ColorManager.kWhiteColor,
-              fontSize: 18,
-            ),
             rightChevronMargin: const EdgeInsets.only(right: 0),
             rightChevronIcon: Container(
-              padding: const EdgeInsets.all(4.0),
+              padding: const EdgeInsets.symmetric(horizontal: 10.0),
               decoration: BoxDecoration(
                 // color: ColorManager.kRedColor,
                 shape: BoxShape.circle,
               ),
               child: Icon(
                 Icons.chevron_right,
-                color: ColorManager.kWhiteColor,
+                color: ColorManager.kGreyColor,
               ),
             ),
             leftChevronIcon: Container(
-              padding: const EdgeInsets.all(4.0),
+              padding: const EdgeInsets.symmetric(horizontal: 10.0),
               child: Icon(
                 Icons.chevron_left,
-                color: ColorManager.kWhiteColor,
+                color: ColorManager.kGreyColor,
               ),
             ),
             leftChevronMargin: const EdgeInsets.only(
@@ -180,14 +178,13 @@ class _BookAppointmentScreenState extends State<BookAppointmentScreen> {
           ),
           calendarStyle: CalendarStyle(
             defaultTextStyle:
-                getboldStyle(color: ColorManager.kWhiteColor, fontSize: 16),
-
+                getRegularStyle(color: ColorManager.kWhiteColor, fontSize: 14),
             todayTextStyle:
-                getboldStyle(color: ColorManager.kWhiteColor, fontSize: 16),
+            getRegularStyle(color: ColorManager.kWhiteColor, fontSize: 14),
             outsideTextStyle:
-                getboldStyle(color: ColorManager.kWhiteColor, fontSize: 16),
+            getRegularStyle(color: ColorManager.kWhiteColor, fontSize: 14),
             selectedTextStyle:
-                getboldStyle(color: ColorManager.kWhiteColor, fontSize: 16),
+            getRegularStyle(color: ColorManager.kWhiteColor, fontSize: 14),
             // outsideDecoration: ,
             todayDecoration: BoxDecoration(
                 color: ColorManager.secondary, shape: BoxShape.circle),
@@ -196,7 +193,7 @@ class _BookAppointmentScreenState extends State<BookAppointmentScreen> {
             // weekendDecoration: BoxDecoration(
             //     shape: BoxShape.circle, color: Colors.grey.withOpacity(0.3)),
             weekendTextStyle:
-                getboldStyle(color: ColorManager.kWhiteColor, fontSize: 16),
+                getRegularStyle(color: ColorManager.kWhiteColor, fontSize: 14),
           ), // Change the color as needed
         ),
       ),
@@ -205,21 +202,22 @@ class _BookAppointmentScreenState extends State<BookAppointmentScreen> {
 
   Widget selectDateAndHour(String text) {
     return Container(
-      width: 150,
+      width: 120,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(30.0),
         border: Border.all(color: ColorManager.secondary),
       ),
       child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 15.0, vertical: 10.0),
+        padding: const EdgeInsets.symmetric(horizontal: 15.0, vertical: 6.0),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
+            SizedBox(),
             Text(
               text,
-              style: getboldStyle(
+              style: getmediumStyle(
                   color: ColorManager.secondary,
-                  fontSize: ScreenUtil().setSp(AppSize.s16)),
+                  fontSize: ScreenUtil().setSp(AppSize.s12)),
             ),
             // SizedBox(width: 10.0),
             SvgPicture.asset(ImageAssets.kArrowDownIcon),
@@ -231,7 +229,7 @@ class _BookAppointmentScreenState extends State<BookAppointmentScreen> {
 
   Widget listTile(String text, String iconPath) {
     return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 5.0),
+      padding: const EdgeInsets.symmetric(vertical: 4.0),
       child: Container(
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(10.0),
@@ -244,7 +242,7 @@ class _BookAppointmentScreenState extends State<BookAppointmentScreen> {
             width: 20,
           ),
           title: Text(text,
-              style: getsemiboldStyle(
+              style: getRegularStyle(
                   color: ColorManager.secondary, fontSize: 14.sp)),
         ),
       ),

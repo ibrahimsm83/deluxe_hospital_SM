@@ -55,14 +55,14 @@ class _SignInScreenState extends State<SignInScreen> {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               AppLogoView(),
-              SizedBox(height: AppSize.s20.h),
+              SizedBox(height: AppSize.sizeHeight(context)*0.05),
               Text(
                 AppStrings.kLoginToYourAccount,
                 style: getboldStyle(
                     color: ColorManager.secondary,
-                    fontSize: ScreenUtil().setSp(AppSize.s24)),
+                    fontSize: ScreenUtil().setSp(AppSize.s20)),
               ),
-              SizedBox(height: AppSize.s20.h),
+              SizedBox(height: AppSize.s30.h),
               CustomTextFormField(
                 hintText: AppStrings.kEmailHintText,
                 focusNode: node,
@@ -79,7 +79,7 @@ class _SignInScreenState extends State<SignInScreen> {
                   return 'Invalid Email';
                 },
               ),
-              SizedBox(height: AppSize.s15.h),
+              SizedBox(height: AppSize.s20.h),
               CustomTextFormField(
                 controller: _passwordController,
                 obscureText: true,
@@ -153,8 +153,7 @@ class _SignInScreenState extends State<SignInScreen> {
                   ],
                 ),
               ),
-              const SizedBox(height: 5),
-              SizedBox(height: 10.h),
+              SizedBox(height: AppSize.sizeHeight(context)*0.05),
               button(
                   text: AppStrings.kSignIn,
                   color: ColorManager.secondary,

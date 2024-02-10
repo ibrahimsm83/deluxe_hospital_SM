@@ -36,27 +36,28 @@ class PaymentSetupScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+            SizedBox(height: AppSize.s15.h),
             Padding(
               padding: const EdgeInsets.symmetric(vertical: 10.0,horizontal: 15),
               child: Text(
                 AppStrings.kDownloadTheAppHereIsLink,
-                style: getboldStyle(
+                style: getsemiboldStyle(
                     color: ColorManager.secondary,
-                    fontSize: ScreenUtil().setSp(AppSize.s16)),
+                    fontSize: ScreenUtil().setSp(AppSize.s14)),
               ),
             ),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 15),
               child: Text(
                 AppStrings.kDownloadTheAppAndPay,
-                style: getsemiboldStyle(
+                style: getRegularStyle(
                     color: ColorManager.kWhiteColor,
-                    fontSize: ScreenUtil().setSp(AppSize.s13)),
+                    fontSize: ScreenUtil().setSp(AppSize.s10)),
               ),
             ),
-            SizedBox(height: AppSize.s15.h),
+            SizedBox(height: AppSize.s20.h),
             listTile(),
-            SizedBox(height: AppSize.sizeHeight(context)/4),
+            SizedBox(height: AppSize.sizeHeight(context)/2),
             button(
                 text: AppStrings.kNext,
                 color: ColorManager.secondary,
@@ -74,7 +75,7 @@ class PaymentSetupScreen extends StatelessWidget {
   }
   Widget listTile() {
     return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 5.0,horizontal: 10.0),
+      padding: const EdgeInsets.symmetric(vertical: 5.0,horizontal: 15.0),
       child: Container(
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(10.0),
@@ -82,10 +83,10 @@ class PaymentSetupScreen extends StatelessWidget {
         ),
         child: ListTile(
           title: Text("www.invite.deluxehospital.com/",
-              style: getsemiboldStyle(
+              style: getRegularStyle(
                   color: ColorManager.secondary, fontSize: 12.sp)),
           trailing:Text("Copy",
-              style: getsemiboldStyle(
+              style: getRegularStyle(
                   color: ColorManager.secondary, fontSize: 12.sp)),
         ),
       ),

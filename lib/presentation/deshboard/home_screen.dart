@@ -113,7 +113,7 @@ class _HomeViewState extends State<HomeView> {
                 Text(
                   "Upcoming Appointment",
                   style:
-                      getboldStyle(color: ColorManager.secondary, fontSize: 18),
+                      getboldStyle(color: ColorManager.secondary, fontSize: 17),
                   textAlign: TextAlign.left,
                 ),
                 const SizedBox(height: 10),
@@ -122,7 +122,7 @@ class _HomeViewState extends State<HomeView> {
                 Text(
                   AppStrings.kProfessionalCategory,
                   style:
-                      getboldStyle(color: ColorManager.secondary, fontSize: 18),
+                      getboldStyle(color: ColorManager.secondary, fontSize: 17),
                   textAlign: TextAlign.left,
                 ),
                 const SizedBox(height: 10),
@@ -176,11 +176,13 @@ class _HomeViewState extends State<HomeView> {
         mainAxisAlignment: MainAxisAlignment.end,
         children: [
           //  Container(
+          //   height: 50,
+          //             width: 50,
           //      decoration: BoxDecoration(
           //        shape: BoxShape.circle,
           //        border: Border.all(
           //          color: ColorManager.secondary,
-          //          width: 2.5, // Set your desired border width
+          //          width: 2.0, // Set your desired border width
           //        ),
           //      ),
           //      child: FloatingActionButton(
@@ -194,6 +196,8 @@ class _HomeViewState extends State<HomeView> {
           //      )),
           // const SizedBox(height: 16.0),
           //  Container(
+          // height: 50,
+          // width: 50,
           //    decoration: BoxDecoration(
           //      shape: BoxShape.circle,
           //      border: Border.all(
@@ -215,6 +219,8 @@ class _HomeViewState extends State<HomeView> {
           //  ),
           //  const  SizedBox(height: 16.0), // Adjust the spacing between buttons
           Container(
+            height: 50,
+            width: 50,
             decoration: BoxDecoration(
               shape: BoxShape.circle,
               border: Border.all(
@@ -270,8 +276,8 @@ class _HomeViewState extends State<HomeView> {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Container(
-            height: 60,
-            width: 60,
+            height: 55,
+            width: 55,
             decoration: BoxDecoration(
                 color: ColorManager.kLightBlueColor, shape: BoxShape.circle),
             child: Padding(
@@ -299,7 +305,7 @@ class _HomeViewState extends State<HomeView> {
 
   Widget someOnePayTextFiled() {
     return SizedBox(
-      height: 55,
+      height: 45,
       child: TextField(
         maxLines: 1,
         style: TextStyle(color: Colors.white, fontSize: 12.sp),
@@ -371,7 +377,7 @@ class _HomeViewState extends State<HomeView> {
 
   Widget searchFiled() {
     return SizedBox(
-      height: 55,
+      height: 45,
       child: Row(
         children: [
           Flexible(
@@ -425,9 +431,9 @@ class _HomeViewState extends State<HomeView> {
               );
             },
             child: Container(
-              padding: EdgeInsets.all(15),
+              padding: EdgeInsets.all(10),
               height: 60,
-              width: 60,
+
               decoration: BoxDecoration(
                   color: ColorManager.kLightBlueColor,
                   borderRadius: BorderRadius.circular(12)),
