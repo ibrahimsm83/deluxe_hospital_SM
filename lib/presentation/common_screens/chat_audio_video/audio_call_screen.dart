@@ -6,7 +6,6 @@ import 'package:get/get.dart';
 import '../../../export_dulex.dart';
 
 class AudioCall extends StatelessWidget {
-  final UserController userController = Get.find();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -66,7 +65,7 @@ class AudioCall extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  userController.userRole.value== UserRole.Patient?SizedBox.shrink():  Column(
+               Column(
                     children: [
                       CircleAvatar(
                         maxRadius: 28,

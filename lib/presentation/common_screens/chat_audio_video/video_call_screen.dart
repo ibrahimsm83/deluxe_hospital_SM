@@ -5,7 +5,6 @@ import 'package:get/get.dart';
 
 
 class VideoCall extends StatelessWidget {
-  final UserController userController = Get.find();
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -60,7 +59,7 @@ class VideoCall extends StatelessWidget {
                   child:  Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
-                      userController.userRole.value== UserRole.Patient?SizedBox.shrink():  Column(
+              Column(
                         children: [
                           CircleAvatar(
                             maxRadius: 28,
