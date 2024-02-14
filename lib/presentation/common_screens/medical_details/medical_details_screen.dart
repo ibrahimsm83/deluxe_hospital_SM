@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:get/get.dart';
 import '../../../../export_dulex.dart';
 
 class MedicalDetailsScreen extends StatefulWidget {
@@ -23,6 +24,9 @@ class _MedicalDetailsScreenState extends State<MedicalDetailsScreen> {
   final _socialHistoryController = TextEditingController();
   final _occupationController = TextEditingController();
   final _previousOccupationController = TextEditingController();
+  final _centimeterController = TextEditingController();
+  final _kiloGramController = TextEditingController();
+  final UserController userController = Get.find();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -205,12 +209,48 @@ class _MedicalDetailsScreenState extends State<MedicalDetailsScreen> {
                     };
                   }
               ),
-              SizedBox(height: 10.h),
-///Select Documents
-              selectDoc(),
-              SizedBox(height: 10.h),
-              upload(),
+              //SizedBox(height: 10.h),
+              // Obx(() {
+              //   return userController.userRole.value ==
+              //       UserRole.Patient?
+              //   Column(
+              //     children: [
+              //       // SizedBox(height: AppSize.s15.h),
+              //       // height(),
+              //       // SizedBox(height: AppSize.s15.h),
+              //       // weight(),
+              //       SizedBox(height: AppSize.s15.h),
+              //       ///Language
+              //       language(),
+              //       ///Next Buttons
+              //     ],
+              //   ):iSpeak();}),
+
+           ///Select Documents
+              Obx(() {
+                return userController.userRole.value ==
+                    UserRole.Patient ?
+                Column(
+                  children: [
+                    SizedBox(height: AppSize.s15.h),
+                    height(),
+                    SizedBox(height: AppSize.s15.h),
+                    weight(),
+                    SizedBox(height: AppSize.s15.h),
+                  ],
+                ) :
+                Column(
+                  children: [
+                    SizedBox(height: AppSize.s10.h),
+                    selectDoc(),
+                    SizedBox(height: 10.h),
+                    upload(),
+                  ],
+                );
+              }),
+
               ///Next Buttons
+
               SizedBox(height: 10.h),
               button(
                   text: AppStrings.kNext,
@@ -238,7 +278,69 @@ class _MedicalDetailsScreenState extends State<MedicalDetailsScreen> {
       ),
     );
   }
+                  Widget height(){
+        return Padding(
+        padding: const EdgeInsets.only(left: 18.0,right: 8.0),
+        child: Row(children: [
+        Container(
+        height: 48,
+        width: 50,
+        decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(10.0),
+        border: Border.all(color: ColorManager.kGreyColor),
+        ),
+        child: Center(child: Text(AppStrings.kCm,style: getRegularStyle(color: ColorManager.kGreyColor),)),
+        ),
+        Flexible(
+        child: CustomTextFormField(
+        hintText: AppStrings.kHeight,
+        horizontalMergin: 0.03,
+        controller: _centimeterController,
+        validator: (String? val) {
+        (String? val) {
+        if (val == null || val.isEmpty) {
+        return "Enter height in cm";
+        }
+        return null;
+        };
+        }
+        ),
+        ),
+        ],),
+        );
+        }
 
+            Widget weight(){
+      return Padding(
+      padding: const EdgeInsets.only(left: 18.0,right: 8.0),
+      child: Row(children: [
+      Container(
+      height: 48,
+      width: 50,
+      decoration: BoxDecoration(
+      borderRadius: BorderRadius.circular(10.0),
+      border: Border.all(color: ColorManager.kGreyColor),
+      ),
+      child: Center(child: Text(AppStrings.kKg,style: getRegularStyle(color: ColorManager.kGreyColor),)),
+      ),
+      Flexible(
+      child: CustomTextFormField(
+      hintText: AppStrings.kWeight,
+      horizontalMergin: 0.03,
+      controller: _kiloGramController,
+      validator: (String? val) {
+      (String? val) {
+      if (val == null || val.isEmpty) {
+      return "Enter weight in kg";
+      }
+      return null;
+      };
+      }
+      ),
+      ),
+      ],),
+      );
+      }
   Widget selectDoc(){
     return  Padding(
         padding: const EdgeInsets.symmetric(horizontal: 18,vertical: 5.0),

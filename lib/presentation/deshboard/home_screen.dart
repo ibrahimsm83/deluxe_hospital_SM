@@ -1,13 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-
 import '../../export_dulex.dart';
 
 class ProfessionalCategoryModel {
   ProfessionalCategoryModel({this.title, this.iconPath});
-
   final String? title;
   final String? iconPath;
 }
@@ -56,9 +53,17 @@ class _HomeViewState extends State<HomeView> {
     ),
   ];
   List professionalCategoryRouteList = [
-    CustomRouteNames.kOnlineConsultationScreenRoute,
-    CustomRouteNames.kPresentingComplaintScreenRoute,
-    " CustomRouteNames.kDashboardScreenRoute,",
+    CustomRouteNames.kListOfDoctorScreenRoute,
+    CustomRouteNames.kListOfDoctorScreenRoute,
+    CustomRouteNames.kListOfDoctorScreenRoute,
+    CustomRouteNames.kListOfDoctorScreenRoute,
+    CustomRouteNames.kListOfDoctorScreenRoute,
+    CustomRouteNames.kListOfDoctorScreenRoute,
+    CustomRouteNames.kListOfDoctorScreenRoute,
+    CustomRouteNames.kListOfDoctorScreenRoute,
+    // CustomRouteNames.kOnlineConsultationScreenRoute,
+    // CustomRouteNames.kPresentingComplaintScreenRoute,
+    // CustomRouteNames.kCreditDetailsScreenRoute,
     " CustomRouteNames.kDashboardScreenRoute,",
     " CustomRouteNames.kDashboardScreenRoute,",
     " CustomRouteNames.kDashboardScreenRoute,",
@@ -139,10 +144,12 @@ class _HomeViewState extends State<HomeView> {
                   itemBuilder: (context, index) {
                     return professionalCategoryGridview(
                         professionalCatList[index], (() {
-                      if (index == 0 || index == 1) {
-                        Navigator.pushNamed(
-                            context, professionalCategoryRouteList[index]);
-                      }
+                      Navigator.pushNamed(
+                          context, professionalCategoryRouteList[index]);
+                      // if (index == 0 || index == 1||index==2) {
+                      //   Navigator.pushNamed(
+                      //       context, professionalCategoryRouteList[index]);
+                      // }
                     }));
                   },
                 ),
@@ -175,49 +182,49 @@ class _HomeViewState extends State<HomeView> {
       floatingActionButton: Column(
         mainAxisAlignment: MainAxisAlignment.end,
         children: [
-          //  Container(
-          //   height: 50,
-          //             width: 50,
-          //      decoration: BoxDecoration(
-          //        shape: BoxShape.circle,
-          //        border: Border.all(
-          //          color: ColorManager.secondary,
-          //          width: 2.0, // Set your desired border width
-          //        ),
-          //      ),
-          //      child: FloatingActionButton(
-          //        onPressed: () {
-          //        },
-          //        backgroundColor: ColorManager.secondary.withOpacity(0.5),
-          //        child: SvgPicture.asset(
-          //          ImageAssets.kSendIcon,
-          //        ),
-          //        shape: CircleBorder(),
-          //      )),
-          // const SizedBox(height: 16.0),
-          //  Container(
-          // height: 50,
-          // width: 50,
-          //    decoration: BoxDecoration(
-          //      shape: BoxShape.circle,
-          //      border: Border.all(
-          //        color: ColorManager.secondary, // Set your desired border color
-          //        width: 2.0, // Set your desired border width
-          //      ),
-          //    ),
-          //    child: FloatingActionButton(
-          //      onPressed: () {
-          //        // Add your desired action when the button is pressed
-          //        // print('Button 2 pressed!');
-          //      },
-          //      backgroundColor: ColorManager.secondary.withOpacity(0.5),
-          //      child: SvgPicture.asset(
-          //        ImageAssets.kDoubleChatMessageIcon,
-          //      ),
-          //      shape: CircleBorder(),
-          //    ),
-          //  ),
-          //  const  SizedBox(height: 16.0), // Adjust the spacing between buttons
+           Container(
+            height: 50,
+                      width: 50,
+               decoration: BoxDecoration(
+                 shape: BoxShape.circle,
+                 border: Border.all(
+                   color: ColorManager.secondary,
+                   width: 2.0, // Set your desired border width
+                 ),
+               ),
+               child: FloatingActionButton(
+                 onPressed: () {
+                 },
+                 backgroundColor: ColorManager.secondary.withOpacity(0.5),
+                 child: SvgPicture.asset(
+                   ImageAssets.kSendIcon,
+                 ),
+                 shape: CircleBorder(),
+               )),
+          const SizedBox(height: 16.0),
+           Container(
+          height: 50,
+          width: 50,
+             decoration: BoxDecoration(
+               shape: BoxShape.circle,
+               border: Border.all(
+                 color: ColorManager.secondary, // Set your desired border color
+                 width: 2.0, // Set your desired border width
+               ),
+             ),
+             child: FloatingActionButton(
+               onPressed: () {
+                 // Add your desired action when the button is pressed
+                 // print('Button 2 pressed!');
+               },
+               backgroundColor: ColorManager.secondary.withOpacity(0.5),
+               child: SvgPicture.asset(
+                 ImageAssets.kDoubleChatMessageIcon,
+               ),
+               shape: CircleBorder(),
+             ),
+           ),
+           const  SizedBox(height: 16.0), // Adjust the spacing between buttons
           Container(
             height: 50,
             width: 50,
@@ -368,7 +375,14 @@ class _HomeViewState extends State<HomeView> {
                 },
                 child: SvgPicture.asset(ImageAssets.kBellIcon)),
             SizedBox(height: 7.0),
-            SvgPicture.asset(ImageAssets.kEmergencyIcon),
+            InkWell(
+                onTap: (){
+                  Navigator.pushNamed(
+                    context,
+                    CustomRouteNames.kPatientDetailsScreenRoute,
+                  );
+                },
+                child: SvgPicture.asset(ImageAssets.kEmergencyIcon,height: 50,width: 50,)),
           ],
         )
       ],
@@ -457,91 +471,99 @@ class _HomeViewState extends State<HomeView> {
           borderRadius: BorderRadius.circular(15)),
       child: Column(
         children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: [
-              ClipRRect(
-                borderRadius: BorderRadius.circular(12.0),
-                child: Image.asset(
-                  ImageAssets.demoUserImage,
-                  height: 60,
-                  width: 60,
+          InkWell(
+            onTap: (){
+              Navigator.pushNamed(
+                context,
+                CustomRouteNames.kMyAppointmentScreenRoute,
+              );
+            },
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+                ClipRRect(
+                  borderRadius: BorderRadius.circular(12.0),
+                  child: Image.asset(
+                    ImageAssets.demoUserImage,
+                    height: 60,
+                    width: 60,
+                  ),
                 ),
-              ),
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text("Dr. Julia Thompson",
-                      style: getmediumStyle(
-                          color: ColorManager.secondary, fontSize: 16)),
-                  SizedBox(height: 5),
-                  Row(
-                    children: [
-                      SvgPicture.asset(
-                        ImageAssets.kHospitalIcon,
-                        width: 15,
-                        height: 15,
-                      ),
-                      const SizedBox(width: 5),
-                      Text("Therapist",
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text("Dr. Julia Thompson",
+                        style: getmediumStyle(
+                            color: ColorManager.secondary, fontSize: 16)),
+                    SizedBox(height: 5),
+                    Row(
+                      children: [
+                        SvgPicture.asset(
+                          ImageAssets.kHospitalIcon,
+                          width: 15,
+                          height: 15,
+                        ),
+                        const SizedBox(width: 5),
+                        Text("Therapist",
+                            style: getRegularStyle(
+                              color: ColorManager.kWhiteColor,
+                            )),
+                        const SizedBox(width: 20),
+                        SvgPicture.asset(
+                          ImageAssets.kChatMoreIcon,
+                          width: 15,
+                          height: 15,
+                        ),
+                        const SizedBox(width: 5),
+                        Text(
+                          "Chat",
                           style: getRegularStyle(
                             color: ColorManager.kWhiteColor,
-                          )),
-                      const SizedBox(width: 20),
-                      SvgPicture.asset(
-                        ImageAssets.kPersonIcon,
-                        width: 15,
-                        height: 15,
-                      ),
-                      const SizedBox(width: 5),
-                      Text(
-                        "In Person Visit",
-                        style: getRegularStyle(
-                          color: ColorManager.kWhiteColor,
+                          ),
                         ),
-                      ),
-                    ],
-                  ),
-                  const SizedBox(height: 5),
-                  Row(
-                    children: [
-                      SvgPicture.asset(
-                        ImageAssets.kCalendarIcon,
-                        width: 15,
-                        height: 15,
-                      ),
-                      SizedBox(
-                        width: 5,
-                      ),
-                      Text(
-                        "02 November, 2023",
-                        style: getRegularStyle(
-                          color: ColorManager.kWhiteColor,
+                      ],
+                    ),
+                    const SizedBox(height: 5),
+                    Row(
+                      children: [
+                        SvgPicture.asset(
+                          ImageAssets.kCalendarIcon,
+                          width: 15,
+                          height: 15,
                         ),
-                      ),
-                      SizedBox(width: 20),
-                      SvgPicture.asset(
-                        ImageAssets.kClockIcon,
-                        width: 15,
-                        height: 15,
-                      ),
-                      SizedBox(width: 5),
-                      Text(
-                        "12:30 PM",
-                        style: getRegularStyle(
-                          color: ColorManager.kWhiteColor,
+                        SizedBox(
+                          width: 5,
                         ),
-                      )
-                    ],
-                  ),
-                ],
-              ),
-              SizedBox(
-                height: 30,
-                width: 30,
-                child: SvgPicture.asset(ImageAssets.kMessageIcon),
-              ),
-            ],
+                        Text(
+                          "02 November, 2023",
+                          style: getRegularStyle(
+                            color: ColorManager.kWhiteColor,
+                          ),
+                        ),
+                        SizedBox(width: 20),
+                        SvgPicture.asset(
+                          ImageAssets.kClockIcon,
+                          width: 15,
+                          height: 15,
+                        ),
+                        SizedBox(width: 5),
+                        Text(
+                          "12:30 PM",
+                          style: getRegularStyle(
+                            color: ColorManager.kWhiteColor,
+                          ),
+                        )
+                      ],
+                    ),
+                  ],
+                ),
+                SizedBox(
+                  height: 30,
+                  width: 30,
+                  child: SvgPicture.asset(ImageAssets.kMessageIcon),
+                ),
+              ],
+            ),
           ),
           const SizedBox(height: 10),
           Padding(

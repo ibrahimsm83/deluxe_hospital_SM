@@ -43,6 +43,7 @@ export 'patient_screens/write_review/write_review_screen.dart';
 export 'patient_screens/online_consultation/online_consultation_screen.dart';
 export 'patient_screens/presenting_complaint/presenting_complaint_screen.dart';
 export 'patient_screens/prescription/prescription_screen.dart';
-
+export 'patient_screens/credit_details/credit_Details_screen.dart';
+export 'patient_screens/list_of_doctor/list_of_doctor_screen.dart';
 
 

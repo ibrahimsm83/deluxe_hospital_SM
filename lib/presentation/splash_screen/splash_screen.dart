@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
+import 'package:shimmer/shimmer.dart';
 import 'dart:async';
 import '../resources/export_resources.dart';
 
@@ -48,13 +49,18 @@ class _SplashScreenState extends State<SplashScreen> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Padding(
+        Shimmer.fromColors(
+        period: const Duration(milliseconds: 800),
+        baseColor: ColorManager.secondary,
+        highlightColor: ColorManager.kWhiteColor,
+          child:  Padding(
               padding: EdgeInsets.only(top:AppSize.sizeWidth(context) * 0.3,
                   left: AppSize.sizeWidth(context) * 0.2, right: AppSize.sizeWidth(context) * 0.2),
               child: Image.asset(
                 ImageAssets.appLogoImage,
+                //ImageAssets.appLogoImage,
               ),
-            ),
+            ),),
 
             Column(
               crossAxisAlignment: CrossAxisAlignment.center,

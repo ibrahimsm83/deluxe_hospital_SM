@@ -147,7 +147,7 @@ class ArticlesView extends StatelessWidget {
                           ),
                           SizedBox(width: AppSize.s4),
                           Text(
-                            "Follow",
+                            "Follow 12",
                             style: getRegularStyle(
                                 color: ColorManager.kWhiteColor,
                                 fontSize: 8.sp),

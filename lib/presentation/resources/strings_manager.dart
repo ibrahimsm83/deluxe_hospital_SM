@@ -5,9 +5,9 @@ class AppStrings {
 
   ///Splash
   static const String productOf = "Product of";
-  static const String millionDollarGlobalInitiatives = "Million Dollar Global Initiatives";
+  // static const String millionDollarGlobalInitiatives = "Million Dollar Global Initiatives";
+  static const String millionDollarGlobalInitiatives = "Enhanced Global Health Services";
 ///Choose Account
-
   static const String continueOfPatient = " Continue as Patient";
   static const String continueAsAHealthProfessional = "Continue as Health Professional";
 
@@ -39,7 +39,7 @@ class AppStrings {
   static const String kDateOfBirth = "Date of Birth";
   static const String kSelectGender = "Select Gender";
   static const String kSelectCountry = "Select Country";
-  static const String kStateAndRegion = "State & Region";
+  static const String kStateAndRegion = "State/Region";
   static const String kCity = "City";
   static const String kCm = "Cm";
   static const String kNext = "Next";
@@ -125,7 +125,7 @@ class AppStrings {
   ///My Appointment
   static const String kMyAppointment ="My Appointment";
   static const String kUpcoming ="Upcoming";
-  static const String kComplete ="Complete";
+  static const String kComplete ="Completed";
   static const String kCancelled ="Cancelled";
   static const String kToday ="Today";
    ///Chat
@@ -180,7 +180,7 @@ class AppStrings {
   static const String kDuration="Duration";
   static const String kPay="Pay";
   ///Sub Account
-  static const String kSubAccount="Sub Account";
+  static const String kSubAccount="Sub Accounts";
   static const String kCreateNew="Create new";
   static const String kSelectThePaymentMethod="Select the payment method  you want to use";
   ///Payments
@@ -291,6 +291,11 @@ class AppStrings {
   static const String kPresentingComplaint="Presenting Complaint";
   static const String kPrescription="Prescription";
   static const String kReferral="Referral";
+  ///Credit Details
+  static const String kCreditDetails="Credit Details";
+  static const String kCredit="Credit";
+  static const String kPaymentHistory="Payment History";
+  static const String kRefundHistory="Refund History";
 
   ///Validator
   static const String otpCode = "Otp Code";

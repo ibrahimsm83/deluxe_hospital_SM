@@ -162,8 +162,25 @@ class _PaymentsScreenState extends State<PaymentsScreen> {
                 onTap: () {},
               ),
             ),
+            SizedBox(height: AppSize.sizeHeight(context)*0.15),
+            button(
+                text: AppStrings.kNext,
+                color: ColorManager.secondary,
+                context: context,
+                onTap: () {
+                  // Navigator.pushNamed(
+                  //   context,
+                  //   CustomRouteNames.kGiveMeDiscountScreenRoute,
+                  // );
+                  Navigator.pushNamed(
+                    context,
+                    CustomRouteNames.kReviewSummaryScreenRoute,
+                  );
+                }),
+            SizedBox(height: AppSize.s10.h),
           ],),
       ),
+
     );
   }
 }

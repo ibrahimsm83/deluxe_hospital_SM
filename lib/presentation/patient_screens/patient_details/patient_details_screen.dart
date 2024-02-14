@@ -114,9 +114,13 @@ class _PatientDetailsScreenState extends State<PatientDetailsScreen> {
                   color: ColorManager.secondary,
                   context: context,
                   onTap: () {
+                    // Navigator.pushNamed(
+                    //   context,
+                    //   CustomRouteNames.kGiveMeDiscountScreenRoute,
+                    // );
                     Navigator.pushNamed(
                       context,
-                      CustomRouteNames.kGiveMeDiscountScreenRoute,
+                      CustomRouteNames.kPaymentsScreenRoute,
                     );
                   }),
               SizedBox(height: AppSize.s10.h),

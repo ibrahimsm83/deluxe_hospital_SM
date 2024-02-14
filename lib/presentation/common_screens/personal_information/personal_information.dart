@@ -137,10 +137,10 @@ class _PersonalInformationScreenState extends State<PersonalInformationScreen> {
                   UserRole.Patient?
               Column(
                 children: [
-                  SizedBox(height: AppSize.s15.h),
-                  height(),
-                  SizedBox(height: AppSize.s15.h),
-                  weight(),
+                  // SizedBox(height: AppSize.s15.h),
+                  // height(),
+                  // SizedBox(height: AppSize.s15.h),
+                  // weight(),
                   SizedBox(height: AppSize.s15.h),
                   ///Language
                   language(),

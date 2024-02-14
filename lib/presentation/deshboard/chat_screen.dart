@@ -46,7 +46,7 @@ class _ChatViewState extends State<ChatView> {
         elevation: 0.0,
         backgroundColor: Colors.transparent,
         centerTitle: true,
-        title: Text(AppStrings.kMessage,
+        title: Text("Chat with your Doctor",
             style: getboldStyle(
                 color: ColorManager.secondary,
                 fontSize: ScreenUtil().setSp(AppSize.s18))),

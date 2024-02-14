@@ -134,8 +134,6 @@ class _AppointmentViewState extends State<AppointmentView>
                     separatorBuilder: (context, i) =>
                         SizedBox(height: 15.0),
                     itemBuilder: (context, index) {
-                      // double cw =
-                      //     AppSize.sizeWidth(context) / 3.3;
                       return Padding(
                         padding: EdgeInsets.symmetric(horizontal: 15.0),
                         child: Column(
@@ -207,14 +205,6 @@ class _AppointmentViewState extends State<AppointmentView>
                       return Padding(
                         padding: EdgeInsets.only(left: 15.0,right: 10.0,top: index==0?20.0:0.0),
                         child: cancelAppointment(),
-
-                        // Column(
-                        //   children: [
-                        //     SizedBox(height: 10.0),
-                        //
-                        //
-                        //   ],
-                        // ),
                       );
                     }),
 
@@ -232,15 +222,6 @@ class _AppointmentViewState extends State<AppointmentView>
         decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(10.0),
             color: ColorManager.kLightBlueColor,
-            // gradient: LinearGradient(
-            //   begin: Alignment.topRight,
-            //   end: Alignment.bottomLeft,
-            //   colors: [
-            //     Colors.black45,
-            //     ColorManager.kLightBlueColor,
-            //
-            //   ],
-            // )
         ),
         child:Padding(
           padding: const EdgeInsets.all(6.0),
@@ -292,91 +273,99 @@ class _AppointmentViewState extends State<AppointmentView>
           borderRadius: BorderRadius.circular(15)),
       child: Column(
         children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: [
-              ClipRRect(
-                borderRadius: BorderRadius.circular(12.0),
-                child: Image.asset(
-                  ImageAssets.demoUserImage,
-                  height: 60,
-                  width: 60,
+          InkWell(
+            onTap: (){
+              Navigator.pushNamed(
+                context,
+                CustomRouteNames.kMyAppointmentScreenRoute,
+              );
+            },
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+                ClipRRect(
+                  borderRadius: BorderRadius.circular(12.0),
+                  child: Image.asset(
+                    ImageAssets.demoUserImage,
+                    height: 60,
+                    width: 60,
+                  ),
                 ),
-              ),
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text("Dr. Julia Thompson",
-                      style: getmediumStyle(
-                          color: ColorManager.secondary, fontSize: 16)),
-                  SizedBox(height: 5),
-                  Row(
-                    children: [
-                      SvgPicture.asset(
-                        ImageAssets.kHospitalIcon,
-                        width: 15,
-                        height: 15,
-                      ),
-                      const SizedBox(width: 5),
-                      Text("Therapist",
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text("Dr. Julia Thompson",
+                        style: getmediumStyle(
+                            color: ColorManager.secondary, fontSize: 16)),
+                    SizedBox(height: 5),
+                    Row(
+                      children: [
+                        SvgPicture.asset(
+                          ImageAssets.kHospitalIcon,
+                          width: 15,
+                          height: 15,
+                        ),
+                        const SizedBox(width: 5),
+                        Text("Therapist",
+                            style: getRegularStyle(
+                              color: ColorManager.kWhiteColor,
+                            )),
+                        const SizedBox(width: 20),
+                        SvgPicture.asset(
+                          ImageAssets.kAudioCallIcon,
+                          width: 12,
+                          height: 12,
+                        ),
+                        const SizedBox(width: 5),
+                        Text(
+                          "Call",
                           style: getRegularStyle(
                             color: ColorManager.kWhiteColor,
-                          )),
-                      const SizedBox(width: 20),
-                      SvgPicture.asset(
-                        ImageAssets.kPersonIcon,
-                        width: 15,
-                        height: 15,
-                      ),
-                      const SizedBox(width: 5),
-                      Text(
-                        "In Person Visit",
-                        style: getRegularStyle(
-                          color: ColorManager.kWhiteColor,
+                          ),
                         ),
-                      ),
-                    ],
-                  ),
-                  const SizedBox(height: 5),
-                  Row(
-                    children: [
-                      SvgPicture.asset(
-                        ImageAssets.kCalendarIcon,
-                        width: 15,
-                        height: 15,
-                      ),
-                      SizedBox(
-                        width: 5,
-                      ),
-                      Text(
-                        "02 November, 2023",
-                        style: getRegularStyle(
-                          color: ColorManager.kWhiteColor,
+                      ],
+                    ),
+                    const SizedBox(height: 5),
+                    Row(
+                      children: [
+                        SvgPicture.asset(
+                          ImageAssets.kCalendarIcon,
+                          width: 15,
+                          height: 15,
                         ),
-                      ),
-                      SizedBox(width: 20),
-                      SvgPicture.asset(
-                        ImageAssets.kClockIcon,
-                        width: 15,
-                        height: 15,
-                      ),
-                      SizedBox(width: 5),
-                      Text(
-                        "12:30 PM",
-                        style: getRegularStyle(
-                          color: ColorManager.kWhiteColor,
+                        SizedBox(
+                          width: 5,
                         ),
-                      )
-                    ],
-                  ),
-                ],
-              ),
-              SizedBox(
-                height: 30,
-                width: 30,
-                child: SvgPicture.asset(ImageAssets.kMessageIcon),
-              ),
-            ],
+                        Text(
+                          "02 November, 2023",
+                          style: getRegularStyle(
+                            color: ColorManager.kWhiteColor,
+                          ),
+                        ),
+                        SizedBox(width: 20),
+                        SvgPicture.asset(
+                          ImageAssets.kClockIcon,
+                          width: 15,
+                          height: 15,
+                        ),
+                        SizedBox(width: 5),
+                        Text(
+                          "12:30 PM",
+                          style: getRegularStyle(
+                            color: ColorManager.kWhiteColor,
+                          ),
+                        )
+                      ],
+                    ),
+                  ],
+                ),
+                SizedBox(
+                  height: 30,
+                  width: 30,
+                  child: SvgPicture.asset(ImageAssets.kMessageIcon),
+                ),
+              ],
+            ),
           ),
           const SizedBox(height: 10),
           Padding(
@@ -393,7 +382,6 @@ class _AppointmentViewState extends State<AppointmentView>
                         boxShadow: [
                           BoxShadow(
                             color: Colors.blueGrey,
-                            // color: ColorManager.kLightBlueColor,
                             offset: const Offset(
                               0.0,
                               0.0,
@@ -508,13 +496,13 @@ class _AppointmentViewState extends State<AppointmentView>
                           )),
                       const SizedBox(width: 20),
                       SvgPicture.asset(
-                        ImageAssets.kPersonIcon,
+                        ImageAssets.kChatMoreIcon,
                         width: 15,
                         height: 15,
                       ),
                       const SizedBox(width: 5),
                       Text(
-                        "In Person Visit",
+                        "chat",
                         style: getRegularStyle(
                           color: ColorManager.kWhiteColor,
                         ),

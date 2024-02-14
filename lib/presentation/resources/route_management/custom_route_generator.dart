@@ -314,6 +314,18 @@ class CustomRouteGenerator {
             return const PrescriptionScreen();
           },
         );
+        case CustomRouteNames.kCreditDetailsScreenRoute:
+        return MaterialPageRoute(
+          builder: (context) {
+            return const CreditDetailsScreen();
+          },
+        );
+        case CustomRouteNames.kListOfDoctorScreenRoute:
+        return MaterialPageRoute(
+          builder: (context) {
+            return  ListOfDoctorScreen();
+          },
+        );
 
       default:
         return null;
