@@ -17,7 +17,7 @@ class ToggleButtonList1 extends StatelessWidget {
       height: 70,
       child: ListView.builder(
           scrollDirection: Axis.horizontal,
-          physics: NeverScrollableScrollPhysics(),
+          //physics: NeverScrollableScrollPhysics(),
           itemCount: categories!.length,
           itemBuilder: (context, index) {
             return GestureDetector(

@@ -27,6 +27,7 @@ class _MedicalDetailsScreenState extends State<MedicalDetailsScreen> {
   final _centimeterController = TextEditingController();
   final _kiloGramController = TextEditingController();
   final UserController userController = Get.find();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -55,160 +56,149 @@ class _MedicalDetailsScreenState extends State<MedicalDetailsScreen> {
             children: [
               CustomTextFormField(
                   hintText: AppStrings.kPastSurgicalHistory,
-                  controller:_pastSurgicalController ,
+                  controller: _pastSurgicalController,
                   maxLines: 4,
                   validator: (String? val) {
-                        (String? val) {
+                    (String? val) {
                       if (val == null || val.isEmpty) {
                         return "Enter Past Surgical History";
                       }
                       return null;
                     };
-                  }
-              ),
+                  }),
               SizedBox(height: AppSize.s15.h),
               CustomTextFormField(
                   hintText: AppStrings.kPastMedicalHistory,
-                  controller:_pastMedicalHistoryController ,
+                  controller: _pastMedicalHistoryController,
                   maxLines: 4,
                   validator: (String? val) {
-                        (String? val) {
+                    (String? val) {
                       if (val == null || val.isEmpty) {
                         return "Enter Past Medical History";
                       }
                       return null;
                     };
-                  }
-              ),
+                  }),
               SizedBox(height: AppSize.s15.h),
               CustomTextFormField(
                   hintText: AppStrings.kAllergy,
-                  controller:_allergyController ,
+                  controller: _allergyController,
                   maxLines: 4,
                   validator: (String? val) {
-                        (String? val) {
+                    (String? val) {
                       if (val == null || val.isEmpty) {
                         return "Enter Allergy Details";
                       }
                       return null;
                     };
-                  }
-              ),
+                  }),
 
               SizedBox(height: AppSize.s15.h),
               CustomTextFormField(
                   hintText: AppStrings.kDrugsHistory,
-                  controller:_drugsHistoryController ,
+                  controller: _drugsHistoryController,
                   maxLines: 4,
                   validator: (String? val) {
-                        (String? val) {
+                    (String? val) {
                       if (val == null || val.isEmpty) {
                         return "Enter Drugs Details";
                       }
                       return null;
                     };
-                  }
-              ),
+                  }),
               SizedBox(height: AppSize.s15.h),
               CustomTextFormField(
                   hintText: AppStrings.kGynaecologicalHistoryFemale,
-                  controller:_gynaecologicalHistoryController ,
+                  controller: _gynaecologicalHistoryController,
                   maxLines: 4,
                   validator: (String? val) {
-                        (String? val) {
+                    (String? val) {
                       if (val == null || val.isEmpty) {
                         return "Enter Gynaecological Details";
                       }
                       return null;
                     };
-                  }
-              ),
+                  }),
 
               SizedBox(height: AppSize.s15.h),
               CustomTextFormField(
                   hintText: AppStrings.kObsetricHistoryFemale,
-                  controller:_obsetricHistoryFemaleController ,
+                  controller: _obsetricHistoryFemaleController,
                   maxLines: 4,
                   validator: (String? val) {
-                        (String? val) {
+                    (String? val) {
                       if (val == null || val.isEmpty) {
                         return "Enter Obsetric Details";
                       }
                       return null;
                     };
-                  }
-              ),
+                  }),
               SizedBox(height: AppSize.s15.h),
               CustomTextFormField(
                   hintText: AppStrings.kRecentHospitalStaysHospitalization,
-                  controller:_recentHospitalStaysHospitalizationController ,
+                  controller: _recentHospitalStaysHospitalizationController,
                   maxLines: 4,
                   validator: (String? val) {
-                        (String? val) {
+                    (String? val) {
                       if (val == null || val.isEmpty) {
                         return "Enter Recent Hospital Stays Details";
                       }
                       return null;
                     };
-                  }
-              ),
+                  }),
               SizedBox(height: AppSize.s15.h),
               CustomTextFormField(
                   hintText: AppStrings.kFamilyHistory,
-                  controller:_familyHistoryController ,
+                  controller: _familyHistoryController,
                   maxLines: 4,
                   validator: (String? val) {
-                        (String? val) {
+                    (String? val) {
                       if (val == null || val.isEmpty) {
                         return "Enter Family Details";
                       }
                       return null;
                     };
-                  }
-              ),
+                  }),
               SizedBox(height: AppSize.s15.h),
               CustomTextFormField(
                   hintText: AppStrings.kSocialHistory,
-                  controller:_socialHistoryController ,
+                  controller: _socialHistoryController,
                   maxLines: 4,
                   validator: (String? val) {
-                        (String? val) {
+                    (String? val) {
                       if (val == null || val.isEmpty) {
                         return "Enter Social History Details";
                       }
                       return null;
                     };
-                  }
-              ),
+                  }),
 
               SizedBox(height: AppSize.s15.h),
               CustomTextFormField(
                   hintText: AppStrings.kOccupation,
-                  controller:_occupationController ,
+                  controller: _occupationController,
                   maxLines: 4,
                   validator: (String? val) {
-                        (String? val) {
+                    (String? val) {
                       if (val == null || val.isEmpty) {
                         return "Enter Occupation Details";
                       }
                       return null;
                     };
-                  }
-              ),
+                  }),
               SizedBox(height: AppSize.s15.h),
               CustomTextFormField(
                   hintText: AppStrings.kPreviousOccupation,
-                  controller:_previousOccupationController ,
+                  controller: _previousOccupationController,
                   maxLines: 4,
                   validator: (String? val) {
-                        (String? val) {
+                    (String? val) {
                       if (val == null || val.isEmpty) {
                         return "Enter Previous Occupation Details";
                       }
                       return null;
                     };
-                  }
-              ),
+                  }),
               //SizedBox(height: 10.h),
               // Obx(() {
               //   return userController.userRole.value ==
@@ -226,27 +216,26 @@ class _MedicalDetailsScreenState extends State<MedicalDetailsScreen> {
               //     ],
               //   ):iSpeak();}),
 
-           ///Select Documents
+              ///Select Documents
               Obx(() {
-                return userController.userRole.value ==
-                    UserRole.Patient ?
-                Column(
-                  children: [
-                    SizedBox(height: AppSize.s15.h),
-                    height(),
-                    SizedBox(height: AppSize.s15.h),
-                    weight(),
-                    SizedBox(height: AppSize.s15.h),
-                  ],
-                ) :
-                Column(
-                  children: [
-                    SizedBox(height: AppSize.s10.h),
-                    selectDoc(),
-                    SizedBox(height: 10.h),
-                    upload(),
-                  ],
-                );
+                return userController.userRole.value == UserRole.Patient
+                    ? Column(
+                        children: [
+                          SizedBox(height: AppSize.s15.h),
+                          height(),
+                          SizedBox(height: AppSize.s15.h),
+                          weight(),
+                          SizedBox(height: AppSize.s15.h),
+                        ],
+                      )
+                    : Column(
+                        children: [
+                          SizedBox(height: AppSize.s10.h),
+                          selectDoc(),
+                          SizedBox(height: 10.h),
+                          upload(),
+                        ],
+                      );
               }),
 
               ///Next Buttons
@@ -278,126 +267,149 @@ class _MedicalDetailsScreenState extends State<MedicalDetailsScreen> {
       ),
     );
   }
-                  Widget height(){
-        return Padding(
-        padding: const EdgeInsets.only(left: 18.0,right: 8.0),
-        child: Row(children: [
-        Container(
-        height: 48,
-        width: 50,
-        decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(10.0),
-        border: Border.all(color: ColorManager.kGreyColor),
-        ),
-        child: Center(child: Text(AppStrings.kCm,style: getRegularStyle(color: ColorManager.kGreyColor),)),
-        ),
-        Flexible(
-        child: CustomTextFormField(
-        hintText: AppStrings.kHeight,
-        horizontalMergin: 0.03,
-        controller: _centimeterController,
-        validator: (String? val) {
-        (String? val) {
-        if (val == null || val.isEmpty) {
-        return "Enter height in cm";
-        }
-        return null;
-        };
-        }
-        ),
-        ),
-        ],),
-        );
-        }
 
-            Widget weight(){
-      return Padding(
-      padding: const EdgeInsets.only(left: 18.0,right: 8.0),
-      child: Row(children: [
-      Container(
-      height: 48,
-      width: 50,
-      decoration: BoxDecoration(
-      borderRadius: BorderRadius.circular(10.0),
-      border: Border.all(color: ColorManager.kGreyColor),
-      ),
-      child: Center(child: Text(AppStrings.kKg,style: getRegularStyle(color: ColorManager.kGreyColor),)),
-      ),
-      Flexible(
-      child: CustomTextFormField(
-      hintText: AppStrings.kWeight,
-      horizontalMergin: 0.03,
-      controller: _kiloGramController,
-      validator: (String? val) {
-      (String? val) {
-      if (val == null || val.isEmpty) {
-      return "Enter weight in kg";
-      }
-      return null;
-      };
-      }
-      ),
-      ),
-      ],),
-      );
-      }
-  Widget selectDoc(){
-    return  Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 18,vertical: 5.0),
-        child: Row(children: [
-
-        Container(decoration: BoxDecoration(
-          borderRadius: BorderRadius.only(topLeft: Radius.circular(10.0),bottomLeft: Radius.circular(10.0)),
-          border: Border.all(color: ColorManager.kGreyColor,)
-        ),
-          child: Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Text(AppStrings.kTypeOf,style: getsemiboldStyle(color: ColorManager.kGreyColor),),
-          ),
-        ),
-
-          Expanded(
-            child: Container(
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.only(topRight: Radius.circular(10.0),bottomRight: Radius.circular(10.0)),
-                border: Border.all(color: ColorManager.kGreyColor,)
-            ),
-              child: Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Text(AppStrings.kSelectDocument,style: getsemiboldStyle(color: ColorManager.kGreyColor),),
-              ),
-            ),
-          ),
-            ],),
-      );
-  }
-
-  Widget upload(){
-    return  Padding(
-      padding: const EdgeInsets.only(left: 20,bottom: 30),
+  Widget height() {
+    return Padding(
+      padding: const EdgeInsets.only(left: 18.0, right: 8.0),
       child: Row(
         children: [
           Container(
-            padding:
-            const EdgeInsets.symmetric(vertical: 8, horizontal: 12),
+            height: 48,
+            width: 50,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(10.0),
+              border: Border.all(color: ColorManager.kGreyColor),
+            ),
+            child: Center(
+                child: Text(
+              AppStrings.kCm,
+              style: getRegularStyle(color: ColorManager.kGreyColor),
+            )),
+          ),
+          Flexible(
+            child: CustomTextFormField(
+                hintText: AppStrings.kHeight,
+                horizontalMergin: 0.03,
+                controller: _centimeterController,
+                keyboardType: TextInputType.number,
+                validator: (String? val) {
+                  (String? val) {
+                    if (val == null || val.isEmpty) {
+                      return "Enter height in cm";
+                    }
+                    return null;
+                  };
+                }),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget weight() {
+    return Padding(
+      padding: const EdgeInsets.only(left: 18.0, right: 8.0),
+      child: Row(
+        children: [
+          Container(
+            height: 48,
+            width: 50,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(10.0),
+              border: Border.all(color: ColorManager.kGreyColor),
+            ),
+            child: Center(
+                child: Text(
+              AppStrings.kKg,
+              style: getRegularStyle(color: ColorManager.kGreyColor),
+            )),
+          ),
+          Flexible(
+            child: CustomTextFormField(
+                hintText: AppStrings.kWeight,
+                horizontalMergin: 0.03,
+                controller: _kiloGramController,
+                keyboardType: TextInputType.number,
+                validator: (String? val) {
+                  (String? val) {
+                    if (val == null || val.isEmpty) {
+                      return "Enter weight in kg";
+                    }
+                    return null;
+                  };
+                }),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget selectDoc() {
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 5.0),
+      child: Row(
+        children: [
+          Container(
+            decoration: BoxDecoration(
+                borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(10.0),
+                    bottomLeft: Radius.circular(10.0)),
+                border: Border.all(
+                  color: ColorManager.kGreyColor,
+                )),
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Text(
+                AppStrings.kTypeOf,
+                style: getsemiboldStyle(color: ColorManager.kGreyColor),
+              ),
+            ),
+          ),
+          Expanded(
+            child: Container(
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.only(
+                      topRight: Radius.circular(10.0),
+                      bottomRight: Radius.circular(10.0)),
+                  border: Border.all(
+                    color: ColorManager.kGreyColor,
+                  )),
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Text(
+                  AppStrings.kSelectDocument,
+                  style: getsemiboldStyle(color: ColorManager.kGreyColor),
+                ),
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget upload() {
+    return Padding(
+      padding: const EdgeInsets.only(left: 20, bottom: 30),
+      child: Row(
+        children: [
+          Container(
+            padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 12),
             decoration: BoxDecoration(
               color: Colors.lightBlueAccent,
               borderRadius: BorderRadius.circular(20),
             ),
-            child:  Text(
-                AppStrings.kAddNew,
-                style: getsemiboldStyle(color: ColorManager.kWhiteColor)
-            ),
+            child: Text(AppStrings.kAddNew,
+                style: getsemiboldStyle(color: ColorManager.kWhiteColor)),
           ),
           const SizedBox(width: 10),
           Container(
-            padding:
-            const EdgeInsets.symmetric(vertical: 8, horizontal: 12),
+            padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 12),
             decoration: BoxDecoration(
               color: Color(0xfff2F579A),
               borderRadius: BorderRadius.circular(20),
             ),
-            child:  Row(
+            child: Row(
               children: [
                 Icon(
                   Icons.camera_alt,
@@ -408,7 +420,6 @@ class _MedicalDetailsScreenState extends State<MedicalDetailsScreen> {
                 Text(
                   AppStrings.kUpload,
                   style: getsemiboldStyle(color: ColorManager.kWhiteColor),
-
                 ),
               ],
             ),

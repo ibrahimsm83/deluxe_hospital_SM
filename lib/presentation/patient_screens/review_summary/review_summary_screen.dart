@@ -36,7 +36,7 @@ class ReviewSummaryScreen extends StatelessWidget {
           padding: const EdgeInsets.symmetric(horizontal: 15.0),
           child: Column(children: [
             SizedBox(height: AppSize.s15.h),
-            info(),
+            info(context),
             Padding(
               padding: const EdgeInsets.symmetric(vertical: 15.0),
               child: dateHour(),
@@ -56,7 +56,7 @@ class ReviewSummaryScreen extends StatelessWidget {
       ),
     );
   }
-  Widget info() {
+  Widget info(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(15.0),
@@ -87,11 +87,11 @@ class ReviewSummaryScreen extends StatelessWidget {
                                 color: ColorManager.kWhiteColor, fontSize: 16)),
                         //Divider(color: ColorManager.kGreyColor,thickness: 3,),
                         Padding(
-                          padding: const EdgeInsets.symmetric(vertical: 10.0),
+                          padding: const EdgeInsets.symmetric(vertical: 4.0),
                           child: Container(
                             color: ColorManager.secondary,
-                            height: 0.5,
-                            width: 250,
+                            height: 1,
+                            width: AppSize.sizeWidth(context)/2,
                           ),
                         ),
                         Text("immunologist | Christ Hospital",

@@ -67,7 +67,6 @@ class ProfilePatientReviewsScreen extends StatelessWidget {
       body:
         ListView.builder(
           shrinkWrap: true,
-          physics: NeverScrollableScrollPhysics(),
           itemCount: userCardList.length,
           itemBuilder: (context, index) {
             return GestureDetector(

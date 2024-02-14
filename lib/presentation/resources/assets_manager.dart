@@ -93,6 +93,11 @@ class ImageAssets {
   static const String kAttachIcon = "$ICON_PATH/attach.svg";
   static const String kemojiIcon = "$ICON_PATH/emoji.svg";
   static const String kDoctorImage = "$IMAGE_PATH/doctor1.jpeg";
+  ///Audio Call Screen
+  static const String kSpeakerIcon = "$ICON_PATH/speaker.svg";
+  static const String kMicIcon = "$ICON_PATH/mic.svg";
+  static const String kCallRedIcon = "$ICON_PATH/callRed.svg";
+  static const String kNotesIcon = "$ICON_PATH/notes.svg";
   ///Doc Profile
   static const String kRatingIcon = "$ICON_PATH/rating.svg";
   static const String kGraphIconIcon = "$ICON_PATH/graphIcon.svg";

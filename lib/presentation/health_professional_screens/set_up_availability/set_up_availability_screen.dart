@@ -451,6 +451,7 @@ separatorBuilder: (context,i)=>SizedBox(height: 10.0),
 
   Widget bottomSheetWidget() {
     return AnimatedContainer(
+      // height: 600,
         duration: const Duration(milliseconds: 300),
         curve: Curves.easeInOut,
         decoration: BoxDecoration(
@@ -458,90 +459,96 @@ separatorBuilder: (context,i)=>SizedBox(height: 10.0),
             borderRadius: BorderRadius.only(
                 topLeft: Radius.circular(25.sp),
                 topRight: Radius.circular(25.sp))),
-        child: Padding(
-          padding: const EdgeInsets.all(8.0),
-          child:
-              Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-            InkWell(
-              onTap: () {
-                Navigator.pop(context);
-              },
-              child: Container(
-                color: Colors.transparent,
+        child: SingleChildScrollView(
+          child: Padding(
+            padding: const EdgeInsets.all(8.0),
+            child:
+                Column(
+          // mainAxisSize: MainAxisSize.max,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+          
+                    children: [
+              InkWell(
+                onTap: () {
+                  Navigator.pop(context);
+                },
                 child: Container(
-                  margin:
-                      EdgeInsets.symmetric(vertical: 5.h, horizontal: 0.43.sw),
-                  padding: EdgeInsets.symmetric(vertical: 2.h),
-                  decoration: BoxDecoration(
-                      color: ColorManager.secondary,
-                      borderRadius: BorderRadius.all(Radius.circular(50))),
+                  color: Colors.transparent,
+                  child: Container(
+                    margin:
+                        EdgeInsets.symmetric(vertical: 5.h, horizontal: 0.43.sw),
+                    padding: EdgeInsets.symmetric(vertical: 2.h),
+                    decoration: BoxDecoration(
+                        color: ColorManager.secondary,
+                        borderRadius: BorderRadius.all(Radius.circular(50))),
+                  ),
                 ),
               ),
-            ),
-            //----------------Cancel Icon----------------
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  SizedBox(
-                    height: 20.h,
-                  ),
-                  Text(
-                    "Set up your availability",
-                    style: getboldStyle(
-                        color: ColorManager.secondary, fontSize: 19),
-                  ),
-                  SizedBox(height: 10.h),
-                  Text(
-                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus et felis dapibus, vulputate libero eget, suscipit nulla. Morbi a finibus lectus. Nulla tincidunt pretium purus.",
-                    style: getRegularStyle(
-                        color: ColorManager.kWhiteColor, fontSize: 11),
-                  ),
-                  SizedBox(
-                    height: 45.h,
-                  ),
-                  InkWell(
-                    onTap: (){
-                      Navigator.pushNamed(
-                        context,
-                        CustomRouteNames.kManageAppointmentScreenRoute,
-                      );
-                    },
-                    child: Container(
-                      width: 1.sw,
-                      margin: const EdgeInsets.symmetric(horizontal: 50),
-                      padding: const EdgeInsets.all(15),
-                      decoration: BoxDecoration(
-                        color: ColorManager.secondary,
-                        borderRadius: BorderRadius.circular(25),
-                      ),
-                      child: Text(
-                        "Continue",
-                        style: getsemiboldStyle(
-                          color: ColorManager.kWhiteColor,
+              //----------------Cancel Icon----------------
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    SizedBox(
+                      height: 20.h,
+                    ),
+                    Text(
+                      "Set up your availability",
+                      style: getboldStyle(
+                          color: ColorManager.secondary, fontSize: 19),
+                    ),
+                    SizedBox(height: 10.h),
+                    Text(
+                      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus et felis dapibus, vulputate libero eget, suscipit nulla. Morbi a finibus lectus. Nulla tincidunt pretium purus.",
+                      style: getRegularStyle(
+                          color: ColorManager.kWhiteColor, fontSize: 11),
+                    ),
+                    SizedBox(
+                      height: 45,
+                    ),
+                    InkWell(
+                      onTap: (){
+                        Navigator.pushNamed(
+                          context,
+                          CustomRouteNames.kManageAppointmentScreenRoute,
+                        );
+                      },
+                      child: Container(
+                        width: 1.sw,
+                        margin: const EdgeInsets.symmetric(horizontal: 50),
+                        padding: const EdgeInsets.all(15),
+                        decoration: BoxDecoration(
+                          color: ColorManager.secondary,
+                          borderRadius: BorderRadius.circular(25),
                         ),
-                        textAlign: TextAlign.center,
+                        child: Text(
+                          "Continue",
+                          style: getsemiboldStyle(
+                            color: ColorManager.kWhiteColor,
+                          ),
+                          textAlign: TextAlign.center,
+                        ),
                       ),
                     ),
-                  ),
-                  SizedBox(
-                    height: 10.h,
-                  ),
-                  Center(
-                      child: GestureDetector(
-                    onTap: () {
-                      Navigator.pop(context);
-                    },
-                    child: Text(
-                      "Not Now",
-                      style: TextStyle(color: ColorManager.kRedColor),
+                    SizedBox(
+                      height: 10.h,
                     ),
-                  ))
-                ],
-              ),
-            )
-          ]),
+                    Center(
+                        child: GestureDetector(
+                      onTap: () {
+                        Navigator.pop(context);
+                      },
+                      child: Text(
+                        "Not Now",
+                        style: TextStyle(color: ColorManager.kRedColor),
+                      ),
+                    ))
+                  ],
+                ),
+              )
+            ]),
+          ),
         ));
   }
 

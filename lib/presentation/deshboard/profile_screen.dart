@@ -131,7 +131,7 @@ class _ProfileViewState extends State<ProfileView> {
                               title: title[index],
                               leadingIcon:iconsList[index],
                               onTap: () {
-                                if(index==1|| index==2||index==3|| index==4||index==4||index==7){
+                                if(index==1|| index==2||index==3|| index==4||index==6||index==7){
                                   Navigator.pushNamed(context, choicsRoute[index]);
                                 }
                               },

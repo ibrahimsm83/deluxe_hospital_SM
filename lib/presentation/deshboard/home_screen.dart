@@ -146,10 +146,6 @@ class _HomeViewState extends State<HomeView> {
                         professionalCatList[index], (() {
                       Navigator.pushNamed(
                           context, professionalCategoryRouteList[index]);
-                      // if (index == 0 || index == 1||index==2) {
-                      //   Navigator.pushNamed(
-                      //       context, professionalCategoryRouteList[index]);
-                      // }
                     }));
                   },
                 ),
@@ -465,6 +461,7 @@ class _HomeViewState extends State<HomeView> {
 
   Widget upComingAppointment() {
     return Container(
+      width: AppSize.sizeWidth(context),
       padding: EdgeInsets.symmetric(vertical: 10.0),
       decoration: BoxDecoration(
           color: ColorManager.kLightBlueColor,
@@ -478,91 +475,104 @@ class _HomeViewState extends State<HomeView> {
                 CustomRouteNames.kMyAppointmentScreenRoute,
               );
             },
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: [
-                ClipRRect(
-                  borderRadius: BorderRadius.circular(12.0),
-                  child: Image.asset(
-                    ImageAssets.demoUserImage,
-                    height: 60,
-                    width: 60,
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 10.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+
+                  Row(
+                    children: [
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(12.0),
+                        child: Image.asset(
+                          ImageAssets.demoUserImage,
+                          height: 55,
+                          width: 55,
+                        ),
+                      ),
+                      SizedBox(width: 10.0),
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text("Dr. Julia Thompson",
+                              style: getmediumStyle(
+                                  color: ColorManager.secondary, fontSize: 14)),
+                          SizedBox(height: 5),
+                          Row(
+                            children: [
+                              SvgPicture.asset(
+                                ImageAssets.kHospitalIcon,
+                                width: 15,
+                                height: 15,
+                              ),
+                              const SizedBox(width: 5),
+                              Text("Therapist",
+                                  style: getRegularStyle(
+                                    fontSize: 10,
+                                    color: ColorManager.kWhiteColor,
+                                  )),
+                              const SizedBox(width: 20),
+                              SvgPicture.asset(
+                                ImageAssets.kChatMoreIcon,
+                                width: 15,
+                                height: 15,
+                              ),
+                              const SizedBox(width: 5),
+                              Text(
+                                "Chat",
+                                style: getRegularStyle(
+                                  fontSize: 10,
+                                  color: ColorManager.kWhiteColor,
+                                ),
+                              ),
+                            ],
+                          ),
+                          const SizedBox(height: 5),
+                          Row(
+                            children: [
+                              SvgPicture.asset(
+                                ImageAssets.kCalendarIcon,
+                                width: 15,
+                                height: 15,
+                              ),
+                              SizedBox(
+                                width: 5,
+                              ),
+                              Text(
+                                "02 November, 2023",
+                                style: getRegularStyle(
+                                  color: ColorManager.kWhiteColor,
+                                  fontSize: 10
+                                ),
+                              ),
+                              SizedBox(width: 5),
+                              SvgPicture.asset(
+                                ImageAssets.kClockIcon,
+                                width: 12,
+                                height: 12,
+                              ),
+                              SizedBox(width: 8),
+                              Text(
+                                "12:30 PM",
+                                style: getRegularStyle(
+                                  fontSize: 10,
+                                  color: ColorManager.kWhiteColor,
+                                ),
+                              )
+                            ],
+                          ),
+                        ],
+                      ),
+                    ],
                   ),
-                ),
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text("Dr. Julia Thompson",
-                        style: getmediumStyle(
-                            color: ColorManager.secondary, fontSize: 16)),
-                    SizedBox(height: 5),
-                    Row(
-                      children: [
-                        SvgPicture.asset(
-                          ImageAssets.kHospitalIcon,
-                          width: 15,
-                          height: 15,
-                        ),
-                        const SizedBox(width: 5),
-                        Text("Therapist",
-                            style: getRegularStyle(
-                              color: ColorManager.kWhiteColor,
-                            )),
-                        const SizedBox(width: 20),
-                        SvgPicture.asset(
-                          ImageAssets.kChatMoreIcon,
-                          width: 15,
-                          height: 15,
-                        ),
-                        const SizedBox(width: 5),
-                        Text(
-                          "Chat",
-                          style: getRegularStyle(
-                            color: ColorManager.kWhiteColor,
-                          ),
-                        ),
-                      ],
-                    ),
-                    const SizedBox(height: 5),
-                    Row(
-                      children: [
-                        SvgPicture.asset(
-                          ImageAssets.kCalendarIcon,
-                          width: 15,
-                          height: 15,
-                        ),
-                        SizedBox(
-                          width: 5,
-                        ),
-                        Text(
-                          "02 November, 2023",
-                          style: getRegularStyle(
-                            color: ColorManager.kWhiteColor,
-                          ),
-                        ),
-                        SizedBox(width: 20),
-                        SvgPicture.asset(
-                          ImageAssets.kClockIcon,
-                          width: 15,
-                          height: 15,
-                        ),
-                        SizedBox(width: 5),
-                        Text(
-                          "12:30 PM",
-                          style: getRegularStyle(
-                            color: ColorManager.kWhiteColor,
-                          ),
-                        )
-                      ],
-                    ),
-                  ],
-                ),
-                SizedBox(
-                  height: 30,
-                  width: 30,
-                  child: SvgPicture.asset(ImageAssets.kMessageIcon),
-                ),
-              ],
+                  SizedBox(
+                    height: 25,
+                    width: 25,
+                    child: SvgPicture.asset(ImageAssets.kMessageIcon),
+                  ),
+                ],
+              ),
             ),
           ),
           const SizedBox(height: 10),

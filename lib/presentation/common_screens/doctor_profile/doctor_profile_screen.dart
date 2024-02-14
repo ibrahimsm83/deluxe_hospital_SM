@@ -34,7 +34,7 @@ class DoctorProfileScreen extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              info(),
+              info(context),
               Padding(
                 padding: const EdgeInsets.symmetric(vertical: 20.0,horizontal: 10.0),
                 child: reportWidget(),
@@ -250,7 +250,7 @@ Widget Reviews(){
     );
   }
 
-  Widget info() {
+  Widget info(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(10.0),
@@ -280,10 +280,13 @@ Widget Reviews(){
                             style: getmediumStyle(
                                 color: ColorManager.kWhiteColor, fontSize: 16)),
                         //Divider(color: ColorManager.kGreyColor,thickness: 3,),
-                        Container(
-                          color: ColorManager.secondary,
-                          height: 1,
-                          width: 250,
+                        Padding(
+                          padding: const EdgeInsets.symmetric(vertical: 4.0),
+                          child: Container(
+                            color: ColorManager.secondary,
+                            height: 1,
+                            width: AppSize.sizeWidth(context)/2,
+                          ),
                         ),
                         Text("immunologist | Christ Hospital",
                             style: getRegularStyle(

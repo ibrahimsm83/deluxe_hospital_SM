@@ -30,9 +30,12 @@ class ArticlesDetailsScreen extends StatelessWidget {
               child: SvgPicture.asset(ImageAssets.arrowLeftIcon)),
         ),
       ),
-      body: Column(children: [
-        articlesDetails(),
-      ],),
+      body: SingleChildScrollView(
+        child: Column(children: [
+          articlesDetails(),
+          SizedBox(height: 30.0),
+        ],),
+      ),
     );
   }
   Widget articlesDetails() {

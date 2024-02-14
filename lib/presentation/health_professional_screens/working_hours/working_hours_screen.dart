@@ -56,7 +56,7 @@ class _WorkingHourScreenState extends State<WorkingHourScreen> {
               ),
               const SizedBox(height: 5.0),
               Padding(
-                padding: const EdgeInsets.all(8.0),
+                padding: const EdgeInsets.symmetric(vertical: 8.0),
                 child: Categories(),
               ),
               rowComponent(
@@ -177,31 +177,28 @@ Widget cancel(){
     return Padding(
       padding: const EdgeInsets.only(top: 10.0),
       child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        mainAxisAlignment: MainAxisAlignment.end,
         children: [
-          const SizedBox(width: 60,),
           SvgPicture.asset(
             ImageAssets.kCloseCircleIcon,
             height: 20,
             width: 20,
           ),
-          SizedBox(width: 10,),
-        Row(
-          children: [
-            timeContainer(),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 10.0),
-              child: Text("-",
-                  style:
-                  getboldStyle(color: ColorManager.secondary, fontSize: 16.sp)),
-            ),
-            timeContainer(),
-          ],
-        ),
-        SvgPicture.asset(
-          ImageAssets.kAddCircleIcon,
-        )
-      ],),
+          SizedBox(width: 5),
+          timeContainer(),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 4.0),
+            child: Text("-",
+                style:
+                getboldStyle(color: ColorManager.secondary, fontSize: 16.sp)),
+          ),
+          timeContainer(),
+          SizedBox(width: 5),
+          SvgPicture.asset(
+            ImageAssets.kAddCircleIcon,
+          )
+        ],
+      ),
     );
 }
   Widget rowComponent(

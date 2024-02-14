@@ -150,40 +150,41 @@ class _ChatViewState extends State<ChatView> {
         )
         ),
         child:Padding(
-    padding: const EdgeInsets.all(6.0),
+    padding: const EdgeInsets.symmetric(horizontal: 10.0,vertical: 4.0),
     child:
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            CircleAvatar(
-              radius: 30.0,
-              backgroundImage: AssetImage(img!),
-            ),
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
+            Row(
               children: [
-                Text(
-                  name!,
-                  style: getboldStyle(
-                      color: ColorManager.kWhiteColor,
-                      fontSize: 12.sp,
-                     ),
+                CircleAvatar(
+                  radius: 30.0,
+                  backgroundImage: AssetImage(img!),
                 ),
-                Text(
-                  "Hey, I was wondering if you could…",
-                  style: TextStyle(
-                      fontSize: 10.sp, color: ColorManager.kGreyColor),
+                const SizedBox(width: 10.0),
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      name!,
+                      style: getboldStyle(
+                        color: ColorManager.kWhiteColor,
+                        fontSize: 12.sp,
+                      ),
+                    ),
+                    Text(
+                      "Hey, I was wondering if you could…",
+                      style: TextStyle(
+                          fontSize: 10.sp, color: ColorManager.kGreyColor),
+                    ),
+                  ],
                 ),
               ],
             ),
-            const SizedBox(width: 5.0),
-            Padding(
-              padding: const EdgeInsets.only(right: 10.0),
-              child: Text(
-                "8:00 AM",
-                style: getRegularStyle(
-                    fontSize: 10.sp, color: ColorManager.kWhiteColor),
-              ),
+            Text(
+              "8:00 AM",
+              style: getRegularStyle(
+                  fontSize: 10.sp, color: ColorManager.kWhiteColor),
             ),
           ],
         ),

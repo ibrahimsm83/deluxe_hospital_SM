@@ -34,7 +34,7 @@ class MyAppointmentScreen extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               SizedBox(height: AppSize.s15.h),
-              info(),
+              info(context),
               const SizedBox(height: 15.0),
               Padding(
                 padding: const EdgeInsets.symmetric(vertical: 10.0),
@@ -169,7 +169,7 @@ class MyAppointmentScreen extends StatelessWidget {
           onTap: onTap),
     );
   }
-  Widget info() {
+  Widget info(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(10.0),
@@ -205,7 +205,7 @@ class MyAppointmentScreen extends StatelessWidget {
                           child: Container(
                             color: ColorManager.secondary,
                             height: 0.5,
-                            width: 230,
+                            width: AppSize.sizeWidth(context)/2,
                           ),
                         ),
 
