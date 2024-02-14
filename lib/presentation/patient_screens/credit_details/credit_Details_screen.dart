@@ -69,17 +69,7 @@ class CreditDetailsScreen extends StatelessWidget {
             const SizedBox(height: 5.0),
               RefundHistoryTable(),
             const SizedBox(height: 10.0),
-              button(
-                  text: AppStrings.kNext,
-                  color: ColorManager.secondary,
-                  context: context,
-                  onTap: () {
-                    Navigator.pushNamed(
-                      context,
-                      CustomRouteNames.kGiveMeDiscountScreenRoute,
-                    );
-                  }),
-              SizedBox(height: AppSize.s10.h),
+
         
           ],),
         ),

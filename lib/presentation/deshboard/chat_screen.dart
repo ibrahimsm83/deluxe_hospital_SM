@@ -46,10 +46,10 @@ class _ChatViewState extends State<ChatView> {
         elevation: 0.0,
         backgroundColor: Colors.transparent,
         centerTitle: true,
-        title: Text("Chat with your Doctor",
+        title: Text("Chat with Health Professional",
             style: getboldStyle(
                 color: ColorManager.secondary,
-                fontSize: ScreenUtil().setSp(AppSize.s18))),
+                fontSize: ScreenUtil().setSp(AppSize.s16))),
       ),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 15.0),

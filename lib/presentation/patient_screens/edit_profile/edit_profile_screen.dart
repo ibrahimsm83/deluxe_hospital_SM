@@ -135,10 +135,10 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
                 return userController.userRole.value == UserRole.Patient
                     ? Column(
                         children: [
-                          SizedBox(height: AppSize.s15.h),
-                          height(),
-                          SizedBox(height: AppSize.s15.h),
-                          weight(),
+                          // SizedBox(height: AppSize.s15.h),
+                          // height(),
+                          // SizedBox(height: AppSize.s15.h),
+                          // weight(),
                           SizedBox(height: AppSize.s15.h),
                           ///Language
                           language(),

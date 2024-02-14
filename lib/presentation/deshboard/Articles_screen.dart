@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:get/get.dart';
 import '../../export_dulex.dart';
 
 class ArticlesView extends StatelessWidget {
-  const ArticlesView({Key? key}) : super(key: key);
-
+   ArticlesView({Key? key}) : super(key: key);
+  final UserController userController = Get.find();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -19,7 +20,7 @@ class ArticlesView extends StatelessWidget {
                 color: ColorManager.secondary,
                 fontSize: ScreenUtil().setSp(AppSize.s18))),
       ),
-      floatingActionButton:    Container(
+      floatingActionButton:   userController.userRole.value== UserRole.Patient?SizedBox.shrink(): Container(
         height: 40,
         width: 40,
         decoration: BoxDecoration(
@@ -45,6 +46,7 @@ class ArticlesView extends StatelessWidget {
           shape: CircleBorder(),
         ),
       ),
+
       body: Column(
         children: [
           Flexible(

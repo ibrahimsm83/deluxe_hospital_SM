@@ -18,16 +18,18 @@ class _ProfileViewState extends State<ProfileView> {
   List<String> title = [
     "Add Recent Vitals",
     "Edit Profile",
+    "Edit Medical Details",
     "Notifications",
     "Credit Details",
     "Languages",
-    "Sub account",
+    "Sub Account",
     "Pay For Someone",
     "Logout",
   ];
 
   List<String> iconsList = [
     ImageAssets.kAddRecentIcon,
+    ImageAssets.kEditProfileIcon,
     ImageAssets.kEditProfileIcon,
     ImageAssets.kNotificationBellIcon,
     ImageAssets.kPaymentsIcon,
@@ -40,6 +42,7 @@ class _ProfileViewState extends State<ProfileView> {
   List choicsRoute = [
    " Routes.PrivacyViewRoute,",
     CustomRouteNames.kEditProfileScreenRoute,
+    CustomRouteNames.kMedicalDetailsScreenRoute,
     CustomRouteNames.kNotificationsScreenRoute,
     CustomRouteNames.kCreditDetailsScreenRoute,
    " Routes.PrivacyViewRoute,",
@@ -128,7 +131,7 @@ class _ProfileViewState extends State<ProfileView> {
                               title: title[index],
                               leadingIcon:iconsList[index],
                               onTap: () {
-                                if(index==1|| index==2||index==3|| index==6||index==5){
+                                if(index==1|| index==2||index==3|| index==4||index==4||index==7){
                                   Navigator.pushNamed(context, choicsRoute[index]);
                                 }
                               },

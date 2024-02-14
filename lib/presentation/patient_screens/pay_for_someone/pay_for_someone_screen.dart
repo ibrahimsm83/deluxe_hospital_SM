@@ -27,57 +27,60 @@ class PayForSomeOneScreen extends StatelessWidget {
               child: SvgPicture.asset(ImageAssets.arrowLeftIcon)),
         ),
       ),
-      body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 15.0, vertical: 10.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(
-              AppStrings.kEnterTheCode,
-              style: getboldStyle(
-                  color: ColorManager.secondary,
-                  fontSize: ScreenUtil().setSp(AppSize.s14)),
-            ),
-            Padding(
-              padding: const EdgeInsets.symmetric(vertical: 10.0),
-              child: Text(
-                AppStrings.kEnterTheCopyWhichWasSentToYou,
-                style: getRegularStyle(
-                    color: ColorManager.kWhiteColor,
-                    fontSize: ScreenUtil().setSp(AppSize.s12)),
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 15.0, vertical: 10.0),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                AppStrings.kEnterTheCode,
+                style: getboldStyle(
+                    color: ColorManager.secondary,
+                    fontSize: ScreenUtil().setSp(AppSize.s14)),
               ),
-            ),
-            SizedBox(
-              height: 55,
-              child: TextField(
-                style: const TextStyle(color: Colors.white),
-                decoration: InputDecoration(
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(10.0),
-                    borderSide: BorderSide(
+              Padding(
+                padding: const EdgeInsets.symmetric(vertical: 10.0),
+                child: Text(
+                  AppStrings.kEnterTheCopyWhichWasSentToYou,
+                  style: getRegularStyle(
+                      color: ColorManager.kWhiteColor,
+                      fontSize: ScreenUtil().setSp(AppSize.s12)),
+                ),
+              ),
+              SizedBox(
+                height: 55,
+                child: TextField(
+                  style: const TextStyle(color: Colors.white),
+                  decoration: InputDecoration(
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(10.0),
+                      borderSide: BorderSide(
+                        color: ColorManager.kGreyColor,
+                      ),
+                    ),
+                    labelText: AppStrings.kEnterTheCode,
+                    labelStyle: getRegularStyle(
                       color: ColorManager.kGreyColor,
                     ),
                   ),
-                  labelText: AppStrings.kEnterTheCode,
-                  labelStyle: getRegularStyle(
-                    color: ColorManager.kGreyColor,
-                  ),
                 ),
               ),
-            ),
-            Spacer(),
-            button(
-                text: AppStrings.kNext,
-                color: ColorManager.secondary,
-                context: context,
-                onTap: () {
-                  Navigator.pushNamed(
-                    context,
-                    CustomRouteNames.kPayForSomeOneTwoScreenRoute,
-                  );
-                }),
-            SizedBox(height: 50.0),
-          ],
+              // Spacer(),
+              SizedBox(height: AppSize.sizeHeight(context)/3,),
+              button(
+                  text: AppStrings.kNext,
+                  color: ColorManager.secondary,
+                  context: context,
+                  onTap: () {
+                    Navigator.pushNamed(
+                      context,
+                      CustomRouteNames.kPayForSomeOneTwoScreenRoute,
+                    );
+                  }),
+              SizedBox(height: 50.0),
+            ],
+          ),
         ),
       ),
     );

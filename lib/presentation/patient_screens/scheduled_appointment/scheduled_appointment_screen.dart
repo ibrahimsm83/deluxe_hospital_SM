@@ -39,45 +39,47 @@ class _ScheduledAppointmentScreenState
               child: SvgPicture.asset(ImageAssets.arrowLeftIcon)),
         ),
       ),
-      body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 15.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            calenderWidget(),
-            Padding(
-              padding: const EdgeInsets.symmetric(vertical: 10.0),
-              child: Text(
-                AppStrings.kSelectDay,
-                style: getboldStyle(
-                    color: ColorManager.kWhiteColor,
-                    fontSize: ScreenUtil().setSp(AppSize.s14)),
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 15.0),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              calenderWidget(),
+              Padding(
+                padding: const EdgeInsets.symmetric(vertical: 10.0),
+                child: Text(
+                  AppStrings.kSelectDay,
+                  style: getboldStyle(
+                      color: ColorManager.kWhiteColor,
+                      fontSize: ScreenUtil().setSp(AppSize.s14)),
+                ),
               ),
-            ),
-            selectDateAndHour("Mon"),
-            Padding(
-              padding: const EdgeInsets.symmetric(vertical: 10.0),
-              child: Text(
-                AppStrings.kSelectHour,
-                style: getboldStyle(
-                    color: ColorManager.kWhiteColor,
-                    fontSize: ScreenUtil().setSp(AppSize.s14)),
+              selectDateAndHour("Mon"),
+              Padding(
+                padding: const EdgeInsets.symmetric(vertical: 10.0),
+                child: Text(
+                  AppStrings.kSelectHour,
+                  style: getboldStyle(
+                      color: ColorManager.kWhiteColor,
+                      fontSize: ScreenUtil().setSp(AppSize.s14)),
+                ),
               ),
-            ),
-            selectDateAndHour("10.00 AM"),
-            const SizedBox(height: 50.0),
-            button(
-                text: AppStrings.kSubmit,
-                color: ColorManager.secondary,
-                context: context,
-                onTap: () {
-                  // Navigator.pushNamed(
-                  //   context,
-                  //   CustomRouteNames.kPatientDetailsScreenRoute,
-                  // );
-                }),
-            const SizedBox(height: 20.0),
-          ],
+              selectDateAndHour("10.00 AM"),
+              const SizedBox(height: 50.0),
+              button(
+                  text: AppStrings.kSubmit,
+                  color: ColorManager.secondary,
+                  context: context,
+                  onTap: () {
+                    // Navigator.pushNamed(
+                    //   context,
+                    //   CustomRouteNames.kPatientDetailsScreenRoute,
+                    // );
+                  }),
+              const SizedBox(height: 20.0),
+            ],
+          ),
         ),
       ),
     );
